@@ -2,30 +2,16 @@
   "name": "@kalkulacka-one/schema",
   "version": "0.0.0",
   "private": true,
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "type": "module",
   "scripts": {
-    "build": "tsc",
-    "e2e": "echo 'No e2e tests for schema package'",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
     "ncu": "ncu",
-    "ncu:upgrade": "ncu -u",
-    "test": "echo 'No tests for schema package'",
-    "typecheck": "tsc --noEmit"
+    "ncu:upgrade": "ncu -u"
   },
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    },
-    "./json": {
-      "default": "./index.js"
-    },
-    "./package.json": "./package.json"
-  },
-  "peerDependencies": {
-    "zod": "^4.0.0"
+    ".": "./index.js",
+    "./*": "./schemas/**/*.{schema.ts,schema.json,md}"
   },
   "packageManager": "npm@11.5.2"
 }

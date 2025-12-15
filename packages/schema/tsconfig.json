@@ -1,9 +1,0 @@
-{
-  "extends": "@kalkulacka-one/typescript-config/base.json",
-  "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./schemas"
-  },
-  "include": ["schemas"],
-  "exclude": ["node_modules", "dist"]
-}

@@ -1,6 +1,6 @@
-import { buildDataUrl, calculatorViewModel, loadCalculatorData } from "@kalkulacka-one/app";
-
 import type { Metadata } from "next";
+
+import { buildDataUrl, calculatorViewModel, loadCalculatorData } from "@/calculator";
 
 export async function generateCalculatorMetadata({
   key,
@@ -23,11 +23,7 @@ export async function generateCalculatorMetadata({
     alt?: string;
   };
 }): Promise<Metadata> {
-  if (!process.env.DATA_ENDPOINT) {
-    throw new Error("DATA_ENDPOINT environment variable is not set");
-  }
-
-  const calculatorData = await loadCalculatorData({ endpoint: process.env.DATA_ENDPOINT, key, group });
+  const calculatorData = await loadCalculatorData({ key, group });
   const calculator = calculatorViewModel(calculatorData.data.calculator);
 
   const ogImage = calculator.images?.find((img) => img.type === "opengraph");
@@ -44,7 +40,7 @@ export async function generateCalculatorMetadata({
     ogImageHeight = ogImageOverride.height;
     ogImageAlt = ogImageOverride.alt;
   } else if (ogImage?.urls?.original) {
-    ogImageUrl = buildDataUrl({ endpoint: process.env.DATA_ENDPOINT, key, group, resourcePath: ogImage.urls.original });
+    ogImageUrl = buildDataUrl({ key, group, resourcePath: ogImage.urls.original });
     ogImageWidth = ogImage.width;
     ogImageHeight = ogImage.height;
     ogImageAlt = ogImage.alt;
@@ -57,7 +53,7 @@ export async function generateCalculatorMetadata({
     twitterImageUrl = twitterImageOverride.url;
     twitterImageAlt = twitterImageOverride.alt;
   } else if (twitterImage?.urls?.original) {
-    twitterImageUrl = buildDataUrl({ endpoint: process.env.DATA_ENDPOINT, key, group, resourcePath: twitterImage.urls.original });
+    twitterImageUrl = buildDataUrl({ key, group, resourcePath: twitterImage.urls.original });
     twitterImageAlt = twitterImage.alt;
   } else {
     twitterImageUrl = ogImageUrl;

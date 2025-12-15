@@ -1,6 +1,6 @@
-import type { CalculatorData } from "@kalkulacka-one/app";
-
 import type { PropsWithChildren } from "react";
+
+import type { CalculatorData } from "@/calculator";
 
 import { ProviderLayout } from "./provider-layout";
 import { SessionDataLoader } from "./session-data-loader";

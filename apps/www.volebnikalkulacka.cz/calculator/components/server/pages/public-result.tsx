@@ -1,9 +1,7 @@
-import type { CalculatorViewModel, ResultViewModel } from "@kalkulacka-one/app";
-import { PublicResultNavigationCard } from "@kalkulacka-one/app";
-
 import { AppHeader, MatchCard, WithCondenseOnScroll } from "@/calculator/client";
+import type { CalculatorViewModel, ResultViewModel } from "@/calculator/view-models/server";
 
-import { Layout } from "../components";
+import { Layout, PublicResultNavigationCard } from "../components";
 
 export type PublicResultPageProps = {
   result: ResultViewModel;

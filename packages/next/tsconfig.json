@@ -1,12 +1,8 @@
 {
-  "extends": "@kalkulacka-one/typescript-config/react-library.json",
+  "extends": "@kalkulacka-one/typescript-config/base.json",
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "./src",
-    "baseUrl": "./src",
-    "paths": {
-      "@/*": ["./*"]
-    }
+    "rootDir": "./src"
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]

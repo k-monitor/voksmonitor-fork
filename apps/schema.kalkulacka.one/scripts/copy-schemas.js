@@ -1,4 +1,4 @@
-import schemas from "@kalkulacka-one/schema/json";
+import schemas from "@kalkulacka-one/schema";
 
 import fs from "node:fs";
 import path from "node:path";

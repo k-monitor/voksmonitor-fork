@@ -1,9 +1,8 @@
-import { useAnswersStore, useCalculator } from "@kalkulacka-one/app/client";
-
 import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
 
 import { IntroductionPage } from "@/calculator";
+import { useAnswersStore, useCalculator } from "@/calculator/client";
 import { useEmbed } from "@/components/client";
 import { useAutoSave } from "@/hooks/auto-save";
 import { saveSessionData } from "@/lib/api";
