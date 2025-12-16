@@ -85,7 +85,7 @@ export default function Page() {
                   {/* Step 1 */}
                   <div className="flex flex-col items-center text-center">
                     <div className="mb-4">
-                      <Image src="/methodology/1.png" alt="Kérdőív" width={64} height={64} />
+                      <img src="/methodology/1.png" alt="Kérdőív" width={64} height={64} />
                     </div>
                     <p className="text-gray-700 text-sm leading-relaxed">
                       A kérdőív 28 olyan közgyűlési ügyet tartalmaz, amelyekről 2024. október 4. és 2025. május 28. között vita és döntés is született.
@@ -95,7 +95,7 @@ export default function Page() {
                   {/* Step 2 */}
                   <div className="flex flex-col items-center text-center">
                     <div className="mb-4">
-                      <Image src="/methodology/2.png" alt="Pártok" width={64} height={64} />
+                      <img src="/methodology/2.png" alt="Pártok" width={64} height={64} />
                     </div>
                     <p className="text-gray-700 text-sm leading-relaxed">A frakciók válaszait a közgyűlési szavazások és viták alapján határoztuk meg.</p>
                   </div>
@@ -103,7 +103,7 @@ export default function Page() {
                   {/* Step 3 */}
                   <div className="flex flex-col items-center text-center">
                     <div className="mb-4">
-                      <Image src="/methodology/3.png" alt="Összehasonlítás" width={64} height={64} />
+                      <img src="/methodology/3.png" alt="Összehasonlítás" width={64} height={64} />
                     </div>
                     <p className="text-gray-700 text-sm leading-relaxed">Ezeket az eredményeket hasonlítjuk össze az Ön válaszaival.</p>
                   </div>
@@ -111,7 +111,7 @@ export default function Page() {
                   {/* Step 4 */}
                   <div className="flex flex-col items-center text-center">
                     <div className="mb-4">
-                      <Image src="/methodology/4.png" alt="Számolás" width={64} height={64} />
+                      <img src="/methodology/4.png" alt="Számolás" width={64} height={64} />
                     </div>
                     <p className="text-gray-700 text-sm leading-relaxed">A Voksmonitor így megmutatja, mely frakció vagy képviselő véleménye áll legközelebb az Ön értékrendjéhez.</p>
                   </div>
