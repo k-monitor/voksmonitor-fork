@@ -60,7 +60,7 @@ export default function Page() {
                     nyelvű választási kalkulátorát. A korábbi Voksmonitorokat az archívumban találod.
                   </p>
                   <div className="grid mt-auto pt-4">
-                    <a href="https://old.voksmonitor.hu" target="_blank" rel="noopener noreferrer" className="grid">
+                    <a href="https://voksmonitor.hu" target="_blank" rel="noopener noreferrer" className="grid">
                       <Button variant="link" color="neutral">
                         Ugrás az archívumra
                       </Button>
