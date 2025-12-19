@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 import rehypeSlug from "rehype-slug";
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
   transpilePackages: ["@kalkulacka-one/design-system"],
   productionBrowserSourceMaps: true,
