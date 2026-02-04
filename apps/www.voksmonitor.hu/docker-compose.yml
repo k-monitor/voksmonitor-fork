@@ -1,0 +1,56 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: voksmonitor-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-voksmonitor}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-voksmonitor}
+      POSTGRES_DB: ${POSTGRES_DB:-voksmonitor}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-voksmonitor} -d ${POSTGRES_DB:-voksmonitor}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  migrate:
+    image: node:22-alpine
+    container_name: voksmonitor-migrate
+    working_dir: /app
+    volumes:
+      - ../../packages/database:/app/packages/database
+      - ../../package.json:/app/package.json
+      - ../../package-lock.json:/app/package-lock.json
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-voksmonitor}:${POSTGRES_PASSWORD:-voksmonitor}@db:5432/${POSTGRES_DB:-voksmonitor}
+    command: >
+      sh -c "npm install prisma@6.19.0 @prisma/client@6.19.0 --prefix /tmp &&
+             /tmp/node_modules/.bin/prisma migrate deploy --schema=/app/packages/database/prisma/schema.prisma"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  app:
+    build:
+      context: ../..
+      dockerfile: apps/www.voksmonitor.hu/Dockerfile
+    container_name: voksmonitor-app
+    restart: unless-stopped
+    ports:
+      - "3030:3000"
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-voksmonitor}:${POSTGRES_PASSWORD:-voksmonitor}@db:5432/${POSTGRES_DB:-voksmonitor}
+      NODE_ENV: production
+      DATA_ENDPOINT: ${DATA_ENDPOINT:-https://voksmonitor.k-monitor.hu/data5/}
+    depends_on:
+      db:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+
+volumes:
+  postgres_data:
