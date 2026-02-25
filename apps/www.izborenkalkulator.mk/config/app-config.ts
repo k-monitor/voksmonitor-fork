@@ -1,4 +1,4 @@
-import { withDefaults } from "@kalkulacka-one/next";
+import { withDefaults } from "@kalkulacka-one/next/config";
 
 export const appConfig = withDefaults({
   domainPath: "www.izborenkalkulator.mk",
@@ -6,5 +6,9 @@ export const appConfig = withDefaults({
   i18n: {
     defaultLocale: "mk",
     locales: ["mk"],
+  },
+
+  footer: {
+    showAnalytics: false,
   },
 });
