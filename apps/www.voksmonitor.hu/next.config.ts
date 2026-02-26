@@ -1,6 +1,7 @@
 import createMDX from "@next/mdx";
 import type { NextConfig } from "next";
 import rehypeSlug from "rehype-slug";
+import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
@@ -72,3 +73,6 @@ const withMDX = createMDX({
 });
 
 export default withMDX(nextConfig);
+
+const withNextIntl = createNextIntlPlugin();
+export default withNextIntl(nextConfig);

@@ -4,6 +4,7 @@ import { Card } from "@kalkulacka-one/design-system/server";
 import Image from "next/image";
 import Link from "next/link";
 import { useId } from "react";
+import { useTranslations } from "next-intl";
 
 import { Background } from "../../../components/Background";
 import { SubscribeForm } from "../../../components/client";
@@ -12,6 +13,7 @@ import { BeadRow } from "./BeadRow";
 export default function Page() {
   const bgGridId = useId();
   const otherCalcsHeadingId = useId();
+  const t = useTranslations("homepage");
 
   return (
     <Background hasBlobs={true} blobsHeight="80%" blueBlobX="5%" blueBlobY="10%" redBlobX="50%" redBlobY="20%">
@@ -19,7 +21,7 @@ export default function Page() {
         {/* Content */}
         <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8 pt-12 md:pt-16 lg:pt-20 pb-4 md:pb-6 flex-1">
           {/* Heading */}
-          <h1 className="font-display ko:font-display font-bold tracking-tighter text-gray-700 text-4xl md:text-5xl lg:text-6xl text-center">Fővárosi Közgyűlés Voksmonitor</h1>
+          <h1 className="font-display ko:font-display font-bold tracking-tighter text-gray-700 text-4xl md:text-5xl lg:text-6xl text-center">{t("title")}</h1>
 
           {/* Featured cards */}
           <div className="mt-10 md:mt-12 flex justify-center">

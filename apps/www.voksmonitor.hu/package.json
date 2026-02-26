@@ -28,6 +28,7 @@
     "@opentelemetry/sdk-logs": "^0.204.0",
     "@kalkulacka-one/database": "*",
     "@kalkulacka-one/design-system": "*",
+    "@kalkulacka-one/next": "*",
     "@vercel/otel": "^1.13.0",
     "next": "15.5.9",
     "react": "^19.1.1",
