@@ -3,6 +3,9 @@ import { notFound } from "next/navigation";
 
 import "../../../globals.css";
 
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+
 import { EmbedProvider } from "../../../../components/client";
 import { PlausibleScript } from "../../../../components/server";
 import { type EmbedName, isEmbedName } from "../../../../config/embeds";
@@ -19,6 +22,7 @@ export default async function RootLayout({ children, params }: { children: React
   const { embed: embedParam } = await params;
   if (!isEmbedName(embedParam)) notFound();
   const embed: EmbedName = embedParam;
+  const messages = await getMessages();
 
   return (
     <html lang="cs">
@@ -26,7 +30,9 @@ export default async function RootLayout({ children, params }: { children: React
         <PlausibleScript />
       </head>
       <body>
-        <EmbedProvider name={embed}>{children}</EmbedProvider>
+        <NextIntlClientProvider messages={messages}>
+          <EmbedProvider name={embed}>{children}</EmbedProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

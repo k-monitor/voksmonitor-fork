@@ -2,6 +2,9 @@ import type { Metadata, Viewport } from "next";
 
 import "../globals.css";
 
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+
 import { EmbedContextProvider, ThemeProvider } from "../../components/client";
 import { PlausibleScript } from "../../components/server";
 import { allowCrawling } from "../../lib/seo";
@@ -59,6 +62,8 @@ export const viewport: Viewport = {
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const messages = await getMessages();
+
   return (
     <html lang="hu">
       <head>
@@ -78,9 +83,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <noscript>
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K33BBGX" height="0" width="0" style={{ display: "none", visibility: "hidden" }} title="Google Tag Manager" />
         </noscript>
-        <EmbedContextProvider isEmbed={false}>
-          <ThemeProvider name="default">{children}</ThemeProvider>
-        </EmbedContextProvider>
+        <NextIntlClientProvider messages={messages}>
+          <EmbedContextProvider isEmbed={false}>
+            <ThemeProvider name="default">{children}</ThemeProvider>
+          </EmbedContextProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

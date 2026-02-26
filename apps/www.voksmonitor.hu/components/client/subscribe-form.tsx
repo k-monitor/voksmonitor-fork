@@ -1,8 +1,10 @@
 import { Button, Description, Field, Input, Label } from "@kalkulacka-one/design-system/client";
 
 import { type FormEvent, useState } from "react";
+import { useTranslations } from "next-intl";
 
 export function SubscribeForm() {
+  const t = useTranslations("subscribe-form");
   const [isSuccessfullySubmitted, setIsSuccessfullySubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [consent, setConsent] = useState(false);
@@ -15,12 +17,12 @@ export function SubscribeForm() {
     setIsSuccessfullySubmitted(false);
 
     if (!consent) {
-      setError("Kérjük, fogadja el az adatkezelési tájékoztatót.");
+      setError(t("error-no-consent"));
       return;
     }
 
     if (!email || !email.includes("@")) {
-      setError("Érvénytelen formátum");
+      setError(t("error-invalid-email"));
       return;
     }
 
@@ -44,10 +46,10 @@ export function SubscribeForm() {
         setIsSuccessfullySubmitted(true);
       } else {
         const data = await response.json().catch(() => ({}));
-        setError(data.error || "Hiba történt a feliratkozás során. Kérjük, próbálja újra.");
+        setError(data.error || t("error-submit"));
       }
     } catch (_error) {
-      setError("Szerverhiba. Kérjük, próbálja újra később.");
+      setError(t("error-server"));
     } finally {
       setIsSubmitting(false);
     }
@@ -56,27 +58,27 @@ export function SubscribeForm() {
   return (
     <>
       {isSuccessfullySubmitted ? (
-        <div>Köszönjük a feliratkozást</div>
+        <div>{t("success")}</div>
       ) : (
         <>
-          <p className="text-center text-gray-700 font-semibold mb-4">Iratkozz fel a K-Monitor hírlevelére!</p>
+          <p className="text-center text-gray-700 font-semibold mb-4">{t("heading")}</p>
           <form className="flex flex-col gap-4 items-center" onSubmit={onSubmit} noValidate>
             <Field disabled={isSubmitting}>
               <div className="grid grid-rows-2 gap-2 justify-center">
                 <div className="flex gap-4 justify-center items-center">
-                  <Label className="sr-only">Adja meg az e-mail címét</Label>
+                  <Label className="sr-only">{t("email-label")}</Label>
                   <Input
                     invalid={!!error && !consent}
                     autoComplete="email"
                     type="email"
-                    placeholder="E-mail"
+                    placeholder={t("email-placeholder")}
                     style={{ height: "48px", minHeight: "48px", backgroundColor: "white" }}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     disabled={isSubmitting}
                   />
                   <Button disabled={isSubmitting || !consent} type="submit" variant="outline" color="neutral" style={{ backgroundColor: "white" }}>
-                    {isSubmitting ? "Küldés" : "Küldés"}
+                    {t("submit-button")}
                   </Button>
                 </div>
                 <div className="text-center space-y-1">
@@ -85,7 +87,7 @@ export function SubscribeForm() {
                     <span>
                       Elolvastam és elfogadom a K-Monitor{" "}
                       <a href="https://adatbazis.k-monitor.hu/egyeb/adatkezelesi-tajekoztato" target="_blank" rel="noopener noreferrer" className="underline">
-                        adatkezelési tájékoztatóját
+                        {t("consent-link")}
                       </a>
                       .
                     </span>
