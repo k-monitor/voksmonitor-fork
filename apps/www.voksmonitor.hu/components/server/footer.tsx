@@ -2,8 +2,11 @@ import { Icon, Logo } from "@kalkulacka-one/design-system/client";
 
 import { mdiEmail, mdiFacebook, mdiInstagram, mdiPhone } from "@mdi/js";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 
-export function Footer() {
+export async function Footer() {
+  const t = await getTranslations("footer");
+
   return (
     <footer className="bg-gray-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,9 +16,7 @@ export function Footer() {
               <div className="text-white">
                 <Logo title="Volební kalkulačka" size="small" monochrome />
               </div>
-              <p className="text-sm text-white mt-3">
-                A <strong>Voksmonitor</strong> összeveti a véleményedet a pártok programjaival.
-              </p>
+              <p className="text-sm text-white mt-3" dangerouslySetInnerHTML={{ __html: t.raw("tagline") }} />
               <div className="grid grid-cols-2 gap-2 mt-4 w-fit">
                 <Link href="https://www.instagram.com/kmonitorhu/" target="_blank" className="text-gray-400 hover:text-white transition-colors flex items-center justify-center" aria-label="Instagram">
                   <Icon icon={mdiInstagram} size="medium" decorative />
@@ -28,20 +29,20 @@ export function Footer() {
             <div />
             <div className="grid grid-flow-row gap-2">
               <Link href="/rolunk" className="text-sm text-gray-400 hover:text-white">
-                Rólunk
+                {t("nav.about-us")}
               </Link>
               <Link href="/voksmonitorrol" className="text-sm text-gray-400 hover:text-white">
-                A Voksmonitorról
+                {t("nav.about-voksmonitor")}
               </Link>
               <Link href="/modszertan" className="text-sm text-gray-400 hover:text-white">
-                Módszertan
+                {t("nav.methodology")}
               </Link>
               <Link href="https://tamogatas.k-monitor.hu/" target="_blank" className="text-sm text-gray-400 hover:text-white">
-                Támogatás
+                {t("nav.support")}
               </Link>
             </div>
             <div>
-              <h3 className="mb-4">Kapcsolat</h3>
+              <h3 className="mb-4">{t("contact.heading")}</h3>
               <div className="space-y-3">
                 <a href="mailto:info@k-monitor.hu" className="flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors">
                   <Icon icon={mdiEmail} size="medium" decorative />

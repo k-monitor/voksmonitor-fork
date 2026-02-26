@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from "next";
 import "../globals.css";
 
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getLocale, getMessages } from "next-intl/server";
 
 import { EmbedContextProvider, ThemeProvider } from "../../components/client";
 import { PlausibleScript } from "../../components/server";
@@ -62,10 +62,11 @@ export const viewport: Viewport = {
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const locale = await getLocale();
   const messages = await getMessages();
 
   return (
-    <html lang="hu">
+    <html lang={locale}>
       <head>
         <PlausibleScript />
         <script
