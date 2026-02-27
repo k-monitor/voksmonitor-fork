@@ -1,9 +1,12 @@
+"use client";
+
 import { Icon } from "@kalkulacka-one/design-system/client";
 import { logoCheck, logoCross } from "@kalkulacka-one/design-system/icons";
 import { Card } from "@kalkulacka-one/design-system/server";
 
 import { mdiArrowRight, mdiStar } from "@mdi/js";
 import Markdown from "react-markdown";
+import { useTranslations } from "next-intl";
 
 import type { CalculatorViewModel } from "../../../view-models";
 
@@ -12,14 +15,15 @@ export type Guide = {
 };
 
 export function Guide({ calculator }: Guide) {
+  const t = useTranslations("calculator.guide");
   return (
     <div className="grid gap-4">
       <Card shadow="hard" className="border border-slate-200">
         <div className="flex items-start gap-3 px-6 py-4 max-w-prose">
           <Icon icon={logoCheck} decorative={true} className="text-[var(--ko-palette-primary)]" />
           <div>
-            <p className="font-semibold text-slate-700">Egyetért</p>
-            <p className="text-sm text-slate-500">Amennyiben egy válasz megegyezik egy frakció vagy egy képviselő válaszával, az egy pontot ér.</p>
+            <p className="font-semibold text-slate-700">{t("agree-label")}</p>
+            <p className="text-sm text-slate-500">{t("agree-description")}</p>
           </div>
         </div>
       </Card>
@@ -28,8 +32,8 @@ export function Guide({ calculator }: Guide) {
         <div className="flex items-start gap-3 px-6 py-4 max-w-prose">
           <Icon icon={logoCross} decorative={true} className="text-[var(--ko-palette-secondary)]" />
           <div>
-            <p className="font-semibold text-slate-700">Nem ért egyet</p>
-            <p className="text-sm text-slate-500">Amennyiben ellentétes a válasz, egy pontot levonunk.</p>
+            <p className="font-semibold text-slate-700">{t("disagree-label")}</p>
+            <p className="text-sm text-slate-500">{t("disagree-description")}</p>
           </div>
         </div>
       </Card>
@@ -38,10 +42,8 @@ export function Guide({ calculator }: Guide) {
         <div className="flex items-start gap-3 px-6 py-4 max-w-prose">
           <Icon icon={mdiArrowRight} decorative={true} />
           <div>
-            <p className="font-semibold text-slate-700">Kihagyás</p>
-            <p className="text-sm text-slate-500">
-              Amennyiben nincs álláspontod a témáról, vagy nem szeretnél válaszolni, a jobb oldalon található nyíllal továbbléphetsz. A kérdést nem vesszük figyelembe az eredmények kiszámításánál.
-            </p>
+            <p className="font-semibold text-slate-700">{t("skip-label")}</p>
+            <p className="text-sm text-slate-500">{t("skip-description")}</p>
           </div>
         </div>
       </Card>
@@ -50,8 +52,8 @@ export function Guide({ calculator }: Guide) {
         <div className="flex items-start gap-3 px-6 py-4 max-w-prose">
           <Icon icon={mdiStar} decorative={true} />
           <div>
-            <p className="font-semibold text-slate-700">Fontos számomra</p>
-            <p className="text-sm text-slate-500">Csillaggal jelölhetőek a kitöltő számára fontos témák. Ezeket a program dupla súllyal számítja.</p>
+            <p className="font-semibold text-slate-700">{t("important-label")}</p>
+            <p className="text-sm text-slate-500">{t("important-description")}</p>
           </div>
         </div>
       </Card>

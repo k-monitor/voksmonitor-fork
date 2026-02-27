@@ -100,5 +100,81 @@
       "meta-title": "Kontakt",
       "heading": "Kapcsolat"
     }
+  },
+  "calculator": {
+    "introduction": {
+      "para1": "A Voksmonitor célja, hogy a választók a politikával ne csak a pártok kommunikációján keresztül találkozzanak, hanem megismerjék a különböző politikai szereplők (esetünkben frakciók és képviselők) álláspontját a várospolitikai és szakmai kérdések széles körében. Az alkalmazás a válaszadóhoz rendeli azt a frakciót, illetve képviselőt, amelynek álláspontja a válaszok alapján legközelebb áll a kitöltő értékrendjéhez.",
+      "para2": "A Voksmonitor a Fővárosi Közgyűlés 2024. október 4-i alakuló ülésétől 2025. május 28-ig tartó időszakból válogat 28 olyan ügyet, amelyekben a képviselők vitáztak, közösen gondolkodtak és döntést hoztak. A kérdéseket a K-Monitor munkatársai úgy állították össze, hogy lefedjék a Fővárosi Közgyűlés előtt tárgyalt döntési területek széles körét. Célunk az volt, hogy a kérdések tükrözzék a város működését érdemben befolyásoló és érthető dilemmákat – a közlekedéstől és lakhatástól kezdve a zöldfelületek kezelésén és átláthatóságon át a városi fejlesztésekig.",
+      "para3": "A Voksmonitor a <kmonitor>K-Monitor</kmonitor> és a <kohopolit>KohoVolit.eu</kohopolit> közös projektje."
+    },
+    "guide": {
+      "agree-label": "Egyetért",
+      "agree-description": "Amennyiben egy válasz megegyezik egy frakció vagy egy képviselő válaszával, az egy pontot ér.",
+      "disagree-label": "Nem ért egyet",
+      "disagree-description": "Amennyiben ellentétes a válasz, egy pontot levonunk.",
+      "skip-label": "Kihagyás",
+      "skip-description": "Amennyiben nincs álláspontod a témáról, vagy nem szeretnél válaszolni, a jobb oldalon található nyíllal továbbléphetsz. A kérdést nem vesszük figyelembe az eredmények kiszámításánál.",
+      "important-label": "Fontos számomra",
+      "important-description": "Csillaggal jelölhetőek a kitöltő számára fontos témák. Ezeket a program dupla súllyal számítja."
+    },
+    "question": {
+      "guide-button": "Útmutató",
+      "previous-button": "Előző",
+      "skip-button": "Kihagyás",
+      "next-button": "Következő",
+      "agree-button": "Egyetértek",
+      "disagree-button": "Nem értek egyet",
+      "important-aria-label": "Számomra fontos"
+    },
+    "review": {
+      "show-results-button": "Eredmények mutatása"
+    },
+    "share": {
+      "title": "Eredmény megosztása",
+      "close-aria-label": "Bezárás",
+      "loading": "Link létrehozása...",
+      "error-create-link": "A megosztási link létrehozása nem sikerült.",
+      "share-description": "Oszd meg az eredményed barátaiddal:",
+      "copy-button": "Másolás",
+      "copied-button": "Másolva",
+      "share-instagram": "Megosztás Instagramon",
+      "share-x": "Megosztás X-en",
+      "share-text": "Nézd meg, hogyan sikerült a Voksmonitorom!",
+      "share-text-with-handle": "Nézd meg, hogyan sikerült a {handle} Voksmonitorom!",
+      "privacy-notice": "Az eredmények megosztásával elfogadja az <privacyLink>adatvédelmi tájékoztatónkat</privacyLink>.",
+      "filename": "Saját Voksmonitor eredményem.png"
+    },
+    "comparison": {
+      "heading": "Összehasonlítás",
+      "back-aria-label": "Vissza az eredményekhez",
+      "close-aria-label": "Bezárás",
+      "choose-party": "Válassz pártot",
+      "all-organizations": "Minden szervezet",
+      "you": "Te"
+    },
+    "result": {
+      "comparison-button": "Összehasonlítás",
+      "share-button": "Megosztás",
+      "factions-label": "Frakciók",
+      "representatives-label": "Képviselők",
+      "my-result-heading": "Saját eredményem",
+      "heading": "Összehasonlítás",
+      "close-aria-label": "Bezárás",
+      "back-aria-label": "Vissza"
+    },
+    "donate": {
+      "title": "Voksmonitor támogatása",
+      "description": "Támogasd a Voksmonitort készítő K-Monitor egyesületet!",
+      "button": "Támogatom a Voksmonitort",
+      "close-aria-label": "Bezárás"
+    },
+    "match": {
+      "you-candidate-header": "Te • Jelölt",
+      "expert-respondent-note": "Az álláspontot nyilvános forrásokból határoztuk meg, a párt nem válaszolt az elküldött kérdésekre.",
+      "unknown-position": "Az álláspontot nem sikerült megállapítani",
+      "source": "Forrás",
+      "no-description": "Nincs elérhető leírás",
+      "source-link": "link"
+    }
   }
 }

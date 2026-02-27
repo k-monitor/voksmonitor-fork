@@ -3,8 +3,10 @@ import { Card } from "@kalkulacka-one/design-system/server";
 
 import { mdiClose } from "@mdi/js";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export function DonateCard() {
+  const t = useTranslations("calculator.donate");
   const [selectedAmount, setSelectedAmount] = useState<string | null>("1000");
   const [isVisible, setIsVisible] = useState(true);
 
@@ -26,15 +28,15 @@ export function DonateCard() {
             <Logo title="Voksmonitor" size="small" />
           </div>
           <div className="row-span-2 justify-self-end self-start @sm:col-start-4 @sm:row-span-2">
-            <Button variant="link" color="neutral" size="small" onClick={() => setIsVisible(false)} aria-label="Zavřít">
+            <Button variant="link" color="neutral" size="small" onClick={() => setIsVisible(false)} aria-label={t("close-aria-label")}>
               <Icon icon={mdiClose} size="small" decorative />
             </Button>
           </div>
           <div className="col-span-2 @sm:col-span-3">
-            <h3 className="text-lg font-display font-bold text-slate-700 tracking-tight">Voksmonitor támogatása</h3>
+            <h3 className="text-lg font-display font-bold text-slate-700 tracking-tight">{t("title")}</h3>
           </div>
           <div className="col-span-3 @sm:col-span-3">
-            <p className="text-neutral text-sm leading-relaxed text-slate-600">Támogasd a Voksmonitort készítő K-Monitor egyesületet!</p>
+            <p className="text-neutral text-sm leading-relaxed text-slate-600">{t("description")}</p>
           </div>
           <div className="@sm:col-start-2">
             <button
@@ -78,7 +80,7 @@ export function DonateCard() {
           <div className="col-span-3 @sm:col-start-2 @sm:col-span-3">
             <a href={getPayPalUrl(selectedAmount || undefined)} target="_blank" className="grid">
               <Button variant="outline" color="primary" size="medium">
-                Támogatom a Voksmonitort
+                {t("button")}
               </Button>
             </a>
           </div>

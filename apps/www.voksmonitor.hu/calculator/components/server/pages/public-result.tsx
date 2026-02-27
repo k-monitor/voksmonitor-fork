@@ -1,3 +1,7 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 import type { CalculatorViewModel, ResultViewModel } from "../../../view-models";
 import { AppHeader, MatchCard, WithCondenseOnScroll } from "../../client";
 import { Layout, PublicResultNavigationCard } from "../components";
@@ -11,6 +15,7 @@ export type PublicResultPageProps = {
 };
 
 export function PublicResultPage({ result, calculator, showOnlyNested, onFilterChange, onStartCalculator }: PublicResultPageProps) {
+  const t = useTranslations("calculator.result");
   const hasNestedCandidates = result.matches.some((match) => match.nestedMatches && match.nestedMatches.length > 0);
   const shouldShowToggleComputed = hasNestedCandidates || showOnlyNested;
 
@@ -22,7 +27,7 @@ export function PublicResultPage({ result, calculator, showOnlyNested, onFilterC
             <AppHeader condensed={condensed} calculator={calculator}>
               <AppHeader.Bottom>
                 <AppHeader.BottomMain condensed={condensed}>
-                  <h3 className="font-display font-semibold text-2xl tracking-tight text-slate-700">Můj výsledek</h3>
+                  <h3 className="font-display font-semibold text-2xl tracking-tight text-slate-700">{t("my-result-heading")}</h3>
                 </AppHeader.BottomMain>
               </AppHeader.Bottom>
             </AppHeader>
@@ -36,11 +41,11 @@ export function PublicResultPage({ result, calculator, showOnlyNested, onFilterC
               <div className="relative bg-slate-100 rounded-full p-1 flex  w-full sm:w-auto text-center">
                 <label className={`grow px-4 py-2 rounded-full cursor-pointer transition-colors ${!showOnlyNested ? "bg-slate-700 text-slate-50" : "bg-slate-100 text-slate-700 hover:bg-slate-200"}`}>
                   <input type="radio" name="resultView" checked={!showOnlyNested} onChange={() => onFilterChange(false)} className="sr-only" />
-                  Frakciók
+                  {t("factions-label")}
                 </label>
                 <label className={`grow px-4 py-2 rounded-full cursor-pointer transition-colors ${showOnlyNested ? "bg-slate-700 text-slate-50" : "bg-slate-100 text-slate-700 hover:bg-slate-200"}`}>
                   <input type="radio" name="resultView" checked={showOnlyNested} onChange={() => onFilterChange(true)} className="sr-only" />
-                  Képviselők
+                  {t("representatives-label")}
                 </label>
               </div>
             </div>

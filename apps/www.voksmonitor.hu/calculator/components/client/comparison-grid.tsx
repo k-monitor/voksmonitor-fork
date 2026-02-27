@@ -3,6 +3,7 @@ import { logoCheck, logoCross, logoSlash } from "@kalkulacka-one/design-system/i
 import { IconBadge } from "@kalkulacka-one/design-system/server";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 import type { AnswersViewModel, QuestionsViewModel, ResultViewModel } from "../../view-models";
 import { ComparisonQuestionCard } from "../server";
@@ -58,10 +59,11 @@ export type OrganizationFilter = {
 
 function OrganizationFilter({ organizations, selectedOrganizations, setSelectedOrganizations }: OrganizationFilter) {
   if (organizations.length === 0) return null;
+  const t = useTranslations("calculator.comparison");
 
   return (
     <div className="sticky left-4 max-w-dvw z-10 flex flex-col gap-2">
-      <h3 className="text-sm font-medium">Válassz pártot:</h3>
+      <h3 className="text-sm font-medium">{t("choose-party")}:</h3>
       <div className="relative bg-gray-100 rounded-full p-1 flex flex-wrap gap-1 max-w-[90dvw] sm:w-fit">
         <label
           className={` text-xs px-4 py-2 rounded-full cursor-pointer transition-colors ${
@@ -80,7 +82,7 @@ function OrganizationFilter({ organizations, selectedOrganizations, setSelectedO
             }}
             className="sr-only"
           />
-          Minden szervezet
+          {t("all-organizations")}
         </label>
         {organizations.map((org) => (
           <label
@@ -135,10 +137,12 @@ export type ComparisonHeader = {
 };
 
 function ComparisonHeader({ condensed = false, result, filterNestedCandidates }: ComparisonHeader) {
+  const t = useTranslations("calculator.comparison");
+  
   return (
     <div className={`sticky ${condensed ? "top-[4.75rem]" : "top-32"} gap-8 flex z-40 transition-all duration-500 ease-in-out`}>
       <div className="rounded-xl bg-green-200/60 backdrop-blur-lg border-emerald-50 border-1 z-50 min-h-[65px] sticky left-4 w-[100px] flex-shrink-0 text-center text-xs flex items-center justify-center">
-        Te
+        {t("you")}
       </div>
       {result.matches.map((match, matchIndex) => {
         const nestedMatches = filterNestedCandidates(match.nestedMatches);

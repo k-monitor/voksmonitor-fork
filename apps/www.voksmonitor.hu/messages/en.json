@@ -100,5 +100,81 @@
             "meta-title": "Contact",
             "heading": "Contact"
         }
+    },
+    "calculator": {
+        "introduction": {
+            "para1": "The goal of Voksmonitor is to help voters engage with politics not only through party communications, but to learn about the positions of various political actors (in this case, factions and representatives) on a wide range of urban policy and professional issues. The app matches respondents with the faction or representative whose position is closest to their values based on their answers.",
+            "para2": "Voksmonitor selects 28 issues from the period between the inaugural session of the Budapest General Assembly on October 4, 2024 and May 28, 2025, in which representatives debated, deliberated, and made decisions. The questions were compiled by K-Monitor staff to cover a wide range of decision-making areas before the General Assembly. Our goal was for the questions to reflect meaningful and understandable dilemmas affecting the city's functioning — from transport and housing to green space management, transparency, and urban development.",
+            "para3": "Voksmonitor is a joint project of <kmonitor>K-Monitor</kmonitor> and <kohopolit>KohoVolit.eu</kohopolit>."
+        },
+        "guide": {
+            "agree-label": "Agree",
+            "agree-description": "If a response matches the position of a faction or representative, it is worth one point.",
+            "disagree-label": "Disagree",
+            "disagree-description": "If the response is the opposite, one point is deducted.",
+            "skip-label": "Skip",
+            "skip-description": "If you have no position on the topic or do not wish to answer, you can proceed with the arrow on the right. The question will not be counted in the results.",
+            "important-label": "Important to me",
+            "important-description": "Topics important to the respondent can be marked with a star. These are counted with double weight by the program."
+        },
+        "question": {
+            "guide-button": "Guide",
+            "previous-button": "Previous",
+            "skip-button": "Skip",
+            "next-button": "Next",
+            "agree-button": "I agree",
+            "disagree-button": "I disagree",
+            "important-aria-label": "Important to me"
+        },
+        "review": {
+            "show-results-button": "Show results"
+        },
+        "share": {
+            "title": "Share result",
+            "close-aria-label": "Close",
+            "loading": "Creating link...",
+            "error-create-link": "Failed to create the sharing link.",
+            "share-description": "Share your result with your friends:",
+            "copy-button": "Copy",
+            "copied-button": "Copied",
+            "share-instagram": "Share on Instagram",
+            "share-x": "Share on X",
+            "share-text": "Check out my Voksmonitor result!",
+            "share-text-with-handle": "Check out my {handle} Voksmonitor result!",
+            "privacy-notice": "By sharing your results, you agree to our <privacyLink>privacy policy</privacyLink>.",
+            "filename": "My Voksmonitor result.png"
+        },
+        "comparison": {
+            "heading": "Comparison",
+            "back-aria-label": "Back to results",
+            "close-aria-label": "Close",
+            "choose-party": "Choose party",
+            "all-organizations": "All organizations",
+            "you": "You"
+        },
+        "result": {
+            "comparison-button": "Comparison",
+            "share-button": "Share",
+            "factions-label": "Factions",
+            "representatives-label": "Representatives",
+            "my-result-heading": "My result",
+            "heading": "Comparison",
+            "close-aria-label": "Close",
+            "back-aria-label": "Back"
+        },
+        "donate": {
+            "title": "Support Voksmonitor",
+            "description": "Support the K-Monitor association that creates Voksmonitor!",
+            "button": "Support Voksmonitor",
+            "close-aria-label": "Close"
+        },
+        "match": {
+            "you-candidate-header": "You • Candidate",
+            "expert-respondent-note": "Position determined from public sources; the party did not respond to the questions sent.",
+            "unknown-position": "Position could not be determined",
+            "source": "Source",
+            "no-description": "No description available",
+            "source-link": "link"
+        }
     }
 }

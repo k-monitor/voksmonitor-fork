@@ -1,8 +1,16 @@
 import { render, screen } from "@testing-library/react";
+import { NextIntlClientProvider } from "next-intl";
 import { describe, expect, it } from "vitest";
 
+import huMessages from "@/messages/hu.json";
 import { calculatorViewModel } from "../../../view-models";
 import { Guide } from ".";
+
+const wrapper = ({ children }: { children: React.ReactNode }) => (
+  <NextIntlClientProvider locale="hu" messages={huMessages}>
+    {children}
+  </NextIntlClientProvider>
+);
 
 describe("Guide", () => {
   it("renders", () => {
@@ -16,7 +24,7 @@ describe("Guide", () => {
       methodology: "Test methodology",
     });
 
-    render(<Guide calculator={mockCalculator} />);
+    render(<Guide calculator={mockCalculator} />, { wrapper });
     expect(screen.getByText("Egyetért")).toBeInTheDocument();
   });
 });

@@ -2,6 +2,7 @@ import { ExpandableCard } from "@kalkulacka-one/design-system/client";
 import { Avatar, ProgressBar } from "@kalkulacka-one/design-system/server";
 
 import React, { useState } from "react";
+import { useTranslations } from "next-intl";
 
 import type { CandidateMatchViewModel } from "../../view-models";
 import { useCandidateAnswerComparison, useHasDirectAnswers } from "../../view-models/client/candidate";
@@ -9,6 +10,7 @@ import { useCandidateAnswerComparison, useHasDirectAnswers } from "../../view-mo
 export type MatchCard = CandidateMatchViewModel;
 
 export function MatchCard({ candidate, order, match, respondent }: MatchCard) {
+  const t = useTranslations("calculator.match");
   const hasDirectAnswers = useHasDirectAnswers(candidate.id);
   const answerComparisons = useCandidateAnswerComparison(candidate.id);
   const [expandedSources, setExpandedSources] = useState<Set<string>>(new Set());
@@ -42,8 +44,7 @@ export function MatchCard({ candidate, order, match, respondent }: MatchCard) {
                 {candidate.organization && <p className="text-sm text-gray-500">{candidate.organization}</p>}
                 {respondent === "expert" && (
                   <p className="text-xs text-gray-500">
-                    Postoje podle veřejných zdrojů,
-                    <br /> strana neodpověděla na zaslané otázky.
+                    {t("expert-respondent-note")}
                   </p>
                 )}
               </div>
@@ -62,7 +63,7 @@ export function MatchCard({ candidate, order, match, respondent }: MatchCard) {
                   <div className="grid grid-cols-[1fr_auto] gap-y-2 gap-x-1 auto-rows-auto">
                     {/* Grid Header Row */}
                     <div />
-                    <div>Te • Jelölt</div>
+                    <div>{t("you-candidate-header")}</div>
 
                     {answerComparisons.map((comparison) => (
                       <React.Fragment key={comparison.questionId}>
@@ -90,7 +91,7 @@ export function MatchCard({ candidate, order, match, respondent }: MatchCard) {
                                       <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z" />
                                       </svg>
-                                      <span>Postoj se nepodařilo zjistit</span>
+                                        <span>{t("unknown-position")}</span>
                                     </div>
                                   </div>
                                 </div>
@@ -115,7 +116,7 @@ export function MatchCard({ candidate, order, match, respondent }: MatchCard) {
                                             setExpandedSources(newExpanded);
                                           }}
                                         >
-                                          <span>{source.title || source.url || "Zdroj"}</span>
+                                          <span>{source.title || source.url || t("source")}</span>
                                           <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
                                             <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
                                           </svg>
@@ -124,12 +125,12 @@ export function MatchCard({ candidate, order, match, respondent }: MatchCard) {
 
                                       {isExpanded && (
                                         <blockquote className="text-gray-600 italic pl-4 border-l-2 border-gray-200 text-sm">
-                                          {source.description || "Žádný popis není k dispozici"}
+                                          {source.description || t("no-description")}
                                           {source.url && (
                                             <>
                                               {" "}
                                               <a href={source.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">
-                                                (odkaz)
+                                                ({t("source-link")})
                                               </a>
                                             </>
                                           )}

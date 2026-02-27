@@ -1,6 +1,9 @@
+"use client";
+
 import { Button, Icon } from "@kalkulacka-one/design-system/client";
 
 import { mdiArrowLeft, mdiClose } from "@mdi/js";
+import { useTranslations } from "next-intl";
 
 import { type EmbedContextType, HideOnEmbed } from "../../../../components/client";
 import type { AnswersViewModel, CalculatorViewModel, QuestionsViewModel, ResultViewModel } from "../../../view-models";
@@ -19,6 +22,7 @@ export type ComparisonPage = {
 };
 
 export function ComparisonPage({ embedContext, calculator, result, answers, questions, onPreviousClick, onCloseClick }: ComparisonPage) {
+  const t = useTranslations("calculator.comparison");
   const hasFooter = embedContext.isEmbed && embedContext.config?.attribution !== false;
 
   return (
@@ -30,19 +34,19 @@ export function ComparisonPage({ embedContext, calculator, result, answers, ques
               <AppHeader condensed={condensed} calculator={calculator}>
                 <AppHeader.Right>
                   <HideOnEmbed>
-                    <Button variant="link" color="neutral" size="small" aria-label="Close" onClick={onCloseClick}>
+                    <Button variant="link" color="neutral" size="small" aria-label={t("close-aria-label")} onClick={onCloseClick}>
                       <Icon icon={mdiClose} size="medium" decorative />
                     </Button>
                   </HideOnEmbed>
                 </AppHeader.Right>
                 <AppHeader.Bottom>
                   <AppHeader.BottomLeft condensed={condensed}>
-                    <Button variant="link" color="neutral" size="small" onClick={onPreviousClick} aria-label="Zpět na výsledky">
+                    <Button variant="link" color="neutral" size="small" onClick={onPreviousClick} aria-label={t("back-aria-label")}>
                       <Icon icon={mdiArrowLeft} size="medium" decorative />
                     </Button>
                   </AppHeader.BottomLeft>
                   <AppHeader.BottomMain condensed={condensed}>
-                    <h3 className="font-display font-semibold text-2xl tracking-tight text-gray-700">Összehasonlítás</h3>
+                    <h3 className="font-display font-semibold text-2xl tracking-tight text-gray-700">{t("heading")}</h3>
                   </AppHeader.BottomMain>
                 </AppHeader.Bottom>
               </AppHeader>

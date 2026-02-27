@@ -1,4 +1,7 @@
+"use client";
+
 import { Button } from "@kalkulacka-one/design-system/client";
+import { useTranslations } from "next-intl";
 
 import { NavigationCard } from "./navigation-card";
 
@@ -9,10 +12,11 @@ export type ReviewNavigationCard = {
 };
 
 export function ReviewNavigationCard({ onNextClick }: ReviewNavigationCard) {
+  const t = useTranslations("calculator.review");
   return (
     <NavigationCard>
       <Button color="primary" onClick={onNextClick}>
-        Eredmények mutatása
+        {t("show-results-button")}
       </Button>
     </NavigationCard>
   );
