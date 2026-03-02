@@ -3,7 +3,7 @@ import { prisma } from "@kalkulacka-one/database";
 import type { NextRequest } from "next/server";
 import { z } from "zod";
 
-import { answerSchema } from "../../../../../../../packages/schema/schemas/answer.schema";
+import { answerSchema } from "@kalkulacka-one/schema";
 import { HttpError, InternalServerError, JsonParseError, NotFoundError, UnauthorizedError, ValidationError } from "../../../../../lib/errors";
 import { getSessionCookie, getSessionFromRequest } from "../../../../../lib/session";
 import { getEmbedNameFromRequest } from "../../../../../lib/session/get-embed-name-from-request";

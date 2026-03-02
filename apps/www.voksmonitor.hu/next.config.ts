@@ -72,7 +72,6 @@ const withMDX = createMDX({
   },
 });
 
-export default withMDX(nextConfig);
-
 const withNextIntl = createNextIntlPlugin();
-export default withNextIntl(nextConfig);
+
+export default withNextIntl(withMDX(nextConfig as any));
