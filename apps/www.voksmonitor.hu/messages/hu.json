@@ -1,7 +1,18 @@
 {
   "homepage": {
     "title": "Voksmonitor",
-    "featured-card": {
+    "other-calculators": "Korábbi voksmonitorok",
+    "2026-card": {
+      "tags": {
+        "questionnaire": "Témák leltára",
+        "questions": "28 kérdés",
+        "duration": "10 perc"
+      },
+      "title": "2026 Voksmonitor",
+      "description": "A Voksmonitor célja, hogy a választók a politikával ne csak a pártok kommunikációján keresztül találkozzanak, hanem megismerjék a különböző politikai szereplők (esetünkben frakciók és képviselők) álláspontját a várospolitikai és szakmai kérdések széles körében. Az alkalmazás a válaszadóhoz rendeli azt a frakciót, illetve képviselőt, amelynek álláspontja a válaszok alapján legközelebb áll a kitöltő értékrendjéhez.",
+      "start-button": "Kérdések indítása"
+    },
+    "bp-card": {
       "tags": {
         "questionnaire": "Témák leltára",
         "questions": "28 kérdés",
