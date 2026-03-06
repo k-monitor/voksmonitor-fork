@@ -62,3 +62,26 @@ model CalculatorSessionData {
 
   session CalculatorSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
 }
+
+model DemographySurveyResponse {
+  id        String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  sessionId String @db.Uuid
+
+  calculatorId  String  @db.Uuid
+  calculatorKey String
+
+  gender      String?
+  age         String?
+  residence   String?
+  education   String?
+  resultMatch String?
+  voted2022   String?
+  wouldVote   String?
+
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+
+  @@index([sessionId])
+  @@index([calculatorId])
+  @@index([calculatorKey])
+  @@index([createdAt])
+}

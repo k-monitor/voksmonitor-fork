@@ -140,6 +140,74 @@
     "review": {
       "show-results-button": "Eredmények mutatása"
     },
+    "demography-survey": {
+      "heading": "Kérdőív",
+      "description": "Kérjük, segítsen nekünk néhány anonim kérdés megválaszolásával! A válaszadás önkéntes, és az eredményeket kizárólag kutatási célra használjuk fel.",
+      "close-aria-label": "Bezárás",
+      "skip-button": "Kihagyás",
+      "submit-button": "Küldés és tovább",
+      "submitting-button": "Küldés...",
+      "answered-count": "{count}/{total} megválaszolva",
+      "gender": {
+        "label": "Az Ön neme?",
+        "male": "Férfi",
+        "female": "Nő",
+        "other": "Egyéb",
+        "no-answer": "Nem kívánok válaszolni"
+      },
+      "age": {
+        "label": "Az Ön életkora?",
+        "18-24": "18–24",
+        "25-34": "25–34",
+        "35-44": "35–44",
+        "45-54": "45–54",
+        "55-64": "55–64",
+        "65+": "65+"
+      },
+      "residence": {
+        "label": "Az Ön lakóhelye? (településtípus)",
+        "budapest": "Budapest",
+        "county-seat": "Megyeszékhely / megyei jogú város",
+        "other-city": "Egyéb város",
+        "village": "Község / falu"
+      },
+      "education": {
+        "label": "Legmagasabb iskolai végzettsége?",
+        "primary": "Alapfokú (általános iskola)",
+        "secondary-no-matura": "Középfokú (érettségi nélkül)",
+        "secondary-matura": "Középfokú (érettségivel)",
+        "bachelor": "Felsőfokú (BA/BSc)",
+        "master-or-higher": "Felsőfokú (MA/MSc vagy magasabb)"
+      },
+      "result-match": {
+        "label": "A Voksmonitor eredménye megegyezik a tényleges pártszimpátiájával?",
+        "yes": "Igen",
+        "no": "Nem",
+        "partially": "Részben",
+        "dont-know": "Nem tudom"
+      },
+      "voted-2022": {
+        "label": "2022-ben melyik pártra szavazott?",
+        "fidesz-kdnp": "Fidesz–KDNP",
+        "opposition-2022": "Egységben Magyarországért (ellenzéki összefogás)",
+        "mi-hazank": "Mi Hazánk Mozgalom",
+        "mkkp": "Magyar Kétfarkú Kutya Párt",
+        "other-party": "Egyéb párt",
+        "did-not-vote": "Nem szavaztam / nem voltam jogosult",
+        "no-answer": "Nem kívánok válaszolni"
+      },
+      "would-vote": {
+        "label": "Ha most vasárnap lenne a választás, Ön melyik pártra szavazna?",
+        "fidesz-kdnp": "Fidesz–KDNP",
+        "tisza": "TISZA Párt",
+        "dk": "DK (Demokratikus Koalíció)",
+        "mi-hazank": "Mi Hazánk Mozgalom",
+        "mkkp": "Magyar Kétfarkú Kutya Párt",
+        "other-party": "Egyéb párt",
+        "would-not-vote": "Nem mennék el szavazni",
+        "dont-know": "Nem tudom / nem kívánok válaszolni"
+      }
+    },
     "share": {
       "title": "Eredmény megosztása",
       "close-aria-label": "Bezárás",

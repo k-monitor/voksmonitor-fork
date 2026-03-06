@@ -140,6 +140,74 @@
         "review": {
             "show-results-button": "Show results"
         },
+        "demography-survey": {
+            "heading": "Survey",
+            "description": "Please help us by answering a few anonymous questions! Participation is voluntary, and the results will be used for research purposes only.",
+            "close-aria-label": "Close",
+            "skip-button": "Skip",
+            "submit-button": "Submit and continue",
+            "submitting-button": "Submitting...",
+            "answered-count": "{count}/{total} answered",
+            "gender": {
+                "label": "What is your gender?",
+                "male": "Male",
+                "female": "Female",
+                "other": "Other",
+                "no-answer": "Prefer not to say"
+            },
+            "age": {
+                "label": "What is your age?",
+                "18-24": "18–24",
+                "25-34": "25–34",
+                "35-44": "35–44",
+                "45-54": "45–54",
+                "55-64": "55–64",
+                "65+": "65+"
+            },
+            "residence": {
+                "label": "Where do you live? (settlement type)",
+                "budapest": "Budapest",
+                "county-seat": "County seat / city with county rights",
+                "other-city": "Other city",
+                "village": "Village / town"
+            },
+            "education": {
+                "label": "What is your highest level of education?",
+                "primary": "Primary school",
+                "secondary-no-matura": "Secondary (without Matura)",
+                "secondary-matura": "Secondary (with Matura)",
+                "bachelor": "Bachelor's degree (BA/BSc)",
+                "master-or-higher": "Master's degree or higher (MA/MSc+)"
+            },
+            "result-match": {
+                "label": "Does the Voksmonitor result match your actual party preference?",
+                "yes": "Yes",
+                "no": "No",
+                "partially": "Partially",
+                "dont-know": "I don't know"
+            },
+            "voted-2022": {
+                "label": "Which party did you vote for in 2022?",
+                "fidesz-kdnp": "Fidesz–KDNP",
+                "opposition-2022": "United for Hungary (opposition alliance)",
+                "mi-hazank": "Mi Hazánk Movement",
+                "mkkp": "Hungarian Two-Tailed Dog Party",
+                "other-party": "Other party",
+                "did-not-vote": "Did not vote / was not eligible",
+                "no-answer": "Prefer not to say"
+            },
+            "would-vote": {
+                "label": "If elections were held next Sunday, which party would you vote for?",
+                "fidesz-kdnp": "Fidesz–KDNP",
+                "tisza": "TISZA Party",
+                "dk": "DK (Democratic Coalition)",
+                "mi-hazank": "Mi Hazánk Movement",
+                "mkkp": "Hungarian Two-Tailed Dog Party",
+                "other-party": "Other party",
+                "would-not-vote": "Would not vote",
+                "dont-know": "Don't know / prefer not to say"
+            }
+        },
         "share": {
             "title": "Share result",
             "close-aria-label": "Close",

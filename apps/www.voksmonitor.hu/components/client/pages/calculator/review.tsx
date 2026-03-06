@@ -1,6 +1,8 @@
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 import { ReviewPage as AppReviewPage } from "../../../../calculator/components/server";
+import { DemographySurvey, useShouldShowDemographySurvey } from "../../../../calculator/components/client";
 import { useAnswersStore } from "../../../../calculator/stores/answers";
 import { useAnswers, useCalculator, useQuestions } from "../../../../calculator/view-models";
 import { useAutoSave } from "../../../../hooks/auto-save";
@@ -16,11 +18,26 @@ export function ReviewPageWithRouting({ segments }: { segments: RouteSegments })
   const answersStore = useAnswersStore((state) => state.answers);
   const answers = useAnswers();
   const embed = useEmbed();
+  const showDemographySurvey = useShouldShowDemographySurvey();
+  const [isSurveyOpen, setIsSurveyOpen] = useState(false);
 
   useAutoSave();
 
-  const handleNextClick = () => {
+  const navigateToResult = () => {
     router.push(routes.result(segments));
+  };
+
+  const handleNextClick = () => {
+    if (showDemographySurvey) {
+      setIsSurveyOpen(true);
+    } else {
+      navigateToResult();
+    }
+  };
+
+  const handleSurveyComplete = () => {
+    setIsSurveyOpen(false);
+    navigateToResult();
   };
 
   const handlePreviousClick = () => {
@@ -49,6 +66,13 @@ export function ReviewPageWithRouting({ segments }: { segments: RouteSegments })
         onPreviousClick={handlePreviousClick}
         onCloseClick={handleCloseClick}
       />
+      {isSurveyOpen && (
+        <DemographySurvey
+          calculatorId={calculator.id}
+          calculatorKey={segments.first}
+          onComplete={handleSurveyComplete}
+        />
+      )}
     </div>
   );
 }
