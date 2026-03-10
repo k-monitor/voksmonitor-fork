@@ -28,11 +28,6 @@ export function ResultPageWithRouting({ segments }: { segments: RouteSegments })
   const algorithmMatches = useCalculatedMatches();
   const result = useResult(algorithmMatches, { showOnlyNested });
 
-  result.matches.forEach((match) => {
-    // log names and uuids
-    console.log(`Match: ${match.candidate.displayName} (${match.candidate.id})`);
-  });
-
   const isTopTwoMode = calculator.id === TOP_TWO_CALCULATOR_ID;
   const filteredResult = useMemo(() => {
     if (!isTopTwoMode || showAllParties) return result;
