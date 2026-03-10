@@ -76,7 +76,7 @@ export function ResultPage({ embedContext, result, calculator, onNextClick, onPr
             </div>
           </div>
         )}
-        <div className="grid gap-4">
+        <div className="grid gap-4 mb-6">
           {donateCardPosition === 0 && <DonateCard />}
           {result.matches.map((match, index) => (
             <React.Fragment key={match.candidate.id}>
@@ -107,6 +107,7 @@ export function ResultPage({ embedContext, result, calculator, onNextClick, onPr
             </div>
           )}
         </div>
+        <DonateCard />
       </Layout.Content>
       <Layout.BottomSpacer className={ResultNavigationCard.heightClassNames} />
       {hasFooter && <Layout.BottomSpacer className={`${EmbedFooter.heightClassNames} lg:hidden`} />}
