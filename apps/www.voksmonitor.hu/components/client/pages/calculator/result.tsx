@@ -12,8 +12,8 @@ import { useEmbed } from "../../embed-context-provider";
 
 const TOP_TWO_CALCULATOR_ID = "d16c04e9-b0b5-4c76-ad3e-f03689303a29";
 const TOP_TWO_PARTY_IDS = [
-  "3fa89d65-4380-488b-808d-581e6b3d1837",
-  "f3d6e7f9-5b59-441f-86fd-254e9039b405",
+  "60502fa2-e9c8-4714-98ae-64c747f46694",
+  "5925e066-3c79-40ca-a366-ef7205a90b49",
 ];
 
 export function ResultPageWithRouting({ segments }: { segments: RouteSegments }) {
@@ -27,6 +27,11 @@ export function ResultPageWithRouting({ segments }: { segments: RouteSegments })
 
   const algorithmMatches = useCalculatedMatches();
   const result = useResult(algorithmMatches, { showOnlyNested });
+
+  result.matches.forEach((match) => {
+    // log names and uuids
+    console.log(`Match: ${match.candidate.displayName} (${match.candidate.id})`);
+  });
 
   const isTopTwoMode = calculator.id === TOP_TWO_CALCULATOR_ID;
   const filteredResult = useMemo(() => {
