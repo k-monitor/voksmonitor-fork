@@ -1,17 +1,19 @@
 import { useContext, useEffect, useRef } from "react";
 
-import type { calculateMatches } from "../calculator/lib/result-calculation/calculate-matches";
 import { AnswersStoreContext } from "../calculator/stores/answers";
 import { useCalculator } from "../calculator/view-models";
-import { saveSessionDataWithBeacon } from "../lib/api/session-data";
-import { reportError } from "../lib/monitoring";
+import { saveAnswersToLocalStorage } from "../lib/local-storage";
 
 export type UseAutoSaveOptions = {
-  matches?: ReturnType<typeof calculateMatches>;
   enabled?: boolean;
 };
 
-export function useAutoSave({ matches, enabled = true }: UseAutoSaveOptions = {}) {
+/**
+ * Saves in-progress answers to localStorage whenever the page becomes hidden
+ * or before unload. No data is sent to the server — this is purely local persistence
+ * so the user can resume if they navigate away.
+ */
+export function useAutoSave({ enabled = true }: UseAutoSaveOptions = {}) {
   const store = useContext(AnswersStoreContext);
   const calculator = useCalculator();
   const savingRef = useRef(false);
@@ -19,7 +21,7 @@ export function useAutoSave({ matches, enabled = true }: UseAutoSaveOptions = {}
   useEffect(() => {
     if (!enabled) return;
 
-    const save = async () => {
+    const save = () => {
       if (savingRef.current) return;
       savingRef.current = true;
 
@@ -30,16 +32,7 @@ export function useAutoSave({ matches, enabled = true }: UseAutoSaveOptions = {}
           return;
         }
 
-        if (matches) {
-          const hasValidMatches = matches.some((match) => match.match !== undefined);
-          if (!hasValidMatches) {
-            return;
-          }
-        }
-
-        await saveSessionDataWithBeacon(calculator.id, answers, matches, calculator.version);
-      } catch (error) {
-        reportError(error);
+        saveAnswersToLocalStorage(calculator.id, answers);
       } finally {
         savingRef.current = false;
       }
@@ -58,5 +51,5 @@ export function useAutoSave({ matches, enabled = true }: UseAutoSaveOptions = {}
       document.removeEventListener("visibilitychange", handleVisibilityChange);
       window.removeEventListener("pagehide", handlePageHide);
     };
-  }, [enabled, matches, calculator.id, calculator.version, store]);
+  }, [enabled, calculator.id, store]);
 }

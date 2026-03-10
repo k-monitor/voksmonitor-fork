@@ -7,12 +7,12 @@ import { mdiArrowRight, mdiClose } from "@mdi/js";
 import { useCallback, useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 
-import { getRuntimeSessionId } from "../../../lib/session/runtime-session";
-
 /**
  * Each question uses a translation key prefix under "calculator.demography-survey".
  * The `optionKeys` are the sub-keys whose translated values are shown as buttons,
  * while the key itself is stored in the database (language-independent).
+ *
+ * Categories are deliberately broad to prevent re-identification.
  */
 type DemographyQuestion = {
   id: string;
@@ -103,53 +103,35 @@ function shouldShowSurvey(): boolean {
   }
 }
 
-async function submitDemographySurvey(
-  calculatorId: string,
-  calculatorKey: string,
+/**
+ * Returns the demography answers as a plain object for inclusion
+ * in the anonymous submission payload. No server call is made here —
+ * the data will be submitted together with the calculator answers.
+ */
+export function collectDemographyAnswers(
   answers: Record<string, string>,
-): Promise<void> {
-  const headers: HeadersInit = {
-    "Content-Type": "application/json",
+): Record<string, string | undefined> {
+  return {
+    gender: answers.gender,
+    age: answers.age,
+    residence: answers.residence,
+    education: answers.education,
+    resultMatch: answers.result_match,
+    voted2022: answers.voted_2022,
+    wouldVote: answers.would_vote,
   };
-
-  const sessionId = getRuntimeSessionId();
-  if (sessionId) {
-    headers.Authorization = `Bearer ${sessionId}`;
-  }
-
-  const response = await fetch("/api/demography-survey", {
-    method: "POST",
-    headers,
-    credentials: "include",
-    body: JSON.stringify({
-      calculatorId,
-      calculatorKey,
-      gender: answers.gender,
-      age: answers.age,
-      residence: answers.residence,
-      education: answers.education,
-      resultMatch: answers.result_match,
-      voted2022: answers.voted_2022,
-      wouldVote: answers.would_vote,
-    }),
-  });
-
-  if (!response.ok) {
-    throw new Error(`Failed to submit demography survey: ${response.status}`);
-  }
 }
 
 export type DemographySurveyProps = {
   calculatorId: string;
   calculatorKey: string;
-  /** Called when the user finishes or skips the survey */
-  onComplete: () => void;
+  /** Called when the user finishes or skips the survey, with optional demography data */
+  onComplete: (demography?: Record<string, string | undefined>) => void;
 };
 
 export function DemographySurvey({ calculatorId, calculatorKey, onComplete }: DemographySurveyProps) {
   const t = useTranslations("calculator.demography-survey");
   const [answers, setAnswers] = useState<Record<string, string>>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSelect = useCallback((questionId: string, value: string) => {
     setAnswers((prev) => ({ ...prev, [questionId]: value }));
@@ -164,16 +146,8 @@ export function DemographySurvey({ calculatorId, calculatorKey, onComplete }: De
       return;
     }
 
-    setIsSubmitting(true);
-    try {
-      await submitDemographySurvey(calculatorId, calculatorKey, answers);
-    } catch {
-      // Don't block the user if saving fails
-    } finally {
-      setIsSubmitting(false);
-      onComplete();
-    }
-  }, [answers, answeredCount, calculatorId, calculatorKey, onComplete]);
+    onComplete(collectDemographyAnswers(answers));
+  }, [answers, answeredCount, onComplete]);
 
   const handleSkip = useCallback(() => {
     onComplete();
@@ -251,9 +225,9 @@ export function DemographySurvey({ calculatorId, calculatorKey, onComplete }: De
               <Button variant="link" color="neutral" size="small" onClick={handleSkip}>
                 {t("skip-button")}
               </Button>
-              <Button color="primary" size="small" onClick={handleSubmit} disabled={isSubmitting}>
-                {isSubmitting ? t("submitting-button") : t("submit-button")}
-                {!isSubmitting && <Icon icon={mdiArrowRight} size="small" decorative />}
+              <Button color="primary" size="small" onClick={handleSubmit}>
+                {t("submit-button")}
+                <Icon icon={mdiArrowRight} size="small" decorative />
               </Button>
             </div>
           </div>

@@ -6,8 +6,7 @@ import { DemographySurvey, useShouldShowDemographySurvey } from "../../../../cal
 import { useAnswersStore } from "../../../../calculator/stores/answers";
 import { useAnswers, useCalculator, useQuestions } from "../../../../calculator/view-models";
 import { useAutoSave } from "../../../../hooks/auto-save";
-import { saveSessionData } from "../../../../lib/api/session-data";
-import { reportError } from "../../../../lib/monitoring";
+import { saveAnswersToLocalStorage } from "../../../../lib/local-storage";
 import { type RouteSegments, routes } from "../../../../lib/routing/route-builders";
 import { useEmbed } from "../../../client/embed-context-provider";
 
@@ -35,8 +34,20 @@ export function ReviewPageWithRouting({ segments }: { segments: RouteSegments })
     }
   };
 
-  const handleSurveyComplete = () => {
+  const handleSurveyComplete = (demography?: Record<string, string | undefined>) => {
     setIsSurveyOpen(false);
+    // Store demography data in sessionStorage so the result page can include it
+    // in the anonymous submission
+    if (demography) {
+      try {
+        sessionStorage.setItem(
+          `voksmonitor-demography-${calculator.id}`,
+          JSON.stringify(demography),
+        );
+      } catch {
+        // silently ignore
+      }
+    }
     navigateToResult();
   };
 
@@ -44,13 +55,10 @@ export function ReviewPageWithRouting({ segments }: { segments: RouteSegments })
     router.push(routes.question(segments, questions.total));
   };
 
-  const handleCloseClick = async () => {
-    try {
-      if (answersStore.length > 0) {
-        await saveSessionData(calculator.id, answersStore, undefined, calculator.version);
-      }
-    } catch (error) {
-      reportError(error);
+  const handleCloseClick = () => {
+    // Save progress to localStorage before leaving
+    if (answersStore.length > 0) {
+      saveAnswersToLocalStorage(calculator.id, answersStore);
     }
     router.push("/");
   };

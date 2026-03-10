@@ -5,10 +5,10 @@
     "2026-card": {
       "tags": {
         "questionnaire": "Témák leltára",
-        "questions": "28 kérdés",
-        "duration": "10 perc"
+        "questions": "40 kérdés",
+        "duration": "20 perc"
       },
-      "title": "2026 Voksmonitor",
+      "title": "Országgyűlési Voksmonitor",
       "description": "A Voksmonitor célja, hogy a választók a politikával ne csak a pártok kommunikációján keresztül találkozzanak, hanem megismerjék a különböző politikai szereplők (esetünkben frakciók és képviselők) álláspontját a várospolitikai és szakmai kérdések széles körében. Az alkalmazás a válaszadóhoz rendeli azt a frakciót, illetve képviselőt, amelynek álláspontja a válaszok alapján legközelebb áll a kitöltő értékrendjéhez.",
       "start-button": "Kérdések indítása"
     },
@@ -239,7 +239,9 @@
       "my-result-heading": "Saját eredményem",
       "heading": "Összehasonlítás",
       "close-aria-label": "Bezárás",
-      "back-aria-label": "Vissza"
+      "back-aria-label": "Vissza",
+      "show-all-parties": "Összes párt mutatása",
+      "show-fewer-parties": "Kevesebb párt mutatása"
     },
     "donate": {
       "title": "Voksmonitor támogatása",

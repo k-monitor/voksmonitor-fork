@@ -19,13 +19,14 @@ export type ResultPage = {
   onNextClick: () => void;
   onPreviousClick: () => void;
   onCloseClick: () => void;
-  onShareClick: () => void;
   showOnlyNested: boolean;
   onFilterChange: (showOnlyNested: boolean) => void;
   donateCardPosition: number | false;
+  showAllParties?: boolean;
+  onShowAllPartiesChange?: (showAll: boolean) => void;
 };
 
-export function ResultPage({ embedContext, result, calculator, onNextClick, onPreviousClick, onCloseClick, onShareClick, showOnlyNested, onFilterChange, donateCardPosition }: ResultPage) {
+export function ResultPage({ embedContext, result, calculator, onNextClick, onPreviousClick, onCloseClick, showOnlyNested, onFilterChange, donateCardPosition, showAllParties, onShowAllPartiesChange }: ResultPage) {
   const t = useTranslations("calculator.result");
   const hasNestedCandidates = result.matches.some((match) => match.nestedMatches && match.nestedMatches.length > 0);
   const shouldShowToggleComputed = hasNestedCandidates || showOnlyNested;
@@ -83,12 +84,34 @@ export function ResultPage({ embedContext, result, calculator, onNextClick, onPr
               {donateCardPosition !== false && donateCardPosition > 0 && index === donateCardPosition - 1 && <DonateCard />}
             </React.Fragment>
           ))}
+          {onShowAllPartiesChange && !showAllParties && (
+            <div className="flex justify-center">
+              <Button
+                variant="outline"
+                color="neutral"
+                onClick={() => onShowAllPartiesChange(true)}
+              >
+                {t("show-all-parties")}
+              </Button>
+            </div>
+          )}
+          {onShowAllPartiesChange && showAllParties && (
+            <div className="flex justify-center">
+              <Button
+                variant="outline"
+                color="neutral"
+                onClick={() => onShowAllPartiesChange(false)}
+              >
+                {t("show-fewer-parties")}
+              </Button>
+            </div>
+          )}
         </div>
       </Layout.Content>
       <Layout.BottomSpacer className={ResultNavigationCard.heightClassNames} />
       {hasFooter && <Layout.BottomSpacer className={`${EmbedFooter.heightClassNames} lg:hidden`} />}
       <Layout.BottomNavigation className={hasFooter ? `${EmbedFooter.marginBottomClassNames} lg:mb-0` : undefined}>
-        <ResultNavigationCard onNextClick={onNextClick} onShareClick={onShareClick} />
+        <ResultNavigationCard onNextClick={onNextClick} />
       </Layout.BottomNavigation>
       <Layout.Footer>{embedContext.isEmbed && <EmbedFooter attribution={embedContext.config?.attribution} />}</Layout.Footer>
     </Layout>

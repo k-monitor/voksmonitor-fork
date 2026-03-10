@@ -5,8 +5,7 @@ import { QuestionPage as AppQuestionPage } from "../../../../calculator/componen
 import { useAnswersStore } from "../../../../calculator/stores/answers";
 import { useAnswer, useCalculator, useQuestions } from "../../../../calculator/view-models";
 import { useAutoSave } from "../../../../hooks/auto-save";
-import { saveSessionData } from "../../../../lib/api/session-data";
-import { reportError } from "../../../../lib/monitoring";
+import { saveAnswersToLocalStorage } from "../../../../lib/local-storage";
 import { type RouteSegments, routes } from "../../../../lib/routing/route-builders";
 import { useEmbed } from "../../../client/embed-context-provider";
 
@@ -52,13 +51,9 @@ export function QuestionPageWithRouting({ current, segments }: { current: number
     }
   };
 
-  const handleCloseClick = async () => {
-    try {
-      if (answersStore.length > 0) {
-        await saveSessionData(calculator.id, answersStore, undefined, calculator.version);
-      }
-    } catch (error) {
-      reportError(error);
+  const handleCloseClick = () => {
+    if (answersStore.length > 0) {
+      saveAnswersToLocalStorage(calculator.id, answersStore);
     }
     router.push("/");
   };

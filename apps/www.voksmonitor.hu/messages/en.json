@@ -5,10 +5,10 @@
         "2026-card": {
             "tags": {
                 "questionnaire": "Topic inventory",
-                "questions": "28 questions",
-                "duration": "10 minutes"
+                "questions": "40 questions",
+                "duration": "20 minutes"
             },
-            "title": "Budapest General Assembly Voksmonitor",
+            "title": "Parliamentary Election Voksmonitor",
             "description": "The goal of Voksmonitor is to help voters engage with politics not only through party communications, but to learn about the positions of various political actors (in this case, factions and representatives) on a wide range of urban policy and professional issues. The app matches respondents with the faction or representative whose position is closest to their values based on their answers.",
             "start-button": "Start questions"
         },
@@ -239,7 +239,9 @@
             "my-result-heading": "My result",
             "heading": "Comparison",
             "close-aria-label": "Close",
-            "back-aria-label": "Back"
+            "back-aria-label": "Back",
+            "show-all-parties": "Show all parties",
+            "show-fewer-parties": "Show fewer parties"
         },
         "donate": {
             "title": "Support Voksmonitor",
