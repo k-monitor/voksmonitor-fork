@@ -9,7 +9,7 @@ import { useTranslations } from "next-intl";
 import type { AnswerViewModel } from "../../../view-models";
 import { NavigationCard } from "../../server/components/navigation-card";
 
-const HEIGHT = "h-[138px]";
+const HEIGHT = "h-[320px] sm:h-[170px]";
 
 export type QuestionNavigationCard = {
   current: number;
