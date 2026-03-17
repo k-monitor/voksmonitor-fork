@@ -256,6 +256,18 @@
       "source": "Source",
       "no-description": "No description available",
       "source-link": "link"
+    },
+    "feedback-survey": {
+      "heading": "Feedback",
+      "description": "Please rate how helpful Voksmonitor was for you!",
+      "close-aria-label": "Close",
+      "helpfulness-label": "How helpful was Voksmonitor?",
+      "star-aria-label": "{value} star",
+      "scale-low": "Not helpful",
+      "scale-high": "Very helpful",
+      "skip-button": "Skip",
+      "submit-button": "Submit",
+      "submitting-button": "Submitting..."
     }
   },
   "share-page": {

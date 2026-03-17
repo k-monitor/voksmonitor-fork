@@ -84,3 +84,17 @@ model DemographySurveyResponse {
   @@index([calculatorKey])
   @@index([createdAt])
 }
+
+model FeedbackSurveyResponse {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+
+  calculatorId  String @db.Uuid
+  calculatorKey String
+  helpfulness   Int
+
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+
+  @@index([calculatorId])
+  @@index([calculatorKey])
+  @@index([createdAt])
+}

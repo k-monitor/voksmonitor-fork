@@ -27,9 +27,9 @@ export default async function SharePage({ searchParams }: { searchParams: Promis
     return <SharePageClient matches={[]} calculatorKey="" />;
   }
 
-  const calcParts = calcParam.split("/");
-  const key = calcParts[0];
-  const group = calcParts.length > 1 ? calcParts[1] : undefined;
+  const slashIndex = calcParam.indexOf("/");
+  const key = slashIndex === -1 ? calcParam : calcParam.slice(0, slashIndex);
+  const group = slashIndex === -1 ? undefined : calcParam.slice(slashIndex + 1);
 
   const calculatorData = await loadCalculatorData({ key, group });
   const { candidates, persons, organizations } = calculatorData.data;

@@ -256,6 +256,18 @@
       "source": "Forrás",
       "no-description": "Nincs elérhető leírás",
       "source-link": "link"
+    },
+    "feedback-survey": {
+      "heading": "Visszajelzés",
+      "description": "Kérjük, értékelje, mennyire volt hasznos az Ön számára a Voksmonitor!",
+      "close-aria-label": "Bezárás",
+      "helpfulness-label": "Mennyire volt hasznos a Voksmonitor?",
+      "star-aria-label": "{value} csillag",
+      "scale-low": "Nem volt hasznos",
+      "scale-high": "Nagyon hasznos",
+      "skip-button": "Kihagyás",
+      "submit-button": "Küldés",
+      "submitting-button": "Küldés..."
     }
   },
   "share-page": {

@@ -1,6 +1,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 
+import { FeedbackSurvey, useShouldShowFeedbackSurvey } from "../../../../calculator/components/client";
 import { ResultPage as AppResultPage } from "../../../../calculator/components/server";
 import { useAnswersStore } from "../../../../calculator/stores/answers";
 import { useCalculatedMatches, useCalculator, useResult } from "../../../../calculator/view-models";
@@ -16,11 +17,13 @@ const TOP_TWO_PARTY_IDS = ["cf177ab5-1e70-40a7-afa0-afb2089259f0", "af78f800-49d
 export function ResultPageWithRouting({ segments }: { segments: RouteSegments }) {
   const [showOnlyNested, setShowOnlyNested] = useState(false);
   const [showAllParties, setShowAllParties] = useState(false);
+  const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
   const router = useRouter();
   const calculator = useCalculator();
   const embed = useEmbed();
   const answersStore = useAnswersStore((state) => state.answers);
   const submittedRef = useRef(false);
+  const showFeedbackSurvey = useShouldShowFeedbackSurvey(calculator.id);
 
   const algorithmMatches = useCalculatedMatches();
   const result = useResult(algorithmMatches, { showOnlyNested });
@@ -76,8 +79,21 @@ export function ResultPageWithRouting({ segments }: { segments: RouteSegments })
     router.push(routes.review(segments));
   };
 
-  const handleNextClick = () => {
+  const navigateToComparison = () => {
     router.push(routes.comparison(segments));
+  };
+
+  const handleNextClick = () => {
+    if (showFeedbackSurvey) {
+      setIsFeedbackOpen(true);
+    } else {
+      navigateToComparison();
+    }
+  };
+
+  const handleFeedbackComplete = () => {
+    setIsFeedbackOpen(false);
+    navigateToComparison();
   };
 
   const handleCloseClick = () => {
@@ -106,20 +122,25 @@ export function ResultPageWithRouting({ segments }: { segments: RouteSegments })
 
   const donateCardPosition = embed.isEmbed ? (embed.config?.donateCard ?? 1) : 5;
 
+  const calculatorKey = segments.second ? `${segments.first}/${segments.second}` : segments.first;
+
   return (
-    <AppResultPage
-      embedContext={embed}
-      calculator={calculator}
-      result={filteredResult}
-      onNextClick={handleNextClick}
-      onPreviousClick={handlePreviousClick}
-      onCloseClick={handleCloseClick}
-      shareUrl={shareUrl}
-      showOnlyNested={showOnlyNested}
-      onFilterChange={setShowOnlyNested}
-      donateCardPosition={donateCardPosition}
-      showAllParties={showAllParties}
-      onShowAllPartiesChange={isTopTwoMode ? setShowAllParties : undefined}
-    />
+    <div>
+      <AppResultPage
+        embedContext={embed}
+        calculator={calculator}
+        result={filteredResult}
+        onNextClick={handleNextClick}
+        onPreviousClick={handlePreviousClick}
+        onCloseClick={handleCloseClick}
+        shareUrl={shareUrl}
+        showOnlyNested={showOnlyNested}
+        onFilterChange={setShowOnlyNested}
+        donateCardPosition={donateCardPosition}
+        showAllParties={showAllParties}
+        onShowAllPartiesChange={isTopTwoMode ? setShowAllParties : undefined}
+      />
+      {isFeedbackOpen && <FeedbackSurvey calculatorId={calculator.id} calculatorKey={calculatorKey} onComplete={handleFeedbackComplete} />}
+    </div>
   );
 }
