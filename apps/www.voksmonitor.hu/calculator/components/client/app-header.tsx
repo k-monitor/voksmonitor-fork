@@ -124,10 +124,11 @@ export function AppHeaderRight({ children }: AppHeaderRight) {
 
 type AppHeaderBottom = {
   children: ReactNode;
+  className?: string;
 };
 
-export function AppHeaderBottom({ children }: AppHeaderBottom) {
-  return <div className="grid grid-flow-col items-center gap-2">{children}</div>;
+export function AppHeaderBottom({ children, className }: AppHeaderBottom) {
+  return <div className={twMerge("flex items-center gap-2", className)}>{children}</div>;
 }
 
 export type AppHeaderBottomLeft = {

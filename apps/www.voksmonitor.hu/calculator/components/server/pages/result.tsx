@@ -10,7 +10,6 @@ import { type EmbedContextType, HideOnEmbed } from "../../../../components/clien
 import type { CalculatorViewModel, ResultViewModel } from "../../../view-models";
 import { AppHeader, DonateCard, MatchCard, WithCondenseOnScroll } from "../../client";
 import { EmbedFooter, Layout } from "../components";
-import { ResultNavigationCard } from "../components/result-navigation-card";
 
 export type ResultPage = {
   embedContext: EmbedContextType;
@@ -57,7 +56,7 @@ export function ResultPage({
                   </Button>
                 </HideOnEmbed>
               </AppHeader.Right>
-              <AppHeader.Bottom>
+              <AppHeader.Bottom className="w-full">
                 <AppHeader.BottomLeft condensed={condensed}>
                   <Button variant="link" color="neutral" size="small" onClick={onPreviousClick} aria-label={t("back-aria-label")}>
                     <Icon icon={mdiArrowLeft} size="medium" decorative />
@@ -66,6 +65,11 @@ export function ResultPage({
                 <AppHeader.BottomMain condensed={condensed}>
                   <h3 className="font-display font-semibold text-2xl tracking-tight text-gray-700">{t("heading")}</h3>
                 </AppHeader.BottomMain>
+                <div className="ml-auto">
+                  <Button variant="fill" color="neutral" size="small" onClick={onNextClick}>
+                    {t("comparison-button")}
+                  </Button>
+                </div>
               </AppHeader.Bottom>
             </AppHeader>
           )}
@@ -113,11 +117,7 @@ export function ResultPage({
         </div>
         <DonateCard />
       </Layout.Content>
-      <Layout.BottomSpacer className={ResultNavigationCard.heightClassNames} />
       {hasFooter && <Layout.BottomSpacer className={`${EmbedFooter.heightClassNames} lg:hidden`} />}
-      <Layout.BottomNavigation className={hasFooter ? `${EmbedFooter.marginBottomClassNames} lg:mb-0` : undefined}>
-        <ResultNavigationCard onNextClick={onNextClick} />
-      </Layout.BottomNavigation>
       <Layout.Footer>{embedContext.isEmbed && <EmbedFooter attribution={embedContext.config?.attribution} />}</Layout.Footer>
     </Layout>
   );
