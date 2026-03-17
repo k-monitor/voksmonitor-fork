@@ -84,6 +84,26 @@ export function ResultPageWithRouting({ segments }: { segments: RouteSegments })
     router.push("/");
   };
 
+  const shareUrl = useMemo(() => {
+    const params = new URLSearchParams();
+    const calculatorKey = segments.second ? `${segments.first}/${segments.second}` : segments.first;
+    params.set("calc", calculatorKey);
+    for (const match of filteredResult.matches) {
+      if (match.candidate.displayName && match.match !== undefined) {
+        const slug = match.candidate.displayName
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .replace(/\s+/g, "-");
+        params.set(slug, String(Math.round(match.match)));
+      }
+    }
+    if (typeof window !== "undefined") {
+      return `${window.location.origin}/share?${params.toString()}`;
+    }
+    return `/share?${params.toString()}`;
+  }, [filteredResult.matches, segments]);
+
   const donateCardPosition = embed.isEmbed ? (embed.config?.donateCard ?? 1) : 5;
 
   return (
@@ -94,6 +114,7 @@ export function ResultPageWithRouting({ segments }: { segments: RouteSegments })
       onNextClick={handleNextClick}
       onPreviousClick={handlePreviousClick}
       onCloseClick={handleCloseClick}
+      shareUrl={shareUrl}
       showOnlyNested={showOnlyNested}
       onFilterChange={setShowOnlyNested}
       donateCardPosition={donateCardPosition}

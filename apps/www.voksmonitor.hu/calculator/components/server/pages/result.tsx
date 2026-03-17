@@ -8,7 +8,7 @@ import React from "react";
 
 import { type EmbedContextType, HideOnEmbed } from "../../../../components/client";
 import type { CalculatorViewModel, ResultViewModel } from "../../../view-models";
-import { AppHeader, DonateCard, MatchCard, WithCondenseOnScroll } from "../../client";
+import { AppHeader, DonateCard, MatchCard, ShareDropdown, WithCondenseOnScroll } from "../../client";
 import { EmbedFooter, Layout } from "../components";
 
 export type ResultPage = {
@@ -18,6 +18,7 @@ export type ResultPage = {
   onNextClick: () => void;
   onPreviousClick: () => void;
   onCloseClick: () => void;
+  shareUrl?: string;
   showOnlyNested: boolean;
   onFilterChange: (showOnlyNested: boolean) => void;
   donateCardPosition: number | false;
@@ -37,6 +38,7 @@ export function ResultPage({
   donateCardPosition,
   showAllParties,
   onShowAllPartiesChange,
+  shareUrl,
 }: ResultPage) {
   const t = useTranslations("calculator.result");
   const hasNestedCandidates = result.matches.some((match) => match.nestedMatches && match.nestedMatches.length > 0);
@@ -65,7 +67,8 @@ export function ResultPage({
                 <AppHeader.BottomMain condensed={condensed}>
                   <h3 className="font-display font-semibold text-2xl tracking-tight text-gray-700">{t("heading")}</h3>
                 </AppHeader.BottomMain>
-                <div className="ml-auto">
+                <div className="ml-auto flex items-center gap-2">
+                  {shareUrl && <ShareDropdown shareUrl={shareUrl} />}
                   <Button variant="fill" color="neutral" size="small" onClick={onNextClick}>
                     {t("comparison-button")}
                   </Button>

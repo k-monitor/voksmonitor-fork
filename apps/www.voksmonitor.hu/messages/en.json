@@ -231,6 +231,9 @@
     "result": {
       "comparison-button": "Comparison",
       "share-button": "Share",
+      "share-copy-link": "Copy link",
+      "share-copied": "Copied!",
+      "share-title": "Check out my Voksmonitor result!",
       "factions-label": "Factions",
       "representatives-label": "Representatives",
       "my-result-heading": "My result",
@@ -254,5 +257,10 @@
       "no-description": "No description available",
       "source-link": "link"
     }
+  },
+  "share-page": {
+    "heading": "Shared result",
+    "no-results": "No results found.",
+    "cta-button": "Try it yourself!"
   }
 }

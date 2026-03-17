@@ -231,6 +231,9 @@
     "result": {
       "comparison-button": "Összehasonlítás",
       "share-button": "Megosztás",
+      "share-copy-link": "Link másolása",
+      "share-copied": "Másolva!",
+      "share-title": "Nézd meg az eredményemet a Voksmonitoron!",
       "factions-label": "Frakciók",
       "representatives-label": "Képviselők",
       "my-result-heading": "Saját eredményem",
@@ -254,5 +257,10 @@
       "no-description": "Nincs elérhető leírás",
       "source-link": "link"
     }
+  },
+  "share-page": {
+    "heading": "Megosztott eredmény",
+    "no-results": "Nem található eredmény.",
+    "cta-button": "Töltsd ki te is!"
   }
 }
