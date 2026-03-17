@@ -147,7 +147,9 @@
       "close-aria-label": "Bezárás",
       "skip-button": "Kihagyás",
       "submit-button": "Küldés és tovább",
+      "confirm-empty-submit": "Nem válaszolt minden kérdésre. Biztosan üresen szeretné beküldeni a kérdőívet?",
       "submitting-button": "Küldés...",
+      "incomplete-warning": "Kérjük, válaszoljon minden kérdésre, vagy válassza a Kihagyás gombot a továbblépéshez.",
       "answered-count": "{count}/{total} megválaszolva",
       "gender": {
         "label": "Az Ön neme?",

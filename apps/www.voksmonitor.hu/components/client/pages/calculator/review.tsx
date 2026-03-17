@@ -17,7 +17,7 @@ export function ReviewPageWithRouting({ segments }: { segments: RouteSegments })
   const answersStore = useAnswersStore((state) => state.answers);
   const answers = useAnswers();
   const embed = useEmbed();
-  const showDemographySurvey = useShouldShowDemographySurvey();
+  const showDemographySurvey = useShouldShowDemographySurvey(calculator.id);
   const [isSurveyOpen, setIsSurveyOpen] = useState(false);
 
   useAutoSave();

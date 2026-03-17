@@ -147,7 +147,9 @@
       "close-aria-label": "Close",
       "skip-button": "Skip",
       "submit-button": "Submit and continue",
+      "confirm-empty-submit": "You have not completed all questions. Are you sure you want to submit the survey empty?",
       "submitting-button": "Submitting...",
+      "incomplete-warning": "Please answer all questions or use Skip to continue without the survey.",
       "answered-count": "{count}/{total} answered",
       "gender": {
         "label": "What is your gender?",

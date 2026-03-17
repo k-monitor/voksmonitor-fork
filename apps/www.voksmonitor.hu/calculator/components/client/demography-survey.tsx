@@ -56,19 +56,45 @@ const DEMOGRAPHY_QUESTIONS: DemographyQuestion[] = [
 /** Probability (0–1) that a user sees the survey */
 const SURVEY_SHOW_PROBABILITY = 1.0;
 
-const STORAGE_KEY = "voksmonitor-demography-shown";
+const SURVEY_SESSION_KEY = "voksmonitor-demography-shown";
+const COMPLETED_KEY_PREFIX = "voksmonitor-demography-completed-";
 
-function shouldShowSurvey(): boolean {
+function completedKey(calculatorId: string): string {
+  return `${COMPLETED_KEY_PREFIX}${calculatorId}`;
+}
+
+function isDemographySurveyCompleted(calculatorId: string): boolean {
   if (typeof window === "undefined") return false;
 
   try {
-    const stored = sessionStorage.getItem(STORAGE_KEY);
+    return localStorage.getItem(completedKey(calculatorId)) === "true";
+  } catch {
+    return false;
+  }
+}
+
+function markDemographySurveyCompleted(calculatorId: string): void {
+  if (typeof window === "undefined") return;
+
+  try {
+    localStorage.setItem(completedKey(calculatorId), "true");
+  } catch {
+    // localStorage may be full or disabled — silently ignore
+  }
+}
+
+function shouldShowSurvey(calculatorId: string): boolean {
+  if (typeof window === "undefined") return false;
+  if (isDemographySurveyCompleted(calculatorId)) return false;
+
+  try {
+    const stored = sessionStorage.getItem(SURVEY_SESSION_KEY);
     if (stored === "yes") return true;
     if (stored === "no") return false;
 
     // First check – roll the dice
     const show = Math.random() < SURVEY_SHOW_PROBABILITY;
-    sessionStorage.setItem(STORAGE_KEY, show ? "yes" : "no");
+    sessionStorage.setItem(SURVEY_SESSION_KEY, show ? "yes" : "no");
     return show;
   } catch {
     return false;
@@ -109,14 +135,19 @@ export function DemographySurvey({ calculatorId, calculatorKey, onComplete }: De
   const answeredCount = Object.keys(answers).length;
   const totalCount = DEMOGRAPHY_QUESTIONS.length;
 
-  const handleSubmit = useCallback(async () => {
-    if (answeredCount === 0) {
+  const handleSubmit = useCallback(() => {
+    if (answeredCount < totalCount) {
+      const shouldSubmitEmpty = window.confirm(t("confirm-empty-submit"));
+      if (!shouldSubmitEmpty) return;
+
+      markDemographySurveyCompleted(calculatorId);
       onComplete();
       return;
     }
 
+    markDemographySurveyCompleted(calculatorId);
     onComplete(collectDemographyAnswers(answers));
-  }, [answers, answeredCount, onComplete]);
+  }, [answers, answeredCount, calculatorId, onComplete, t, totalCount]);
 
   const handleSkip = useCallback(() => {
     onComplete();
@@ -189,12 +220,12 @@ export function DemographySurvey({ calculatorId, calculatorKey, onComplete }: De
  * Hook that determines whether the demography survey should be shown
  * to the current user. Returns a stable boolean per session.
  */
-export function useShouldShowDemographySurvey(): boolean {
+export function useShouldShowDemographySurvey(calculatorId: string): boolean {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    setShow(shouldShowSurvey());
-  }, []);
+    setShow(shouldShowSurvey(calculatorId));
+  }, [calculatorId]);
 
   return show;
 }
