@@ -29,7 +29,7 @@ const DEMOGRAPHY_QUESTIONS: DemographyQuestion[] = [
   {
     id: "age",
     translationKey: "age",
-    optionKeys: ["18-24", "25-34", "35-44", "45-54", "55-64", "65+"],
+    optionKeys: ["0-18", "18-24", "25-34", "35-44", "45-54", "55-64", "65+"],
   },
   {
     id: "residence",
