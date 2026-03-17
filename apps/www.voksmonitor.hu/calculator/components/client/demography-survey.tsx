@@ -4,8 +4,8 @@ import { Button, Icon } from "@kalkulacka-one/design-system/client";
 import { Card } from "@kalkulacka-one/design-system/server";
 
 import { mdiArrowRight, mdiClose } from "@mdi/js";
-import { useCallback, useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import { useCallback, useEffect, useState } from "react";
 
 /**
  * Each question uses a translation key prefix under "calculator.demography-survey".
@@ -39,45 +39,17 @@ const DEMOGRAPHY_QUESTIONS: DemographyQuestion[] = [
   {
     id: "education",
     translationKey: "education",
-    optionKeys: [
-      "primary",
-      "secondary-no-matura",
-      "secondary-matura",
-      "bachelor",
-      "master-or-higher",
-    ],
-  },
-  {
-    id: "result_match",
-    translationKey: "result-match",
-    optionKeys: ["yes", "no", "partially", "dont-know"],
+    optionKeys: ["primary", "secondary-no-matura", "secondary-matura", "bachelor", "master-or-higher"],
   },
   {
     id: "voted_2022",
     translationKey: "voted-2022",
-    optionKeys: [
-      "fidesz-kdnp",
-      "opposition-2022",
-      "mi-hazank",
-      "mkkp",
-      "other-party",
-      "did-not-vote",
-      "no-answer",
-    ],
+    optionKeys: ["fidesz-kdnp", "opposition-2022", "mi-hazank", "mkkp", "other-party", "did-not-vote", "no-answer"],
   },
   {
     id: "would_vote",
     translationKey: "would-vote",
-    optionKeys: [
-      "fidesz-kdnp",
-      "tisza",
-      "dk",
-      "mi-hazank",
-      "mkkp",
-      "other-party",
-      "would-not-vote",
-      "dont-know",
-    ],
+    optionKeys: ["fidesz-kdnp", "tisza", "dk", "mi-hazank", "mkkp", "other-party", "would-not-vote", "dont-know"],
   },
 ];
 
@@ -108,15 +80,12 @@ function shouldShowSurvey(): boolean {
  * in the anonymous submission payload. No server call is made here —
  * the data will be submitted together with the calculator answers.
  */
-export function collectDemographyAnswers(
-  answers: Record<string, string>,
-): Record<string, string | undefined> {
+export function collectDemographyAnswers(answers: Record<string, string>): Record<string, string | undefined> {
   return {
     gender: answers.gender,
     age: answers.age,
     residence: answers.residence,
     education: answers.education,
-    resultMatch: answers.result_match,
     voted2022: answers.voted_2022,
     wouldVote: answers.would_vote,
   };
@@ -155,19 +124,10 @@ export function DemographySurvey({ calculatorId, calculatorKey, onComplete }: De
 
   return (
     <div className="fixed inset-0 z-[100] flex items-start justify-center overflow-y-auto bg-black/40 backdrop-blur-sm p-4 sm:p-8">
-      <Card
-        corner="bottomRight"
-        className="relative w-full max-w-xl bg-white shadow-xl rounded-2xl my-8"
-      >
+      <Card corner="bottomRight" className="relative w-full max-w-xl bg-white shadow-xl rounded-2xl my-8">
         {/* Close / skip button */}
         <div className="absolute top-3 right-3 z-10">
-          <Button
-            variant="link"
-            color="neutral"
-            size="small"
-            aria-label={t("close-aria-label")}
-            onClick={handleSkip}
-          >
+          <Button variant="link" color="neutral" size="small" aria-label={t("close-aria-label")} onClick={handleSkip}>
             <Icon icon={mdiClose} size="medium" decorative />
           </Button>
         </div>
@@ -175,21 +135,15 @@ export function DemographySurvey({ calculatorId, calculatorKey, onComplete }: De
         <div className="p-5 sm:p-6 grid gap-5">
           {/* Header */}
           <div>
-            <h2 className="font-display font-semibold text-xl sm:text-2xl tracking-tight text-gray-800">
-              {t("heading")}
-            </h2>
-            <p className="text-sm text-gray-500 mt-1">
-              {t("description")}
-            </p>
+            <h2 className="font-display font-semibold text-xl sm:text-2xl tracking-tight text-gray-800">{t("heading")}</h2>
+            <p className="text-sm text-gray-500 mt-1">{t("description")}</p>
           </div>
 
           {/* Questions */}
           <div className="grid gap-5">
             {DEMOGRAPHY_QUESTIONS.map((q) => (
               <fieldset key={q.id} className="grid gap-2">
-                <legend className="font-medium text-sm text-gray-700">
-                  {t(`${q.translationKey}.label`)}
-                </legend>
+                <legend className="font-medium text-sm text-gray-700">{t(`${q.translationKey}.label`)}</legend>
                 <div className="flex flex-wrap gap-2">
                   {q.optionKeys.map((optionKey) => {
                     const isSelected = answers[q.id] === optionKey;
@@ -200,11 +154,7 @@ export function DemographySurvey({ calculatorId, calculatorKey, onComplete }: De
                         onClick={() => handleSelect(q.id, optionKey)}
                         className={`
                           inline-flex items-center px-3 py-1.5 text-sm rounded-full border transition-all cursor-pointer
-                          ${
-                            isSelected
-                              ? "border-gray-600 bg-gray-700 text-white"
-                              : "border-gray-300 bg-white text-gray-700 hover:bg-gray-50"
-                          }
+                          ${isSelected ? "border-gray-600 bg-gray-700 text-white" : "border-gray-300 bg-white text-gray-700 hover:bg-gray-50"}
                         `}
                       >
                         {t(`${q.translationKey}.${optionKey}`)}
@@ -218,9 +168,7 @@ export function DemographySurvey({ calculatorId, calculatorKey, onComplete }: De
 
           {/* Footer */}
           <div className="flex items-center justify-between pt-2 border-t border-gray-100">
-            <span className="text-xs text-gray-400">
-              {t("answered-count", { count: answeredCount, total: totalCount })}
-            </span>
+            <span className="text-xs text-gray-400">{t("answered-count", { count: answeredCount, total: totalCount })}</span>
             <div className="flex gap-2">
               <Button variant="link" color="neutral" size="small" onClick={handleSkip}>
                 {t("skip-button")}
