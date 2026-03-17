@@ -44,7 +44,8 @@ export const createCalculatorStore = (calculatorData: CalculatorData, sessionId?
     ...calculatorData,
     data: {
       ...calculatorData.data,
-      questions: shuffle(calculatorData.data.questions, seed),
+      questions: calculatorData.data.questions,
+      // questions: shuffle(calculatorData.data.questions, seed),
     },
   };
 
