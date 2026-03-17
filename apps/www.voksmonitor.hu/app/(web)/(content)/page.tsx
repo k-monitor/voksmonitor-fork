@@ -22,6 +22,7 @@ export default function Page() {
         <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8 pt-12 md:pt-16 lg:pt-20 pb-4 md:pb-6 flex-1">
           {/* Heading */}
           <h1 className="font-display ko:font-display font-bold tracking-tighter text-gray-700 text-4xl md:text-5xl lg:text-6xl text-center">{t("title")}</h1>
+          <p className="mt-3 text-center text-lg font-semibold text-gray-600">{t("date")}</p>
 
           {/* Featured cards */}
           <div className="mt-10 md:mt-12 flex justify-center">
