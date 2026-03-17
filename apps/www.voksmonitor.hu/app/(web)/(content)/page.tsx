@@ -3,8 +3,8 @@ import { Card } from "@kalkulacka-one/design-system/server";
 
 import Image from "next/image";
 import Link from "next/link";
-import { useId } from "react";
 import { useTranslations } from "next-intl";
+import { useId } from "react";
 
 import { Background } from "../../../components/Background";
 import { SubscribeForm } from "../../../components/client";
@@ -37,7 +37,7 @@ export default function Page() {
                   <h2 className="mt-4 font-display ko:font-display font-bold tracking-tight text-gray-700 text-2xl md:text-3xl">{t("2026-card.title")}</h2>
                   <p className="mt-2 text-gray-500">{t("2026-card.description")}</p>
                   <div className="grid mt-auto pt-4 md:pt-6">
-                    <Link href="/vm/fovarosi-kozgyules/inventory" className="grid">
+                    <Link href="/vm/2026-ogy/inventory" className="grid">
                       <Button variant="fill" color="primary">
                         {t("2026-card.start-button")}
                       </Button>
@@ -50,32 +50,31 @@ export default function Page() {
 
           <div className="mt-12 flex justify-center">
             <div className="w-full max-w-2xl">
-
-        {/* Other calculators */}
-        <h3 id={otherCalcsHeadingId} className="mt-16 md:mt-20 font-display ko:font-display font-bold tracking-tight text-slate-700 text-3xl">
-          {t("other-calculators")}
-        </h3>
-        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-1 lg:grid-cols-2 items-stretch">
-              <Card shadow="elevated" border corner="topLeft" className="bg-white h-full !border-gray-200">
-                <div className="p-6 md:p-8 h-full flex flex-col">
-                  <div className="flex flex-wrap items-center gap-2 text-xs text-gray-600">
-                    <span className="inline-flex items-center gap-1 rounded-full bg-red-50 px-2.5 py-1 font-semibold text-red-700">{t("bp-card.tags.questionnaire")}</span>
-                    <span className="rounded-full bg-gray-100 px-2.5 py-1">{t("bp-card.tags.questions")}</span>
-                    <span className="rounded-full bg-gray-100 px-2.5 py-1">{t("bp-card.tags.duration")}</span>
+              {/* Other calculators */}
+              <h3 id={otherCalcsHeadingId} className="mt-16 md:mt-20 font-display ko:font-display font-bold tracking-tight text-slate-700 text-3xl">
+                {t("other-calculators")}
+              </h3>
+              <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-1 lg:grid-cols-2 items-stretch">
+                <Card shadow="elevated" border corner="topLeft" className="bg-white h-full !border-gray-200">
+                  <div className="p-6 md:p-8 h-full flex flex-col">
+                    <div className="flex flex-wrap items-center gap-2 text-xs text-gray-600">
+                      <span className="inline-flex items-center gap-1 rounded-full bg-red-50 px-2.5 py-1 font-semibold text-red-700">{t("bp-card.tags.questionnaire")}</span>
+                      <span className="rounded-full bg-gray-100 px-2.5 py-1">{t("bp-card.tags.questions")}</span>
+                      <span className="rounded-full bg-gray-100 px-2.5 py-1">{t("bp-card.tags.duration")}</span>
+                    </div>
+                    <h2 className="mt-4 font-display ko:font-display font-bold tracking-tight text-gray-700 text-2xl md:text-3xl">{t("bp-card.title")}</h2>
+                    <p className="mt-2 text-gray-500">{t("bp-card.description")}</p>
+                    <div className="grid mt-auto pt-4 md:pt-6">
+                      <Link href="/vm/fovarosi-kozgyules/inventory" className="grid">
+                        <Button variant="fill" color="primary">
+                          {t("bp-card.start-button")}
+                        </Button>
+                      </Link>
+                    </div>
                   </div>
-                  <h2 className="mt-4 font-display ko:font-display font-bold tracking-tight text-gray-700 text-2xl md:text-3xl">{t("bp-card.title")}</h2>
-                  <p className="mt-2 text-gray-500">{t("bp-card.description")}</p>
-                  <div className="grid mt-auto pt-4 md:pt-6">
-                    <Link href="/vm/fovarosi-kozgyules/inventory" className="grid">
-                      <Button variant="fill" color="primary">
-                        {t("bp-card.start-button")}
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-              </Card>
-          </div>
-          </div>
+                </Card>
+              </div>
+            </div>
           </div>
 
           {/* Archive section */}
