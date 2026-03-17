@@ -2,11 +2,13 @@ import { Icon } from "@kalkulacka-one/design-system/client";
 import { logoCheck, logoCross, logoSlash } from "@kalkulacka-one/design-system/icons";
 import { IconBadge } from "@kalkulacka-one/design-system/server";
 
-import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
 
 import type { AnswersViewModel, QuestionsViewModel, ResultViewModel } from "../../view-models";
 import { ComparisonQuestionCard } from "../server";
+
+const COMMENT_PREVIEW_LENGTH = 120;
 
 export type ComparisonGridDashlinesOverlay = {
   result: ResultViewModel;
@@ -130,6 +132,38 @@ function ComparisonAnswerIcon({ answer }: ComparisonAnswerIcon) {
   );
 }
 
+type ExpandableComment = {
+  comment?: string;
+  cellKey: string;
+  expandedComments: Set<string>;
+  toggleComment: (cellKey: string) => void;
+};
+
+function ExpandableComment({ comment, cellKey, expandedComments, toggleComment }: ExpandableComment) {
+  const normalizedComment = comment?.trim();
+  if (!normalizedComment) return null;
+
+  const isLong = normalizedComment.length > COMMENT_PREVIEW_LENGTH;
+  const isExpanded = expandedComments.has(cellKey);
+  const preview = isLong ? `${normalizedComment.slice(0, COMMENT_PREVIEW_LENGTH)}...` : normalizedComment;
+  const textToRender = isExpanded ? normalizedComment : preview;
+
+  if (!isLong) {
+    return <p className="text-[10px] leading-4 text-center text-gray-600 break-words">{textToRender}</p>;
+  }
+
+  return (
+    <button
+      type="button"
+      className="text-[10px] leading-4 text-center text-gray-700 break-words cursor-pointer hover:text-gray-900 transition-colors"
+      onClick={() => toggleComment(cellKey)}
+      aria-expanded={isExpanded}
+    >
+      {textToRender}
+    </button>
+  );
+}
+
 export type ComparisonHeader = {
   condensed?: boolean;
   result: ResultViewModel;
@@ -138,7 +172,7 @@ export type ComparisonHeader = {
 
 function ComparisonHeader({ condensed = false, result, filterNestedCandidates }: ComparisonHeader) {
   const t = useTranslations("calculator.comparison");
-  
+
   return (
     <div className={`sticky ${condensed ? "top-[4.75rem]" : "top-32"} gap-8 flex z-40 transition-all duration-500 ease-in-out`}>
       <div className="rounded-xl bg-green-200/60 backdrop-blur-lg border-emerald-50 border-1 z-50 min-h-[65px] sticky left-4 w-[100px] flex-shrink-0 text-center text-xs flex items-center justify-center">
@@ -188,6 +222,19 @@ type ComparisonQuestionRow = {
 
 function ComparisonQuestionRow({ question, index, totalQuestions, answers, result, filterNestedCandidates }: ComparisonQuestionRow) {
   const userAnswer = answers.answers.find((answer) => answer.answer?.questionId === question.id);
+  const [expandedComments, setExpandedComments] = useState<Set<string>>(new Set());
+
+  const toggleComment = (cellKey: string) => {
+    setExpandedComments((current) => {
+      const updated = new Set(current);
+      if (updated.has(cellKey)) {
+        updated.delete(cellKey);
+      } else {
+        updated.add(cellKey);
+      }
+      return updated;
+    });
+  };
 
   return (
     <div key={question.id} className="flex flex-col gap-4 relative z-30">
@@ -227,8 +274,9 @@ function ComparisonQuestionRow({ question, index, totalQuestions, answers, resul
           if (!nestedMatches) {
             const answer = match.candidateAnswers.find((a) => a.questionId === question.id);
             return (
-              <div key={`answer-${match.candidate.id}-${matchIndex}`} className="w-[100px] flex-shrink-0 flex justify-center items-center min-h-[40px]">
+              <div key={`answer-${match.candidate.id}-${matchIndex}`} className="w-[100px] flex-shrink-0 flex flex-col justify-center items-center min-h-[40px] gap-1">
                 <ComparisonAnswerIcon answer={answer?.answer} />
+                <ExpandableComment comment={answer?.comment} cellKey={`${question.id}-${match.candidate.id}`} expandedComments={expandedComments} toggleComment={toggleComment} />
               </div>
             );
           }
@@ -237,8 +285,9 @@ function ComparisonQuestionRow({ question, index, totalQuestions, answers, resul
               {nestedMatches.map((nested: NonNullable<ResultViewModel["matches"][0]["nestedMatches"]>[0]) => {
                 const answer = nested.candidateAnswers.find((a: (typeof nested.candidateAnswers)[0]) => a.questionId === question.id);
                 return (
-                  <div key={`answer-${nested.candidate.id}-${matchIndex}`} className="w-[100px] flex-shrink-0 flex justify-center items-center min-h-[40px]">
+                  <div key={`answer-${nested.candidate.id}-${matchIndex}`} className="w-[100px] flex-shrink-0 flex flex-col justify-center items-center min-h-[40px] gap-1">
                     <ComparisonAnswerIcon answer={answer?.answer} />
+                    <ExpandableComment comment={answer?.comment} cellKey={`${question.id}-${nested.candidate.id}`} expandedComments={expandedComments} toggleComment={toggleComment} />
                   </div>
                 );
               })}

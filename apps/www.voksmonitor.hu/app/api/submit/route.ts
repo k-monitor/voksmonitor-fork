@@ -1,9 +1,9 @@
 import { Prisma, prisma } from "@kalkulacka-one/database";
+import { answerSchema } from "@kalkulacka-one/schema";
 
 import type { NextRequest } from "next/server";
 import { z } from "zod";
 
-import { answerSchema } from "@kalkulacka-one/schema";
 import { HttpError, JsonParseError, ValidationError } from "../../../lib/errors";
 
 const matchSchema = z.object({
@@ -17,7 +17,6 @@ const demographySchema = z
     age: z.string().optional(),
     residence: z.string().optional(),
     education: z.string().optional(),
-    resultMatch: z.string().optional(),
     voted2022: z.string().optional(),
     wouldVote: z.string().optional(),
   })
@@ -95,7 +94,6 @@ export async function POST(request: NextRequest) {
               age: d.age ?? null,
               residence: d.residence ?? null,
               education: d.education ?? null,
-              resultMatch: d.resultMatch ?? null,
               voted2022: d.voted2022 ?? null,
               wouldVote: d.wouldVote ?? null,
             },

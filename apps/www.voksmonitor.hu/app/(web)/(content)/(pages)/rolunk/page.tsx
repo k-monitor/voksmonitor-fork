@@ -15,9 +15,13 @@ export default async function Page() {
     <div className="ko:max-w-4xl ko:mx-auto ko:p-6">
       <h2 className="font-display ko:font-display font-bold tracking-tight text-gray-800 text-2xl md:text-xl mb-2 mt-8">{t("about-kmonitor-heading")}</h2>
 
-      {t("about-kmonitor").split("\n").map((para, i) => (
-        <p key={i} className="text-lg text-gray-700 leading-relaxed mb-0">{para}</p>
-      ))}
+      {t("about-kmonitor")
+        .split("\n")
+        .map((para, i) => (
+          <p key={i} className="text-lg text-gray-700 leading-relaxed mb-0">
+            {para}
+          </p>
+        ))}
 
       <p className="text-lg text-gray-700 leading-relaxed mb-0">
         {t.rich("about-kmonitor-links", {

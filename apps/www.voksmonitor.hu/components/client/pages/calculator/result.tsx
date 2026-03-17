@@ -10,11 +10,8 @@ import { reportError } from "../../../../lib/monitoring";
 import { type RouteSegments, routes } from "../../../../lib/routing/route-builders";
 import { useEmbed } from "../../embed-context-provider";
 
-const TOP_TWO_CALCULATOR_ID = "d16c04e9-b0b5-4c76-ad3e-f03689303a29";
-const TOP_TWO_PARTY_IDS = [
-  "60502fa2-e9c8-4714-98ae-64c747f46694",
-  "5925e066-3c79-40ca-a366-ef7205a90b49",
-];
+const TOP_TWO_CALCULATOR_ID = "12c0b7cc-2206-5f5e-a407-6e3687b18a82";
+const TOP_TWO_PARTY_IDS = ["cf177ab5-1e70-40a7-afa0-afb2089259f0", "af78f800-49d1-4239-8ea7-0bc2d74639b5"];
 
 export function ResultPageWithRouting({ segments }: { segments: RouteSegments }) {
   const [showOnlyNested, setShowOnlyNested] = useState(false);
@@ -31,9 +28,7 @@ export function ResultPageWithRouting({ segments }: { segments: RouteSegments })
   const isTopTwoMode = calculator.id === TOP_TWO_CALCULATOR_ID;
   const filteredResult = useMemo(() => {
     if (!isTopTwoMode || showAllParties) return result;
-    const topTwoMatches = result.matches.filter((match) =>
-      TOP_TWO_PARTY_IDS.includes(match.candidate.id),
-    );
+    const topTwoMatches = result.matches.filter((match) => TOP_TWO_PARTY_IDS.includes(match.candidate.id));
     return { ...result, matches: topTwoMatches };
   }, [result, isTopTwoMode, showAllParties]);
 

@@ -3,8 +3,8 @@
 import { Button, Icon } from "@kalkulacka-one/design-system/client";
 
 import { mdiArrowLeft, mdiClose } from "@mdi/js";
-import React from "react";
 import { useTranslations } from "next-intl";
+import React from "react";
 
 import { type EmbedContextType, HideOnEmbed } from "../../../../components/client";
 import type { CalculatorViewModel, ResultViewModel } from "../../../view-models";
@@ -26,7 +26,19 @@ export type ResultPage = {
   onShowAllPartiesChange?: (showAll: boolean) => void;
 };
 
-export function ResultPage({ embedContext, result, calculator, onNextClick, onPreviousClick, onCloseClick, showOnlyNested, onFilterChange, donateCardPosition, showAllParties, onShowAllPartiesChange }: ResultPage) {
+export function ResultPage({
+  embedContext,
+  result,
+  calculator,
+  onNextClick,
+  onPreviousClick,
+  onCloseClick,
+  showOnlyNested,
+  onFilterChange,
+  donateCardPosition,
+  showAllParties,
+  onShowAllPartiesChange,
+}: ResultPage) {
   const t = useTranslations("calculator.result");
   const hasNestedCandidates = result.matches.some((match) => match.nestedMatches && match.nestedMatches.length > 0);
   const shouldShowToggleComputed = hasNestedCandidates || showOnlyNested;
@@ -40,7 +52,7 @@ export function ResultPage({ embedContext, result, calculator, onNextClick, onPr
             <AppHeader condensed={condensed} calculator={calculator}>
               <AppHeader.Right>
                 <HideOnEmbed>
-                    <Button variant="link" color="neutral" size="small" aria-label={t("close-aria-label")} onClick={onCloseClick}>
+                  <Button variant="link" color="neutral" size="small" aria-label={t("close-aria-label")} onClick={onCloseClick}>
                     <Icon icon={mdiClose} size="medium" decorative />
                   </Button>
                 </HideOnEmbed>
@@ -86,22 +98,14 @@ export function ResultPage({ embedContext, result, calculator, onNextClick, onPr
           ))}
           {onShowAllPartiesChange && !showAllParties && (
             <div className="flex justify-center">
-              <Button
-                variant="outline"
-                color="neutral"
-                onClick={() => onShowAllPartiesChange(true)}
-              >
+              <Button variant="outline" color="neutral" onClick={() => onShowAllPartiesChange(true)}>
                 {t("show-all-parties")}
               </Button>
             </div>
           )}
           {onShowAllPartiesChange && showAllParties && (
             <div className="flex justify-center">
-              <Button
-                variant="outline"
-                color="neutral"
-                onClick={() => onShowAllPartiesChange(false)}
-              >
+              <Button variant="outline" color="neutral" onClick={() => onShowAllPartiesChange(false)}>
                 {t("show-fewer-parties")}
               </Button>
             </div>

@@ -56,7 +56,13 @@ export function QuestionNavigationCard({ current, total, onPreviousClick, onNext
         </div>
         <div className="flex flex-col @[500px]:flex-row gap-2 @sm:gap-4 items-stretch">
           <div className="flex-shrink-0">
-            <ToggleButton color="neutral" variant="link" checked={answer.answer?.isImportant || false} onChange={(checked: boolean) => onImportantChange(checked)} aria-label={t("important-aria-label")}>
+            <ToggleButton
+              color="neutral"
+              variant="link"
+              checked={answer.answer?.isImportant || false}
+              onChange={(checked: boolean) => onImportantChange(checked)}
+              aria-label={t("important-aria-label")}
+            >
               <Icon icon={answer.answer?.isImportant ? mdiStar : mdiStarOutline} decorative={true} />
             </ToggleButton>
           </div>

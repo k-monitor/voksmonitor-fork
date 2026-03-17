@@ -5,8 +5,8 @@ import { logoCheck, logoCross } from "@kalkulacka-one/design-system/icons";
 import { Card } from "@kalkulacka-one/design-system/server";
 
 import { mdiArrowRight, mdiStar } from "@mdi/js";
-import Markdown from "react-markdown";
 import { useTranslations } from "next-intl";
+import Markdown from "react-markdown";
 
 import type { CalculatorViewModel } from "../../../view-models";
 

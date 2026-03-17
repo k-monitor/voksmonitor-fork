@@ -1,8 +1,8 @@
 import { ExpandableCard } from "@kalkulacka-one/design-system/client";
 import { Avatar, ProgressBar } from "@kalkulacka-one/design-system/server";
 
-import React, { useState } from "react";
 import { useTranslations } from "next-intl";
+import React, { useState } from "react";
 
 import type { CandidateMatchViewModel } from "../../view-models";
 import { useCandidateAnswerComparison, useHasDirectAnswers } from "../../view-models/client/candidate";
@@ -42,11 +42,7 @@ export function MatchCard({ candidate, order, match, respondent }: MatchCard) {
               <div className="flex flex-col gap-1 items-start justify-center">
                 <h3 className="text-lg font-bold leading-tight text-gray-700">{candidate.displayName}</h3>
                 {candidate.organization && <p className="text-sm text-gray-500">{candidate.organization}</p>}
-                {respondent === "expert" && (
-                  <p className="text-xs text-gray-500">
-                    {t("expert-respondent-note")}
-                  </p>
-                )}
+                {respondent === "expert" && <p className="text-xs text-gray-500">{t("expert-respondent-note")}</p>}
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-3xl font-bold tracking-tight text-gray-800">{match !== undefined ? `${Math.round(match)} %` : "—"}</span>
@@ -91,7 +87,7 @@ export function MatchCard({ candidate, order, match, respondent }: MatchCard) {
                                       <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z" />
                                       </svg>
-                                        <span>{t("unknown-position")}</span>
+                                      <span>{t("unknown-position")}</span>
                                     </div>
                                   </div>
                                 </div>

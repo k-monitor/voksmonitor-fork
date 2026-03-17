@@ -17,21 +17,33 @@ export default async function Page() {
 
       <h3 className="font-display ko:font-display font-bold tracking-tight text-gray-800 text-xl md:text-lg mb-2 mt-8">{t("what-heading")}</h3>
 
-      {t("what").split("\n").map((para, i) => (
-        <p key={i} className="text-lg text-gray-700 leading-relaxed mb-0">{para}</p>
-      ))}
+      {t("what")
+        .split("\n")
+        .map((para, i) => (
+          <p key={i} className="text-lg text-gray-700 leading-relaxed mb-0">
+            {para}
+          </p>
+        ))}
 
       <h3 className="font-display ko:font-display font-bold tracking-tight text-gray-800 text-xl md:text-lg mb-2 mt-8">{t("who-heading")}</h3>
 
-      {t("who").split("\n").map((para, i) => (
-        <p key={i} className="text-lg text-gray-700 leading-relaxed mb-0">{para}</p>
-      ))}
+      {t("who")
+        .split("\n")
+        .map((para, i) => (
+          <p key={i} className="text-lg text-gray-700 leading-relaxed mb-0">
+            {para}
+          </p>
+        ))}
 
       <h3 className="font-display ko:font-display font-bold tracking-tight text-gray-800 text-xl md:text-lg mb-2 mt-8">{t("how-heading")}</h3>
 
-      {t("how").split("\n").map((para, i) => (
-        <p key={i} className="text-lg text-gray-700 leading-relaxed mb-0">{para}</p>
-      ))}
+      {t("how")
+        .split("\n")
+        .map((para, i) => (
+          <p key={i} className="text-lg text-gray-700 leading-relaxed mb-0">
+            {para}
+          </p>
+        ))}
     </div>
   );
 }

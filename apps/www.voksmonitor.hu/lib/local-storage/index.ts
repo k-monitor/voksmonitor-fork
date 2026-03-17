@@ -19,10 +19,7 @@ function completedKey(calculatorId: string): string {
   return `${COMPLETED_KEY_PREFIX}${calculatorId}`;
 }
 
-export function saveAnswersToLocalStorage(
-  calculatorId: string,
-  answers: Answer[],
-): void {
+export function saveAnswersToLocalStorage(calculatorId: string, answers: Answer[]): void {
   if (typeof window === "undefined") return;
   try {
     localStorage.setItem(answersKey(calculatorId), JSON.stringify(answers));
@@ -33,9 +30,7 @@ export function saveAnswersToLocalStorage(
   }
 }
 
-export function loadAnswersFromLocalStorage(
-  calculatorId: string,
-): Answer[] {
+export function loadAnswersFromLocalStorage(calculatorId: string): Answer[] {
   if (typeof window === "undefined") return [];
   try {
     // Check if answers have expired
@@ -66,10 +61,7 @@ export function loadAnswersFromLocalStorage(
 export function setAnswersExpiry(calculatorId: string): void {
   if (typeof window === "undefined") return;
   try {
-    localStorage.setItem(
-      expiryKey(calculatorId),
-      String(Date.now() + ANSWERS_TTL_MS),
-    );
+    localStorage.setItem(expiryKey(calculatorId), String(Date.now() + ANSWERS_TTL_MS));
   } catch {
     // silently ignore
   }

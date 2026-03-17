@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@kalkulacka-one/design-system/client";
+
 import { useTranslations } from "next-intl";
 
 import { NavigationCard } from "./navigation-card";

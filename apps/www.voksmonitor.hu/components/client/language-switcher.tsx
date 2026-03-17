@@ -1,7 +1,7 @@
 "use client";
 
-import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
+import { useLocale } from "next-intl";
 import { useTransition } from "react";
 
 import { setLocale } from "../../app/actions";
@@ -32,11 +32,7 @@ export function LanguageSwitcher() {
             type="button"
             onClick={() => handleSwitch(code)}
             disabled={locale === code || isPending}
-            className={
-              locale === code
-                ? "text-gray-900 font-semibold cursor-default"
-                : "text-gray-400 hover:text-gray-600 transition-colors cursor-pointer disabled:opacity-50"
-            }
+            className={locale === code ? "text-gray-900 font-semibold cursor-default" : "text-gray-400 hover:text-gray-600 transition-colors cursor-pointer disabled:opacity-50"}
             aria-label={`Switch to ${label}`}
             aria-current={locale === code ? "true" : undefined}
           >

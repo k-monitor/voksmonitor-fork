@@ -21,9 +21,13 @@ export default async function Page() {
             kohopolit: (chunks) => <strong className="font-semibold text-gray-900">{chunks}</strong>,
           })}
         </p>
-        {t("body").split("\n").map((para, i) => (
-          <p key={i} className="text-lg text-gray-700 leading-relaxed mb-6">{para}</p>
-        ))}
+        {t("body")
+          .split("\n")
+          .map((para, i) => (
+            <p key={i} className="text-lg text-gray-700 leading-relaxed mb-6">
+              {para}
+            </p>
+          ))}
       </div>
 
       <h2 className="font-display ko:font-display font-bold tracking-tight text-gray-800 text-2xl md:text-xl mb-2 mt-8">{t("support-heading")}</h2>

@@ -1,6 +1,5 @@
 import { AppHeader, AppHeaderRight, WithCondenseOnScroll } from "../../calculator/components/client";
 import { Layout } from "../../calculator/components/server/components";
-
 import { LanguageSwitcher } from "./language-switcher";
 
 export function Header() {

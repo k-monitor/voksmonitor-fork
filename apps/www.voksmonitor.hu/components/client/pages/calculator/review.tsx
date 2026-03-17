@@ -1,8 +1,8 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-import { ReviewPage as AppReviewPage } from "../../../../calculator/components/server";
 import { DemographySurvey, useShouldShowDemographySurvey } from "../../../../calculator/components/client";
+import { ReviewPage as AppReviewPage } from "../../../../calculator/components/server";
 import { useAnswersStore } from "../../../../calculator/stores/answers";
 import { useAnswers, useCalculator, useQuestions } from "../../../../calculator/view-models";
 import { useAutoSave } from "../../../../hooks/auto-save";
@@ -40,10 +40,7 @@ export function ReviewPageWithRouting({ segments }: { segments: RouteSegments })
     // in the anonymous submission
     if (demography) {
       try {
-        sessionStorage.setItem(
-          `voksmonitor-demography-${calculator.id}`,
-          JSON.stringify(demography),
-        );
+        sessionStorage.setItem(`voksmonitor-demography-${calculator.id}`, JSON.stringify(demography));
       } catch {
         // silently ignore
       }
@@ -74,13 +71,7 @@ export function ReviewPageWithRouting({ segments }: { segments: RouteSegments })
         onPreviousClick={handlePreviousClick}
         onCloseClick={handleCloseClick}
       />
-      {isSurveyOpen && (
-        <DemographySurvey
-          calculatorId={calculator.id}
-          calculatorKey={segments.first}
-          onComplete={handleSurveyComplete}
-        />
-      )}
+      {isSurveyOpen && <DemographySurvey calculatorId={calculator.id} calculatorKey={segments.first} onComplete={handleSurveyComplete} />}
     </div>
   );
 }
