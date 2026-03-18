@@ -251,7 +251,7 @@
       "heading": "Visszajelzés",
       "description": "Kérjük, értékelje, mennyire volt hasznos az Ön számára a Voksmonitor!",
       "close-aria-label": "Bezárás",
-      "helpfulness-label": "Mennyire volt hasznos a Voksmonitor?",
+      "helpfulness-label": "Hozzájárult a Voksmonitor ahhoz, hogy könnyebben dönts a választáson?",
       "star-aria-label": "{value} csillag",
       "scale-low": "Nem volt hasznos",
       "scale-high": "Nagyon hasznos",
