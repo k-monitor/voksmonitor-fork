@@ -96,11 +96,9 @@ export function ResultPage({
           </div>
         )}
         <div className="grid gap-4 mb-6">
-          {donateCardPosition === 0 && <DonateCard />}
           {result.matches.map((match, index) => (
             <React.Fragment key={match.candidate.id}>
               <MatchCard {...match} />
-              {donateCardPosition !== false && donateCardPosition > 0 && index === donateCardPosition - 1 && <DonateCard />}
             </React.Fragment>
           ))}
           {onShowAllPartiesChange && !showAllParties && (
