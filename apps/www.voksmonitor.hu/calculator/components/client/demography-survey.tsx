@@ -42,11 +42,6 @@ const DEMOGRAPHY_QUESTIONS: DemographyQuestion[] = [
     optionKeys: ["primary", "secondary-no-matura", "secondary-matura", "bachelor", "master-or-higher"],
   },
   {
-    id: "voted_2022",
-    translationKey: "voted-2022",
-    optionKeys: ["fidesz-kdnp", "opposition-2022", "mi-hazank", "mkkp", "other-party", "did-not-vote", "no-answer"],
-  },
-  {
     id: "would_vote",
     translationKey: "would-vote",
     optionKeys: ["fidesz-kdnp", "tisza", "dk", "mi-hazank", "mkkp", "other-party", "would-not-vote", "dont-know"],
@@ -112,7 +107,6 @@ export function collectDemographyAnswers(answers: Record<string, string>): Recor
     age: answers.age,
     residence: answers.residence,
     education: answers.education,
-    voted2022: answers.voted_2022,
     wouldVote: answers.would_vote,
   };
 }

@@ -183,16 +183,6 @@
         "bachelor": "Felsőfokú (BA/BSc)",
         "master-or-higher": "Felsőfokú (MA/MSc vagy magasabb)"
       },
-      "voted-2022": {
-        "label": "2022-ben melyik pártra szavazott?",
-        "fidesz-kdnp": "Fidesz–KDNP",
-        "opposition-2022": "Egységben Magyarországért (ellenzéki összefogás)",
-        "mi-hazank": "Mi Hazánk Mozgalom",
-        "mkkp": "Magyar Kétfarkú Kutya Párt",
-        "other-party": "Egyéb párt",
-        "did-not-vote": "Nem szavaztam / nem voltam jogosult",
-        "no-answer": "Nem kívánok válaszolni"
-      },
       "would-vote": {
         "label": "Ha most vasárnap lenne a választás, Ön melyik pártra szavazna?",
         "fidesz-kdnp": "Fidesz–KDNP",

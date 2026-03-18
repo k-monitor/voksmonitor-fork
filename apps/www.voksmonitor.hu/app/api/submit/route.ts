@@ -17,7 +17,6 @@ const demographySchema = z
     age: z.string().optional(),
     residence: z.string().optional(),
     education: z.string().optional(),
-    voted2022: z.string().optional(),
     wouldVote: z.string().optional(),
   })
   .optional();
@@ -94,7 +93,6 @@ export async function POST(request: NextRequest) {
               age: d.age ?? null,
               residence: d.residence ?? null,
               education: d.education ?? null,
-              voted2022: d.voted2022 ?? null,
               wouldVote: d.wouldVote ?? null,
             },
           });

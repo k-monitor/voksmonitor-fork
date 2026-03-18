@@ -183,16 +183,6 @@
         "bachelor": "Bachelor's degree (BA/BSc)",
         "master-or-higher": "Master's degree or higher (MA/MSc+)"
       },
-      "voted-2022": {
-        "label": "Which party did you vote for in 2022?",
-        "fidesz-kdnp": "Fidesz–KDNP",
-        "opposition-2022": "United for Hungary (opposition alliance)",
-        "mi-hazank": "Mi Hazánk Movement",
-        "mkkp": "Hungarian Two-Tailed Dog Party",
-        "other-party": "Other party",
-        "did-not-vote": "Did not vote / was not eligible",
-        "no-answer": "Prefer not to say"
-      },
       "would-vote": {
         "label": "If elections were held next Sunday, which party would you vote for?",
         "fidesz-kdnp": "Fidesz–KDNP",

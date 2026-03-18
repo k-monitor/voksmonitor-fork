@@ -13,7 +13,6 @@ export type SubmitPayload = {
     age?: string;
     residence?: string;
     education?: string;
-    voted2022?: string;
     wouldVote?: string;
   };
 };

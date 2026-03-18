@@ -74,7 +74,6 @@ model DemographySurveyResponse {
   age         String?
   residence   String?
   education   String?
-  voted2022   String?
   wouldVote   String?
 
   createdAt DateTime @default(now()) @db.Timestamptz(3)
