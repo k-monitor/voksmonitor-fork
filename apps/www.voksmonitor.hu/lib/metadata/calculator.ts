@@ -64,22 +64,22 @@ export async function generateCalculatorMetadata({
   }
 
   const metadata: Metadata = {
-    title: "Fővárosi Közgyűlés Voksmonitor 2025",
-    description: "Voksmonitor 2025 - Hasonlítsd össze az álláspontod a frakciók és a képviselők álláspontjával!",
+    title: "Országgyűlési választások 2026 Voksmonitor",
+    description: "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.",
     alternates: {
       canonical: canonicalUrl,
     },
     metadataBase: new URL(baseUrl),
     openGraph: {
-      title: "Fővárosi Közgyűlés Voksmonitor 2025",
-      description: "Voksmonitor 2025 - Hasonlítsd össze az álláspontod a frakciók és a képviselők álláspontjával!",
+      title: "Országgyűlési választások 2026 Voksmonitor",
+      description: "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.",
       url: canonicalUrl,
       images: [
         {
           url: ogImageUrl || "/og-image.png",
           width: ogImageWidth || 1200,
           height: ogImageHeight || 630,
-          alt: ogImageAlt || "Hasonlítsd össze az álláspontod a frakciók és a képviselők álláspontjával!",
+          alt: ogImageAlt || "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.",
         },
       ],
     },

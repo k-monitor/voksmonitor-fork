@@ -15,7 +15,7 @@ describe("loadCalculatorData", () => {
   const DATA_ENDPOINT = "https://data.kalkulacka.one";
   const data = {
     id: "123e4567-e89b-12d3-a456-426614174000",
-    title: "Voksmonitor 2025",
+    title: "Voksmonitor 2026",
     publishedAt: "2024-01-15T10:30:00Z",
   };
 

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     default: "Voksmonitor",
     template: "%s — Voksmonitor",
   },
-  description: "Voksmonitor 2025 - Hasonlítsd össze az álláspontod a frakciók és a képviselők álláspontjával!",
+  description: "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.",
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
   metadataBase: new URL(baseUrl),
   openGraph: {
-    title: "Fővárosi Közgyűlés Voksmonitor 2025",
-    description: "Voksmonitor 2025 - Hasonlítsd össze az álláspontod a frakciók és a képviselők álláspontjával!",
+    title: "Országgyűlési választások 2026 Voksmonitor",
+    description: "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.",
     url: baseUrl,
     siteName: "Voksmonitor",
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Hasonlítsd össze az álláspontod a frakciók és a képviselők álláspontjával!",
+        alt: "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.",
       },
     ],
     locale: "hu_HU",
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fővárosi Közgyűlés Voksmonitor 2025",
-    description: "Voksmonitor 2025 - Hasonlítsd össze az álláspontod a frakciók és a képviselők álláspontjával!",
+    title: "Országgyűlési választások 2026 Voksmonitor",
+    description: "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.",
     images: ["/og-image.png"],
   },
   robots: {

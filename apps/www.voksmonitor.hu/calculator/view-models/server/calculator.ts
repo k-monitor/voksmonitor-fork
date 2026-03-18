@@ -6,7 +6,7 @@ export type CalculatorViewModel = Calculator & {
 };
 
 export function calculatorViewModel(calculator: Calculator): CalculatorViewModel {
-  const calculatorGroupShortTitle = "Voksmonitor 2025";
+  const calculatorGroupShortTitle = "Voksmonitor 2026";
   const title = calculator?.shortTitle || calculatorGroupShortTitle;
   const secondaryTitle = calculator?.shortTitle ? calculatorGroupShortTitle : undefined;
 
