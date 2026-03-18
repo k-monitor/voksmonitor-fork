@@ -104,7 +104,7 @@ export function ResultPageWithRouting({ segments }: { segments: RouteSegments })
     const params = new URLSearchParams();
     const calculatorKey = segments.second ? `${segments.first}/${segments.second}` : segments.first;
     params.set("calc", calculatorKey);
-    for (const match of filteredResult.matches) {
+    for (const match of result.matches) {
       if (match.candidate.displayName && match.match !== undefined) {
         const slug = match.candidate.displayName
           .toLowerCase()
@@ -118,7 +118,7 @@ export function ResultPageWithRouting({ segments }: { segments: RouteSegments })
       return `${window.location.origin}/share?${params.toString()}`;
     }
     return `/share?${params.toString()}`;
-  }, [filteredResult.matches, segments]);
+  }, [result.matches, segments]);
 
   const donateCardPosition = embed.isEmbed ? (embed.config?.donateCard ?? 1) : 5;
 
