@@ -15,8 +15,13 @@ function normalizeSlug(text: string): string {
 }
 
 export const metadata: Metadata = {
-  title: "Megosztott eredmény — Voksmonitor",
-  description: "Nézd meg az eredményeimet a Voksmonitoron!",
+  title: "Kiderült, mely pártok állnak hozzám a legközelebb 👀",
+  description: "Töltsd ki te is a Voksmonitort!",
+  openGraph: {
+    title: "Kiderült, mely pártok állnak hozzám a legközelebb 👀",
+    description: "Töltsd ki te is a Voksmonitort!",
+    images: [],
+  },
 };
 
 export default async function SharePage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
