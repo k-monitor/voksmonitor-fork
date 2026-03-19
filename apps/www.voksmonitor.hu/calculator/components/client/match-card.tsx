@@ -2,7 +2,7 @@ import { ExpandableCard } from "@kalkulacka-one/design-system/client";
 import { Avatar, ProgressBar } from "@kalkulacka-one/design-system/server";
 
 import { useTranslations } from "next-intl";
-import React, { useState } from "react";
+import React from "react";
 
 import type { CandidateMatchViewModel } from "../../view-models";
 import { useCandidateAnswerComparison, useHasDirectAnswers } from "../../view-models/client/candidate";
@@ -13,7 +13,6 @@ export function MatchCard({ candidate, order, match, respondent }: MatchCard) {
   const t = useTranslations("calculator.match");
   const hasDirectAnswers = useHasDirectAnswers(candidate.id);
   const answerComparisons = useCandidateAnswerComparison(candidate.id);
-  const [expandedSources, setExpandedSources] = useState<Set<string>>(new Set());
 
   return (
     <ExpandableCard corner="topLeft" shadow="hard" className="overflow-hidden border border-gray-200">
@@ -92,49 +91,22 @@ export function MatchCard({ candidate, order, match, respondent }: MatchCard) {
                                   </div>
                                 </div>
                               ) : (
-                                (comparison.candidateSources || comparison.expertSources)?.map((source, i) => {
-                                  const sourceKey = `${comparison.questionId}-${i}`;
-                                  const isExpanded = expandedSources.has(sourceKey);
-
-                                  return (
-                                    <div key={source.url || `source-${i}`} className="space-y-1">
-                                      <div>
-                                        <button
-                                          type="button"
-                                          className="inline-flex items-center gap-1 px-2 py-1 rounded bg-gray-100 hover:bg-gray-200 text-gray-700 hover:text-gray-900 text-xs"
-                                          onClick={() => {
-                                            const newExpanded = new Set(expandedSources);
-                                            if (isExpanded) {
-                                              newExpanded.delete(sourceKey);
-                                            } else {
-                                              newExpanded.add(sourceKey);
-                                            }
-                                            setExpandedSources(newExpanded);
-                                          }}
-                                        >
-                                          <span>{source.title || source.url || t("source")}</span>
-                                          <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
-                                          </svg>
-                                        </button>
-                                      </div>
-
-                                      {isExpanded && (
-                                        <blockquote className="text-gray-600 italic pl-4 border-l-2 border-gray-200 text-sm">
-                                          {source.description || t("no-description")}
-                                          {source.url && (
-                                            <>
-                                              {" "}
-                                              <a href={source.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">
-                                                ({t("source-link")})
-                                              </a>
-                                            </>
-                                          )}
-                                        </blockquote>
-                                      )}
-                                    </div>
-                                  );
-                                })
+                                <div className="flex flex-wrap gap-1">
+                                  {(comparison.candidateSources || comparison.expertSources)?.map((source, i) => (
+                                    <a
+                                      key={source.url || `source-${i}`}
+                                      href={source.url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="inline-flex items-center gap-1 px-2 py-1 rounded bg-gray-100 hover:bg-gray-200 text-gray-700 hover:text-gray-900 text-xs"
+                                    >
+                                      <span>{source.title || source.url || t("source")}</span>
+                                      <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
+                                      </svg>
+                                    </a>
+                                  ))}
+                                </div>
                               )}
                             </div>
                           )}
