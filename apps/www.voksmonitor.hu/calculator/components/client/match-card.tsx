@@ -70,7 +70,7 @@ export function MatchCard({ candidate, order, match, respondent }: MatchCard) {
                           {/* Comment if available - candidate or expert - but not if showing expert no-data badge */}
                           {(comparison.candidateComment || comparison.expertComment) &&
                             !((comparison.candidateAnswer === null || comparison.candidateAnswer === undefined) && respondent === "expert") && (
-                              <blockquote className="text-gray-600 italic pl-4 border-l-2 border-gray-200 text-sm">"{comparison.candidateComment || comparison.expertComment}"</blockquote>
+                              <blockquote className="text-gray-600 italic pl-4 border-l-2 border-gray-200 text-sm">{comparison.candidateComment || comparison.expertComment}</blockquote>
                             )}
 
                           {/* Sources if available - candidate or expert */}
