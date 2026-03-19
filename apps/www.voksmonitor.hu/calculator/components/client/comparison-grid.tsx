@@ -134,33 +134,60 @@ function ComparisonAnswerIcon({ answer }: ComparisonAnswerIcon) {
 
 type ExpandableComment = {
   comment?: string;
+  sources?: { url: string; title?: string }[];
   cellKey: string;
   expandedComments: Set<string>;
   toggleComment: (cellKey: string) => void;
 };
 
-function ExpandableComment({ comment, cellKey, expandedComments, toggleComment }: ExpandableComment) {
+function ExpandableComment({ comment, sources, cellKey, expandedComments, toggleComment }: ExpandableComment) {
   const normalizedComment = comment?.trim();
-  if (!normalizedComment) return null;
+  const hasSources = sources && sources.length > 0;
+  if (!normalizedComment && !hasSources) return null;
 
-  const isLong = normalizedComment.length > COMMENT_PREVIEW_LENGTH;
+  const isLong = normalizedComment ? normalizedComment.length > COMMENT_PREVIEW_LENGTH : false;
   const isExpanded = expandedComments.has(cellKey);
-  const preview = isLong ? `${normalizedComment.slice(0, COMMENT_PREVIEW_LENGTH)}...` : normalizedComment;
+  const preview = normalizedComment && isLong ? `${normalizedComment.slice(0, COMMENT_PREVIEW_LENGTH)}...` : normalizedComment;
   const textToRender = isExpanded ? normalizedComment : preview;
 
+  const sourceLinks = hasSources ? (
+    <div className="flex flex-wrap justify-center gap-1 mt-1">
+      {sources.map((source) => (
+        <a key={source.url} href={source.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-0.5 text-[9px] text-blue-600 hover:text-blue-800 underline">
+          {source.title || source.url}
+          <svg className="w-2.5 h-2.5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
+          </svg>
+        </a>
+      ))}
+    </div>
+  ) : null;
+
+  if (!normalizedComment) {
+    return sourceLinks;
+  }
+
   if (!isLong) {
-    return <p className="text-[10px] leading-4 text-center text-gray-600 break-words">{textToRender}</p>;
+    return (
+      <div>
+        <p className="text-[10px] leading-4 text-center text-gray-600 break-words">{textToRender}</p>
+        {sourceLinks}
+      </div>
+    );
   }
 
   return (
-    <button
-      type="button"
-      className="text-[10px] leading-4 text-center text-gray-700 break-words cursor-pointer hover:text-gray-900 transition-colors"
-      onClick={() => toggleComment(cellKey)}
-      aria-expanded={isExpanded}
-    >
-      {textToRender}
-    </button>
+    <div>
+      <button
+        type="button"
+        className="text-[10px] leading-4 text-center text-gray-700 break-words cursor-pointer hover:text-gray-900 transition-colors"
+        onClick={() => toggleComment(cellKey)}
+        aria-expanded={isExpanded}
+      >
+        {textToRender}
+      </button>
+      {sourceLinks}
+    </div>
   );
 }
 
@@ -276,7 +303,7 @@ function ComparisonQuestionRow({ question, index, totalQuestions, answers, resul
             return (
               <div key={`answer-${match.candidate.id}-${matchIndex}`} className="w-[100px] flex-shrink-0 flex flex-col justify-center items-center min-h-[40px] gap-1">
                 <ComparisonAnswerIcon answer={answer?.answer} />
-                <ExpandableComment comment={answer?.comment} cellKey={`${question.id}-${match.candidate.id}`} expandedComments={expandedComments} toggleComment={toggleComment} />
+                <ExpandableComment comment={answer?.comment} sources={answer?.sources} cellKey={`${question.id}-${match.candidate.id}`} expandedComments={expandedComments} toggleComment={toggleComment} />
               </div>
             );
           }
@@ -287,7 +314,7 @@ function ComparisonQuestionRow({ question, index, totalQuestions, answers, resul
                 return (
                   <div key={`answer-${nested.candidate.id}-${matchIndex}`} className="w-[100px] flex-shrink-0 flex flex-col justify-center items-center min-h-[40px] gap-1">
                     <ComparisonAnswerIcon answer={answer?.answer} />
-                    <ExpandableComment comment={answer?.comment} cellKey={`${question.id}-${nested.candidate.id}`} expandedComments={expandedComments} toggleComment={toggleComment} />
+                    <ExpandableComment comment={answer?.comment} sources={answer?.sources} cellKey={`${question.id}-${nested.candidate.id}`} expandedComments={expandedComments} toggleComment={toggleComment} />
                   </div>
                 );
               })}
