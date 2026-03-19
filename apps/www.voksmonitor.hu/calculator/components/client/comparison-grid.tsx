@@ -303,7 +303,13 @@ function ComparisonQuestionRow({ question, index, totalQuestions, answers, resul
             return (
               <div key={`answer-${match.candidate.id}-${matchIndex}`} className="w-[100px] flex-shrink-0 flex flex-col justify-center items-center min-h-[40px] gap-1">
                 <ComparisonAnswerIcon answer={answer?.answer} />
-                <ExpandableComment comment={answer?.comment} sources={answer?.sources} cellKey={`${question.id}-${match.candidate.id}`} expandedComments={expandedComments} toggleComment={toggleComment} />
+                <ExpandableComment
+                  comment={answer?.comment}
+                  sources={answer?.sources}
+                  cellKey={`${question.id}-${match.candidate.id}`}
+                  expandedComments={expandedComments}
+                  toggleComment={toggleComment}
+                />
               </div>
             );
           }
@@ -314,7 +320,13 @@ function ComparisonQuestionRow({ question, index, totalQuestions, answers, resul
                 return (
                   <div key={`answer-${nested.candidate.id}-${matchIndex}`} className="w-[100px] flex-shrink-0 flex flex-col justify-center items-center min-h-[40px] gap-1">
                     <ComparisonAnswerIcon answer={answer?.answer} />
-                    <ExpandableComment comment={answer?.comment} sources={answer?.sources} cellKey={`${question.id}-${nested.candidate.id}`} expandedComments={expandedComments} toggleComment={toggleComment} />
+                    <ExpandableComment
+                      comment={answer?.comment}
+                      sources={answer?.sources}
+                      cellKey={`${question.id}-${nested.candidate.id}`}
+                      expandedComments={expandedComments}
+                      toggleComment={toggleComment}
+                    />
                   </div>
                 );
               })}

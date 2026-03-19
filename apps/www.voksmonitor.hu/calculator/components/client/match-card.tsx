@@ -63,14 +63,14 @@ export function MatchCard({ candidate, order, match, respondent }: MatchCard) {
                     {answerComparisons.map((comparison) => (
                       <React.Fragment key={comparison.questionId}>
                         {/* Question + Metadata Wrapper */}
-                        <div className="space-y-2">
+                        <div className="space-y-2 min-w-0">
                           {/* Question Text */}
                           <div className="text-gray-800 font-medium text-sm">{comparison.questionText}</div>
 
                           {/* Comment if available - candidate or expert - but not if showing expert no-data badge */}
                           {(comparison.candidateComment || comparison.expertComment) &&
                             !((comparison.candidateAnswer === null || comparison.candidateAnswer === undefined) && respondent === "expert") && (
-                              <blockquote className="text-gray-600 italic pl-4 border-l-2 border-gray-200 text-sm">{comparison.candidateComment || comparison.expertComment}</blockquote>
+                              <blockquote className="text-gray-600 italic pl-4 border-l-2 border-gray-200 text-sm break-words">{comparison.candidateComment || comparison.expertComment}</blockquote>
                             )}
 
                           {/* Sources if available - candidate or expert */}
