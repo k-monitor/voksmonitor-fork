@@ -68,7 +68,7 @@ export function ResultPage({
                   <h3 className="font-display font-semibold text-2xl tracking-tight text-gray-700">{t("heading")}</h3>
                 </AppHeader.BottomMain>
                 <div className="ml-auto flex items-center gap-2">
-                  {shareUrl && <ShareDropdown shareUrl={shareUrl} />}
+                  {shareUrl && <ShareDropdown shareUrl={shareUrl} align={condensed ? "left" : "right"} />}
                   <Button variant="fill" color="neutral" size="small" onClick={onNextClick}>
                     {t("comparison-button")}
                   </Button>
