@@ -53,7 +53,7 @@ export function ResultPage({
             <AppHeader condensed={condensed} calculator={calculator}>
               <AppHeader.Right>
                 <HideOnEmbed>
-                  <Button variant="link" color="neutral" size="small" aria-label={t("close-aria-label")} onClick={onCloseClick}>
+                  <Button variant="link" color="neutral" size="small" aria-label={t("close-aria-label")} title={t("close-aria-label")} onClick={onCloseClick}>
                     <Icon icon={mdiClose} size="medium" decorative />
                   </Button>
                 </HideOnEmbed>

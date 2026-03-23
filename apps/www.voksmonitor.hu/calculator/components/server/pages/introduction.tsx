@@ -1,6 +1,7 @@
 import { Button, Icon } from "@kalkulacka-one/design-system/client";
 
 import { mdiClose } from "@mdi/js";
+import { useTranslations } from "next-intl";
 
 import { type EmbedContextType, HideOnEmbed } from "../../../../components/client";
 import type { CalculatorViewModel } from "../../../view-models";
@@ -16,6 +17,7 @@ export type IntroductionPage = {
 
 export function IntroductionPage({ embedContext, calculator, onNextClick, onCloseClick }: IntroductionPage) {
   const hasFooter = embedContext.isEmbed && embedContext.config?.attribution !== false;
+  const t = useTranslations("calculator.introduction");
 
   return (
     <Layout>
@@ -23,7 +25,7 @@ export function IntroductionPage({ embedContext, calculator, onNextClick, onClos
         <AppHeader calculator={calculator}>
           <AppHeader.Right>
             <HideOnEmbed>
-              <Button variant="link" color="neutral" size="small" aria-label="Close" onClick={onCloseClick}>
+              <Button variant="link" color="neutral" size="small" aria-label={t("close-aria-label")} title={t("close-aria-label")} onClick={onCloseClick}>
                 <Icon icon={mdiClose} size="medium" decorative />
               </Button>
             </HideOnEmbed>

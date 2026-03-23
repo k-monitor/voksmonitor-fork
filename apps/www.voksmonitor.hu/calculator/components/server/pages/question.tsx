@@ -1,6 +1,7 @@
 import { Button, Icon } from "@kalkulacka-one/design-system/client";
 
 import { mdiClose } from "@mdi/js";
+import { useTranslations } from "next-intl";
 
 import { type EmbedContextType, HideOnEmbed } from "../../../../components/client";
 import type { AnswerViewModel, CalculatorViewModel, QuestionViewModel } from "../../../view-models";
@@ -21,6 +22,7 @@ export type QuestionPage = {
 
 export function QuestionPage({ embedContext, question, number, total, calculator, onPreviousClick, onNextClick, answer, onCloseClick }: QuestionPage) {
   const hasFooter = embedContext.isEmbed && embedContext.config?.attribution !== false;
+  const t = useTranslations("calculator.question");
 
   const handleAgreeChange = (checked: boolean) => {
     if (checked) {
@@ -67,7 +69,7 @@ export function QuestionPage({ embedContext, question, number, total, calculator
             <AppHeader condensed={condensed} calculator={calculator}>
               <AppHeader.Right>
                 <HideOnEmbed>
-                  <Button variant="link" color="neutral" size="small" aria-label="Close" onClick={onCloseClick}>
+                  <Button variant="link" color="neutral" size="small" aria-label={t("close-aria-label")} title={t("close-aria-label")} onClick={onCloseClick}>
                     <Icon icon={mdiClose} size="medium" decorative />
                   </Button>
                 </HideOnEmbed>

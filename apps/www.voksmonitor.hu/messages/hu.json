@@ -136,10 +136,12 @@
       "next-button": "Következő",
       "agree-button": "Egyetértek",
       "disagree-button": "Nem értek egyet",
-      "important-aria-label": "Számomra fontos"
+      "important-aria-label": "Számomra fontos",
+      "close-aria-label": "Kérdőív bezárása"
     },
     "review": {
-      "show-results-button": "Eredmények mutatása"
+      "show-results-button": "Eredmények mutatása",
+      "close-aria-label": "Bezárás"
     },
     "demography-survey": {
       "heading": "Kérdőív",
@@ -216,7 +218,8 @@
       "close-aria-label": "Bezárás",
       "choose-party": "Válassz pártot",
       "all-organizations": "Minden szervezet",
-      "you": "Te"
+      "you": "Te",
+      "read-more": "Olvass tovább!"
     },
     "result": {
       "comparison-button": "Összehasonlítás",

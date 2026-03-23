@@ -184,7 +184,7 @@ function ExpandableComment({ comment, sources, cellKey, expandedComments, toggle
         onClick={() => toggleComment(cellKey)}
         aria-expanded={isExpanded}
       >
-        {textToRender}
+        {textToRender} {!isExpanded && <span className="text-black-600 font-bold ml-1">Olvass tovább!</span>}
       </button>
       {sourceLinks}
     </div>

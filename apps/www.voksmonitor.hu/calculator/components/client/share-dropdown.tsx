@@ -87,9 +87,7 @@ export function ShareDropdown({ shareUrl, shareText, align = "right" }: ShareDro
         <Icon icon={mdiShareVariant} size="medium" decorative />
       </Button>
       {isOpen && (
-        <div
-          className={`absolute ${align === "left" ? "left-0" : "right-0"} top-full mt-2 z-50 min-w-[200px] rounded-xl border border-gray-200 bg-white shadow-lg`}
-        >
+        <div className={`absolute ${align === "left" ? "left-0" : "right-0"} top-full mt-2 z-50 min-w-[200px] rounded-xl border border-gray-200 bg-white shadow-lg`}>
           <ul className="py-1">
             <li>
               <button type="button" onClick={handleCopyLink} className="flex w-full items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors">

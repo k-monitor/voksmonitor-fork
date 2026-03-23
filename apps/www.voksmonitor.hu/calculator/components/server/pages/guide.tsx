@@ -1,6 +1,7 @@
 import { Button, Icon } from "@kalkulacka-one/design-system/client";
 
 import { mdiArrowLeft, mdiClose } from "@mdi/js";
+import { useTranslations } from "next-intl";
 
 import { type EmbedContextType, HideOnEmbed } from "../../../../components/client";
 import type { CalculatorViewModel } from "../../../view-models";
@@ -17,6 +18,7 @@ export type GuidePage = {
 
 export function GuidePage({ embedContext, calculator, onNextClick, onBackClick, onCloseClick }: GuidePage) {
   const hasFooter = embedContext.isEmbed && embedContext.config?.attribution !== false;
+  const t = useTranslations("calculator.guide");
 
   return (
     <Layout>
@@ -24,7 +26,7 @@ export function GuidePage({ embedContext, calculator, onNextClick, onBackClick, 
         <AppHeader calculator={calculator}>
           <AppHeader.Right>
             <HideOnEmbed>
-              <Button variant="link" color="neutral" size="small" aria-label="Close" onClick={onCloseClick}>
+              <Button variant="link" color="neutral" size="small" aria-label={t("close-aria-label")} onClick={onCloseClick}>
                 <Icon icon={mdiClose} size="medium" decorative />
               </Button>
             </HideOnEmbed>
