@@ -64,9 +64,10 @@ export function QuestionNavigationCard({ current, total, onPreviousClick, onNext
               aria-label={t("important-aria-label")}
             >
               <Icon icon={answer.answer?.isImportant ? mdiStar : mdiStarOutline} decorative={true} />
+              {t("important-aria-label")}
             </ToggleButton>
           </div>
-          <div className="flex flex-col @[500px]:flex-row gap-2 flex-1">
+          <div className="flex ws-nowrap flex-col @[500px]:flex-row gap-2 flex-1">
             <ToggleButton variant="answer" color="primary" checked={answer.answer?.answer === true} onChange={(checked: boolean) => onAgreeChange(checked)}>
               <Icon icon={logoCheck} decorative={true} />
               {t("agree-button")}
