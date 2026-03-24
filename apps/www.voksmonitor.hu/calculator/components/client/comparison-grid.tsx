@@ -25,7 +25,7 @@ function ComparisonGridDashlinesOverlay({ result, filterNestedCandidates }: Comp
     >
       <div className="h-full flex gap-8">
         {/* User column line - sticky */}
-        <div className="w-[100px] flex justify-center sticky left-4">
+        <div className="w-[200px] flex justify-center sticky left-4">
           <div className="w-0 h-full border-r-2 border-dashed border-gray-200" />
         </div>
         {/* Candidate columns lines */}
@@ -33,7 +33,7 @@ function ComparisonGridDashlinesOverlay({ result, filterNestedCandidates }: Comp
           const nestedMatches = filterNestedCandidates(match.nestedMatches);
           if (!nestedMatches) {
             return (
-              <div key={`line-${match.candidate.id}-${matchIndex}`} className="w-[100px] flex justify-center">
+              <div key={`line-${match.candidate.id}-${matchIndex}`} className="w-[200px] flex justify-center">
                 <div className="w-0 h-full border-r-2 border-dashed border-gray-200" />
               </div>
             );
@@ -41,7 +41,7 @@ function ComparisonGridDashlinesOverlay({ result, filterNestedCandidates }: Comp
           return (
             <div key={`line-group-${match.candidate.id}-${matchIndex}`} className="flex gap-8">
               {nestedMatches.map((nested: NonNullable<ResultViewModel["matches"][0]["nestedMatches"]>[0]) => (
-                <div key={`line-${nested.candidate.id}-${matchIndex}`} className="w-[100px] flex justify-center">
+                <div key={`line-${nested.candidate.id}-${matchIndex}`} className="w-[200px] flex justify-center">
                   <div className="w-0 h-full border-r-2 border-dashed border-slate-200" />
                 </div>
               ))}
@@ -180,7 +180,7 @@ function ExpandableComment({ comment, sources, cellKey, expandedComments, toggle
     <div>
       <button
         type="button"
-        className="text-[10px] leading-4 text-center text-gray-700 break-words cursor-pointer hover:text-gray-900 transition-colors"
+        className="text-[10px] leading-4 text-center text-gray-700 break-words cursor-pointer hover:text-gray-900 transition-colors hyphens-auto"
         onClick={() => toggleComment(cellKey)}
         aria-expanded={isExpanded}
       >
@@ -202,7 +202,7 @@ function ComparisonHeader({ condensed = false, result, filterNestedCandidates }:
 
   return (
     <div className={`sticky ${condensed ? "top-[4.75rem]" : "top-32"} gap-8 flex z-40 transition-all duration-500 ease-in-out`}>
-      <div className="rounded-xl bg-green-200/60 backdrop-blur-lg border-emerald-50 border-1 z-50 min-h-[65px] sticky left-4 w-[100px] flex-shrink-0 text-center text-xs flex items-center justify-center">
+      <div className="rounded-xl bg-green-200/60 backdrop-blur-lg border-emerald-50 border-1 z-50 min-h-[65px] sticky left-4 w-[200px] flex-shrink-0 text-center text-xs flex items-center justify-center">
         {t("you")}
       </div>
       {result.matches.map((match, matchIndex) => {
@@ -210,7 +210,7 @@ function ComparisonHeader({ condensed = false, result, filterNestedCandidates }:
         const nestedCandidates = nestedMatches?.map((nested: NonNullable<ResultViewModel["matches"][0]["nestedMatches"]>[0]) => (
           <div
             key={`header-${nested.candidate.id}-${matchIndex}`}
-            className=" rounded-xl bg-gray-100/60 backdrop-blur-lg border-gray-100 border-1 w-[100px] flex-shrink-0 flex items-center justify-center text-center text-xs"
+            className=" rounded-xl bg-gray-100/60 backdrop-blur-lg border-gray-100 border-1 w-[200px] flex-shrink-0 flex items-center justify-center text-center text-xs"
           >
             <span>
               {nested.candidate.displayName}
@@ -222,7 +222,7 @@ function ComparisonHeader({ condensed = false, result, filterNestedCandidates }:
           return (
             <div
               key={`header-${match.candidate.id}-${matchIndex}`}
-              className="rounded-xl bg-gray-100/60 backdrop-blur-lg border-gray-100 border-1 w-[100px] flex-shrink-0 flex items-center justify-center text-center text-xs"
+              className="rounded-xl bg-gray-100/60 backdrop-blur-lg border-gray-100 border-1 w-[200px] flex-shrink-0 flex items-center justify-center text-center text-xs"
             >
               {match.candidate.displayName}
             </div>
@@ -270,16 +270,16 @@ function ComparisonQuestionRow({ question, index, totalQuestions, answers, resul
         <div className="px-4 flex justify-start sticky left-4 w-[95dvw]">
           <ComparisonQuestionCard question={question} current={index + 1} total={totalQuestions} />
         </div>
-        <div className="w-[100px] flex-shrink-0" />
+        <div className="w-[200px] flex-shrink-0" />
         {result.matches.map((match, matchIndex) => {
           const nestedMatches = filterNestedCandidates(match.nestedMatches);
           if (!nestedMatches) {
-            return <div key={`spacer-${match.candidate.id}-${matchIndex}`} className="w-[100px] flex-shrink-0" />;
+            return <div key={`spacer-${match.candidate.id}-${matchIndex}`} className="w-[200px] flex-shrink-0" />;
           }
           return (
             <div key={`spacer-group-${match.candidate.id}-${matchIndex}`} className="flex gap-8">
               {nestedMatches.map((nested) => (
-                <div key={`spacer-${nested.candidate.id}-${matchIndex}`} className="w-[100px] flex-shrink-0" />
+                <div key={`spacer-${nested.candidate.id}-${matchIndex}`} className="w-[200px] flex-shrink-0" />
               ))}
             </div>
           );
@@ -290,7 +290,7 @@ function ComparisonQuestionRow({ question, index, totalQuestions, answers, resul
       <div className="flex gap-8 relative">
         <div className="h-32 absolute left-0 top-0" />
         {/* user answers */}
-        <div className="w-[100px] z-20 flex-shrink-0 flex justify-center items-center min-h-[40px] sticky left-4">
+        <div className="w-[200px] z-20 flex-shrink-0 flex justify-center items-center min-h-[40px] sticky left-4">
           <div className="rounded-full bg-gray-50">
             <ComparisonAnswerIcon answer={userAnswer?.answer?.answer} />
           </div>
@@ -301,7 +301,7 @@ function ComparisonQuestionRow({ question, index, totalQuestions, answers, resul
           if (!nestedMatches) {
             const answer = match.candidateAnswers.find((a) => a.questionId === question.id);
             return (
-              <div key={`answer-${match.candidate.id}-${matchIndex}`} className="w-[100px] flex-shrink-0 flex flex-col justify-center items-center min-h-[40px] gap-1">
+              <div key={`answer-${match.candidate.id}-${matchIndex}`} className="w-[200px] flex-shrink-0 flex flex-col justify-center items-center min-h-[40px] gap-1">
                 <ComparisonAnswerIcon answer={answer?.answer} />
                 <ExpandableComment
                   comment={answer?.comment}
@@ -318,7 +318,7 @@ function ComparisonQuestionRow({ question, index, totalQuestions, answers, resul
               {nestedMatches.map((nested: NonNullable<ResultViewModel["matches"][0]["nestedMatches"]>[0]) => {
                 const answer = nested.candidateAnswers.find((a: (typeof nested.candidateAnswers)[0]) => a.questionId === question.id);
                 return (
-                  <div key={`answer-${nested.candidate.id}-${matchIndex}`} className="w-[100px] flex-shrink-0 flex flex-col justify-center items-center min-h-[40px] gap-1">
+                  <div key={`answer-${nested.candidate.id}-${matchIndex}`} className="w-[200px] flex-shrink-0 flex flex-col justify-center items-center min-h-[40px] gap-1">
                     <ComparisonAnswerIcon answer={answer?.answer} />
                     <ExpandableComment
                       comment={answer?.comment}
