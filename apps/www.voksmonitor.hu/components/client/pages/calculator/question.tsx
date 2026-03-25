@@ -5,7 +5,7 @@ import { QuestionPage as AppQuestionPage } from "../../../../calculator/componen
 import { useAnswersStore } from "../../../../calculator/stores/answers";
 import { useAnswer, useCalculator, useQuestions } from "../../../../calculator/view-models";
 import { useAutoSave } from "../../../../hooks/auto-save";
-import { saveAnswersToLocalStorage } from "../../../../lib/local-storage";
+import { saveAnswersToLocalStorage, clearExpiredAnswersFromLocalStorage } from "../../../../lib/local-storage";
 import { type RouteSegments, routes } from "../../../../lib/routing/route-builders";
 import { useEmbed } from "../../../client/embed-context-provider";
 
@@ -20,6 +20,9 @@ export function QuestionPageWithRouting({ current, segments }: { current: number
   const getAnswer = useAnswersStore((state) => state.getAnswer);
 
   useAutoSave();
+  useEffect(() => {
+    clearExpiredAnswersFromLocalStorage();
+  }, []);
 
   useEffect(() => {
     if (question) {

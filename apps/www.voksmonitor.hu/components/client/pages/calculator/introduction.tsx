@@ -4,9 +4,11 @@ import { IntroductionPage } from "../../../../calculator/components/server";
 import { useAnswersStore } from "../../../../calculator/stores/answers";
 import { useCalculator } from "../../../../calculator/view-models";
 import { useAutoSave } from "../../../../hooks/auto-save";
-import { saveAnswersToLocalStorage } from "../../../../lib/local-storage";
+import { saveAnswersToLocalStorage, clearExpiredAnswersFromLocalStorage } from "../../../../lib/local-storage";
 import { type RouteSegments, routes } from "../../../../lib/routing/route-builders";
 import { useEmbed } from "../../../client/embed-context-provider";
+
+import { useEffect } from "react";
 
 export function IntroductionPageWithRouting({ segments }: { segments: RouteSegments }) {
   const router = useRouter();
@@ -15,6 +17,9 @@ export function IntroductionPageWithRouting({ segments }: { segments: RouteSegme
   const answersStore = useAnswersStore((state) => state.answers);
 
   useAutoSave();
+  useEffect(() => {
+    clearExpiredAnswersFromLocalStorage();
+  }, []);
 
   const handleNavigationNextClick = () => {
     router.push(routes.guide(segments));

@@ -1,11 +1,39 @@
+/**
+ * Scans localStorage for all answer keys and removes those whose expiry has passed.
+ * Call this on app load or periodically to keep storage clean.
+ */
+export function clearExpiredAnswersFromLocalStorage(): void {
+  if (typeof window === "undefined") return;
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (!key) continue;
+      if (key.startsWith(EXPIRY_KEY_PREFIX)) {
+        const calculatorId = key.substring(EXPIRY_KEY_PREFIX.length);
+        const expiry = localStorage.getItem(key);
+        if (expiry && Date.now() >= Number(expiry)) {
+          localStorage.removeItem(key);
+          localStorage.removeItem(answersKey(calculatorId));
+          localStorage.removeItem(completedKey(calculatorId));
+          localStorage.removeItem(demoCompletedKey(calculatorId));
+          localStorage.removeItem(feedbackCompletedKey(calculatorId));
+        }
+      }
+    }
+  } catch {
+    // silently ignore
+  }
+}
 import type { Answer } from "../../../../packages/schema/schemas/answer.schema";
 
 const ANSWERS_KEY_PREFIX = "voksmonitor-answers-";
 const EXPIRY_KEY_PREFIX = "voksmonitor-answers-expiry-";
 const COMPLETED_KEY_PREFIX = "voksmonitor-completed-";
+const DEMO_COMPLETED_KEY_PREFIX = "voksmonitor-demography-completed-";
+const FEEDBACK_COMPLETED_KEY_PREFIX = "voksmonitor-feedback-completed-";
 
-/** 24 hours in milliseconds */
-const ANSWERS_TTL_MS = 24 * 60 * 60 * 1000;
+/** 1 hour in milliseconds */
+const ANSWERS_TTL_MS = 1 * 60 * 60 * 1000;
 
 function answersKey(calculatorId: string): string {
   return `${ANSWERS_KEY_PREFIX}${calculatorId}`;
@@ -18,6 +46,15 @@ function expiryKey(calculatorId: string): string {
 function completedKey(calculatorId: string): string {
   return `${COMPLETED_KEY_PREFIX}${calculatorId}`;
 }
+
+function demoCompletedKey(calculatorId: string): string {
+  return `${DEMO_COMPLETED_KEY_PREFIX}${calculatorId}`;
+}
+
+function feedbackCompletedKey(calculatorId: string): string {
+  return `${FEEDBACK_COMPLETED_KEY_PREFIX}${calculatorId}`;
+}
+
 
 export function saveAnswersToLocalStorage(calculatorId: string, answers: Answer[]): void {
   if (typeof window === "undefined") return;
@@ -54,7 +91,7 @@ export function loadAnswersFromLocalStorage(calculatorId: string): Answer[] {
 }
 
 /**
- * Start the 24-hour expiry countdown for saved answers.
+ * Start the 1-hour expiry countdown for saved answers.
  * Call this after a successful anonymous submission so the answers
  * remain available for review but are automatically cleaned up.
  */
