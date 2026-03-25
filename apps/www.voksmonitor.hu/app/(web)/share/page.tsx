@@ -20,7 +20,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kiderült, mely pártok állnak hozzám a legközelebb 👀",
     description: "Töltsd ki te is a Voksmonitort!",
-    images: [],
+    images: [
+      {
+        url: "/share-og.png",
+        width: 1200,
+        height: 630,
+        alt: "Én már kitöltöttem a Voksmonitort! Nézd meg az eredményeim!",
+      },
+    ],
   },
 };
 
