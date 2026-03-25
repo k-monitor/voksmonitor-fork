@@ -6,11 +6,11 @@
     "2026-card": {
       "tags": {
         "questionnaire": "Kérdések leltára",
-        "questions": "45 kérdés",
-        "duration": "20 perc"
+        "questions": "44 kérdés",
+        "duration": "15 perc"
       },
       "title": "Országgyűlési választások 2026 Voksmonitor",
-      "description": "A 2026-os országgyűlési választásokra készült Voksmonitor célja, hogy a választók a politikával ne csak a pártok kampányüzenetein keresztül találkozzanak, hanem megismerjék a választáson induló pártok álláspontját fontos szakpolitikai kérdésekben. Az alkalmazás a válaszadóhoz azt a pártot rendeli, amelynek álláspontja a válaszok alapján a legközelebb áll a kitöltő véleményéhez. A kérdéseket a K-Monitor munkatársai úgy állították össze, hogy lefedjék az ország működését meghatározó szakpolitikai területek széles körét. Célunk az volt, hogy a kérdések olyan dilemmákat jelenítsenek meg, amelyek érdemben befolyásolják a közpolitikát, és a választók számára is érthetők, például a gazdaság, a szociálpolitika, az oktatás, az egészségügy, a környezetvédelem vagy az állami működés átláthatósága terén.",
+      "description": "A 2026-os országgyűlési választásokra készült Voksmonitor célja, hogy a választók a politikával ne csak a pártok kampányüzenetein keresztül találkozzanak, hanem megismerjék a választáson induló pártok álláspontját fontos szakpolitikai kérdésekben. Az alkalmazás a válaszadóhoz azt a pártot rendeli, amelynek álláspontja a válaszok alapján a legközelebb áll a kitöltő véleményéhez. A kérdéseket a <website>K-Monitor</website> munkatársai úgy állították össze, hogy lefedjék az ország működését meghatározó szakpolitikai területek széles körét. Célunk az volt, hogy a kérdések olyan dilemmákat jelenítsenek meg, amelyek érdemben befolyásolják a közpolitikát, és a választók számára is érthetők, például a gazdaság, a szociálpolitika, az oktatás, az egészségügy, a környezetvédelem vagy az állami működés átláthatósága terén.",
       "start-button": "Kérdések indítása"
     },
     "bp-card": {
@@ -29,17 +29,17 @@
     },
     "methodology-section": {
       "title": "Hogyan készül a Voksmonitor?",
-      "description": "A Voksmonitor a K-Monitor és a KohoVolit.eu nonprofit szervezetek közös projektje, ami a pártok programjára alapozva segít mérlegelni, hogy kire szavazzon.",
+      "description": "A Voksmonitor a <website>K-Monitor</website> és a KohoVolit.eu nonprofit szervezetek közös projektje, ami a pártok programjára alapozva segít mérlegelni, hogy kire szavazzon.",
       "step1-alt": "Kérdőív",
-      "step1-text": "A kérdőív 45 kérdésben méri fel a kitöltő álláspontját aktuális európai politikai témákról.",
+      "step1-text": "A kérdőív 44 kérdésben méri fel a kitöltő álláspontját aktuális politikai témákról.",
       "step2-alt": "Pártok",
       "step2-text": "A kérdéseket minden listát állító, érdemi támogatottsággal rendelkező pártnak feltettük.",
       "step3-alt": "Összehasonlítás",
-      "step3-text": "Ezeket az eredményeket hasonlítjuk össze az Ön válaszaival.",
+      "step3-text": "Ezeket az eredményeket hasonlítjuk össze a válaszaiddal.",
       "step4-alt": "Számolás",
-      "step4-text": "A Voksmonitor így megmutatja, mely párt véleménye áll legközelebb az Ön értékrendjéhez.",
-      "footer-text": "A Voksmonitor célja a tájékoztatás és a választói mérlegelés segítése. A végső döntést a szavazófülkében Ön hozza meg.",
-      "learn-more": "Tudjon meg többet!"
+      "step4-text": "A Voksmonitor így megmutatja, mely párt véleménye áll legközelebb a te értékrendedhez.",
+      "footer-text": "A Voksmonitor célja a tájékoztatás és a választói mérlegelés segítése. A végső döntést a szavazófülkében te hozod meg.",
+      "learn-more": "Tudj meg többet!"
     },
     "footer": "© 2026 Volební kalkulačka / Voksmonitor"
   },
@@ -70,16 +70,16 @@
   },
   "subscribe-form": {
     "heading": "Iratkozz fel a K-Monitor hírlevelére!",
-    "email-label": "Adja meg az e-mail címét",
+    "email-label": "Add meg az e-mail címed",
     "email-placeholder": "E-mail",
     "submit-button": "Küldés",
     "consent-text": "Elolvastam és elfogadom a K-Monitor adatkezelési tájékoztatóját.",
     "consent-link": "adatkezelési tájékoztatóját",
     "success": "Köszönjük a feliratkozást",
-    "error-no-consent": "Kérjük, fogadja el az adatkezelési tájékoztatót.",
+    "error-no-consent": "Kérjük, fogadd el az adatkezelési tájékoztatót.",
     "error-invalid-email": "Érvénytelen formátum",
-    "error-submit": "Hiba történt a feliratkozás során. Kérjük, próbálja újra.",
-    "error-server": "Szerverhiba. Kérjük, próbálja újra később."
+    "error-submit": "Hiba történt a feliratkozás során. Kérjük, próbáld újra.",
+    "error-server": "Szerverhiba. Kérjük, próbáld újra később."
   },
   "pages": {
     "rolunk": {
@@ -97,16 +97,16 @@
       "who-heading": "Ki és hogyan készíti a Voksmonitort?",
       "how-heading": "Hogyan működik?",
       "what": "A Voksmonitor egy online választási kalkulátor, amely összehasonlítja az Ön politikai véleményét a 2026-os országgyűlési választáson induló pártok álláspontjával. A Voksmonitorhoz hasonló magyar (pl. Vokskabin) és nemzetközi alkalmazások (pl.Stemwijzer, Wahl-O-Mat,Wahlrechner) célja, hogy segítsék a választókat a tájékozódásban és átláthatóbbá tegyék a politikai kínálatot. A Voksmonitor célja, hogy a választók ne csupán kampányüzeneteken és kommunikáción keresztül találkozzanak a politikával, hanem megismerjék a pártok konkrét programját, valamint a fontos szakpolitikai kérdésekben képviselt álláspontjukat. Az alkalmazás segít feltárni, hogy mely politikai szereplők nézetei állnak legközelebb vagy éppen a legmesszebbre az Ön értékrendjétől.",
-      "who": "A Voksmonitort évek óta a K-Monitor és a KohoVolit.eu nonprofit szervezetek közösen fejlesztik és működtetik. Ebben az évben a Vox Populi Választási Kalauz is csatlakozott a kezdeményezésünkhöz. A kérdéseket a K-Monitor munkatársai és szakértők állítják össze annak érdekében, hogy a választás szempontjából legfontosabb szakpolitikai témákat lefedjék. A témák között szerepelnek például a gazdaság, az egészségügy, az oktatás, a környezetvédelem, az energia, valamint a jogállamiság kérdései is. A kérdéssort előzetesen elküldjük a választáson induló pártoknak, akik lehetőséget kapnak arra, hogy megadják válaszaikat és azok indoklását. Amennyiben egy párt nem válaszol, az álláspontját nyilvános programja, megszólalásai és korábbi döntései alapján rekonstruáljuk. Minden érintett számára biztosítjuk a lehetőséget a válaszok ellenőrzésére és pontosítására.",
-      "how": "A Voksmonitor kérdőíve 45, a 2026-os országgyűlési választás szempontjából releváns politikai kérdést tartalmaz. Minden kérdéshez tartozik egy rövid, semleges magyarázat, amely bemutatja a különböző álláspontokat, segítve a kitöltőt saját véleménye kialakításában. A felhasználók minden kérdésnél megjelölhetik, hogy egyetértenek-e az adott állítással (igen / nem / nem tudom), és azt is jelezhetik, mennyire tartják fontosnak az adott témát. Az alkalmazás ezután összeveti a válaszokat a pártok álláspontjaival, majd kiszámítja az egyezés mértékét. Az eredmény százalékos formában jelenik meg, megmutatva, hogy mely pártok állnak a legközelebb az Ön nézeteihez. Az eredmények tájékoztató jellegűek: céljuk, hogy segítsék a választókat a döntésben és lehetőséget adjanak saját álláspontjuk összehasonlítására a politikai kínálattal."
+      "who": "A Voksmonitort évek óta a <website>K-Monitor</website> és a KohoVolit.eu nonprofit szervezetek közösen fejlesztik és működtetik. Ebben az évben a Vox Populi Választási Kalauz is csatlakozott a kezdeményezésünkhöz. A kérdéseket a K-Monitor munkatársai és szakértők állítják össze annak érdekében, hogy a választás szempontjából legfontosabb szakpolitikai témákat lefedjék. A témák között szerepelnek például a gazdaság, az egészségügy, az oktatás, a környezetvédelem, az energia, valamint a jogállamiság kérdései is. A kérdéssort előzetesen elküldjük a választáson induló pártoknak, akik lehetőséget kapnak arra, hogy megadják válaszaikat és azok indoklását. Amennyiben egy párt nem válaszol, az álláspontját nyilvános programja, megszólalásai és korábbi döntései alapján rekonstruáljuk. Minden érintett számára biztosítjuk a lehetőséget a válaszok ellenőrzésére és pontosítására.",
+      "how": "A Voksmonitor kérdőíve 44, a 2026-os országgyűlési választás szempontjából releváns politikai kérdést tartalmaz. Minden kérdéshez tartozik egy rövid, semleges magyarázat, amely bemutatja a különböző álláspontokat, segítve a kitöltőt saját véleménye kialakításában. A felhasználók minden kérdésnél megjelölhetik, hogy egyetértenek-e az adott állítással (igen / nem / nem tudom), és azt is jelezhetik, mennyire tartják fontosnak az adott témát. Az alkalmazás ezután összeveti a válaszokat a pártok álláspontjaival, majd kiszámítja az egyezés mértékét. Az eredmény százalékos formában jelenik meg, megmutatva, hogy mely pártok állnak a legközelebb az Ön nézeteihez. Az eredmények tájékoztató jellegűek: céljuk, hogy segítsék a választókat a döntésben és lehetőséget adjanak saját álláspontjuk összehasonlítására a politikai kínálattal."
     },
     "modszertan": {
       "meta-title": "A Voksmonitor módszertana",
       "heading": "A Voksmonitor módszertana",
-      "p1": "A Voksmonitor a <kmonitor>K-Monitor</kmonitor> és a <kohopolit>KohoVolit.eu</kohopolit> közös projektje, amelynek célja, hogy a választók a politikával ne csak a frakciók és képviselők kommunikációján keresztül találkozzanak, hanem megismerjék álláspontjukat a Fővárosi Közgyűlés várospolitikai és szakmai kérdéseiben.",
+      "p1": "A Voksmonitor a <website>K-Monitor</website> és a KohoVolit.eu közös projektje, amelynek célja, hogy a választók a politikával ne csak a pártok kommunikációján keresztül találkozzanak, hanem megismerjék a különböző pártok programját és álláspontját a legfontosabb, a 2026-os országgyűlési választás szempontjából releváns politikai kérdésekben. Ebben az évben a Vox Populi Választási Kalauz is csatlakozott a kezdeményezésünkhöz.",
       "support-heading": "Támogasd a Voksmonitor elkészítését!",
       "support-text": "Tetszik a Voksmonitor? Kérjük, támogasd az elkészítését!",
-      "body": "A Voksmonitor a K-Monitor és a KohoVolit.eu közös projektje, amelynek célja, hogy a választók a politikával ne csak a pártok kommunikációján keresztül találkozzanak, hanem megismerjék a különböző pártok programját és álláspontját a legfontosabb, a 2026-os országgyűlési választás szempontjából releváns politikai kérdésekben. Az alkalmazás a felhasználóhoz rendeli a pártokat annak sorrendjében, hogy azok szakpolitikai állításai mennyire állnak közel a felhasználó válaszaihoz. A kérdéseket az alkalmazás elkészítése előtt elküldjük a választáson induló pártoknak, amelyek lehetőséget kapnak a kérdések megválaszolására és válaszaik indoklására. Amennyiben egy párt nem válaszol megkeresésünkre, az álláspontját a választási programja, nyilvános megszólalásai és korábbi döntései alapján rekonstruáljuk. Ez természetesen felveti annak lehetőségét, hogy a pártok hivatalos álláspontjától eltérhetnek a válaszok, ugyanakkor a K-Monitor minden, az alkalmazásban szereplő politikai erőnek lehetőséget biztosít ezek korrigálására. A Voksmonitor 45 politikai témájú kérdésben segít eligazodni a kitöltőknek. Ezek lefedik az aktuális országos szinten releváns politikai ügyeket és szakpolitikai témákat. A kérdésekre anonim módon minden esetben igennel, nemmel vagy „nem tudom” válasszal lehet reagálni. Minden kérdésnél a felhasználók rendelkezésére áll egy rövid, semleges magyarázat is, amely összefoglalja a kérdéssel kapcsolatos főbb álláspontokat. Az eredmény minden esetben orientációs jellegű: segítségével a felhasználók össze tudják hasonlítani saját álláspontjukat a pártok pozícióival. A kérdőív kitöltését követően a felhasználók egy anoním, rövid, opcionálisan kitölthető mini kérdőívet látnak, amelyben néhány alapvető demográfiai kérdésre, valamint egy pártpreferenciára vonatkozó kérdésre válaszolhatnak. Ezeket az adatokat kizárólag kutatási célokra használjuk fel: segítségükkel jobban megérthető, hogy a különböző társadalmi csoportok hogyan viszonyulnak az egyes politikai kérdésekhez, illetve mennyiben tér el a felhasználók önbevallott pártpreferenciája attól, amit a Voksmonitor eredménye mutat. Ez hozzájárul az alkalmazás módszertanának fejlesztéséhez, valamint a választói attitűdök pontosabb feltérképezéséhez."
+      "body": "Az alkalmazás a felhasználóhoz rendeli a pártokat annak sorrendjében, hogy azok szakpolitikai állításai mennyire állnak közel a felhasználó válaszaihoz. A kérdéseket az alkalmazás elkészítése előtt elküldjük a választáson induló pártoknak, amelyek lehetőséget kapnak a kérdések megválaszolására és válaszaik indoklására. Amennyiben egy párt nem válaszol megkeresésünkre, az álláspontját a választási programja, nyilvános megszólalásai és korábbi döntései alapján rekonstruáljuk. Ez természetesen felveti annak lehetőségét, hogy a pártok hivatalos álláspontjától eltérhetnek a válaszok, ugyanakkor a K-Monitor minden, az alkalmazásban szereplő politikai erőnek lehetőséget biztosít ezek korrigálására. A Voksmonitor 44 politikai témájú kérdésben segít eligazodni a kitöltőknek. Ezek lefedik az aktuális országos szinten releváns politikai ügyeket és szakpolitikai témákat. A kérdésekre anonim módon minden esetben igennel, nemmel vagy „nem tudom” válasszal lehet reagálni. Minden kérdésnél a felhasználók rendelkezésére áll egy rövid, semleges magyarázat is, amely összefoglalja a kérdéssel kapcsolatos főbb álláspontokat. Az eredmény minden esetben orientációs jellegű: segítségével a felhasználók össze tudják hasonlítani saját álláspontjukat a pártok pozícióival. A kérdőív kitöltését követően a felhasználók egy anoním, rövid, opcionálisan kitölthető mini kérdőívet látnak, amelyben néhány alapvető demográfiai kérdésre, valamint egy pártpreferenciára vonatkozó kérdésre válaszolhatnak. Ezeket az adatokat kizárólag kutatási célokra használjuk fel: segítségükkel jobban megérthető, hogy a különböző társadalmi csoportok hogyan viszonyulnak az egyes politikai kérdésekhez, illetve mennyiben tér el a felhasználók önbevallott pártpreferenciája attól, amit a Voksmonitor eredménye mutat. Ez hozzájárul az alkalmazás módszertanának fejlesztéséhez, valamint a választói attitűdök pontosabb feltérképezéséhez."
     },
     "kontakt": {
       "meta-title": "Kontakt",
@@ -117,17 +117,17 @@
     "introduction": {
       "para1": "Az Országgyűlési választások 2026 Voksmonitor célja, hogy a választók a politikával ne csak a pártok kampányüzenetein keresztül találkozzanak, hanem megismerjék a pártok álláspontját fontos szakpolitikai kérdésekben. Az alkalmazás a válaszadóhoz azt a pártot rendeli, amelynek álláspontja a válaszok alapján a legközelebb áll a kitöltő véleményéhez.",
       "para2": "Az Országgyűlési választások 2026 Voksmonitor a 2026-os országgyűlési választásokra készült. A kérdéseket a K-Monitor munkatársai úgy állították össze, hogy lefedjék az ország működését meghatározó szakpolitikai területek széles körét. Célunk az volt, hogy a kérdések olyan dilemmákat jelenítsenek meg, amelyek érdemben befolyásolják a közpolitikát, és a választók számára is érthetők, például a gazdaság, a szociálpolitika, az oktatás, az egészségügy, a környezetvédelem vagy az állami működés átláthatósága terén.",
-      "para3": "Az Országgyűlési választások 2026 Voksmonitor  a K-Monitor, a KohoVolit.eu és a Vox Populi közös projektje."
+      "para3": "Az Országgyűlési választások 2026 Voksmonitor  a <website>K-Monitor</website>, a KohoVolit.eu és a Vox Populi közös projektje."
     },
     "guide": {
       "agree-label": "Egyetért",
-      "agree-description": "Amennyiben egy válasza megegyezik egy párt válaszával, az egy pontot ér.",
+      "agree-description": "Amennyiben egy válaszod megegyezik egy párt válaszával, az egy pontot ér.",
       "disagree-label": "Nem ért egyet",
-      "disagree-description": "Amennyiben a válasza ellentétes, egy pontot levonunk.",
+      "disagree-description": "Amennyiben a válaszod ellentétes egy párt válaszával, egy pontot levonunk.",
       "skip-label": "Kihagyás",
-      "skip-description": "Amennyiben nincs álláspontja a témáról, vagy nem szeretne válaszolni, a jobb oldalon található nyíllal továbbléphet. A kérdést nem vesszük figyelembe az eredmények kiszámításánál.",
+      "skip-description": "Amennyiben nincs álláspontod a témáról, vagy nem szeretnél válaszolni, a jobb oldalon található nyíllal továbbléphetsz. A kérdést nem vesszük figyelembe az eredmények kiszámításánál.",
       "important-label": "Fontos számomra",
-      "important-description": "Csillaggal jelölheti az Ön számára fontos témákat. Ezeket a program dupla súllyal számítja."
+      "important-description": "Csillaggal jelölheted a számodra fontos témákat. Ezeket a program dupla súllyal számítja."
     },
     "question": {
       "guide-button": "Útmutató",
@@ -145,13 +145,13 @@
     },
     "demography-survey": {
       "heading": "Kérdőív",
-      "description": "Kérjük, járuljon hozzá munkánkhoz néhány rövid, anonim kérdés megválaszolásával! A válaszadás teljes mértékben önkéntes, az adatokat pedig kizárólag kutatási célokra használjuk fel.",
+      "description": "Kérjük, járulj hozzá munkánkhoz néhány rövid kérdés megválaszolásával! A válaszadás teljes mértékben önkéntes, az adatokat pedig kizárólag kutatási célokra használjuk fel. Kitöltéseddel hozzájárulsz ahhoz, hogy pontosabb és árnyaltabb képet kapjunk a közvéleményről.",
       "close-aria-label": "Bezárás",
       "skip-button": "Kihagyás",
       "submit-button": "Küldés és tovább",
-      "confirm-empty-submit": "Nem válaszolt minden kérdésre. Biztosan üresen szeretné beküldeni a kérdőívet?",
+      "confirm-empty-submit": "Nem válaszoltál minden kérdésre. Biztosan üresen szeretnéd beküldeni a kérdőívet?",
       "submitting-button": "Küldés...",
-      "incomplete-warning": "Kérjük, válaszoljon minden kérdésre, vagy válassza a Kihagyás gombot a továbblépéshez.",
+      "incomplete-warning": "Kérjük, válaszolj minden kérdésre, vagy válaszd a Kihagyás gombot a továbblépéshez.",
       "answered-count": "{count}/{total} megválaszolva",
       "gender": {
         "label": "Az Ön neme?",
@@ -161,7 +161,7 @@
         "no-answer": "Nem kívánok válaszolni"
       },
       "age": {
-        "label": "Az Ön életkora?",
+        "label": "Kérjük, add meg az életkorod",
         "0-18": "0–18",
         "18-24": "18–24",
         "25-34": "25–34",
@@ -171,14 +171,14 @@
         "65+": "65+"
       },
       "residence": {
-        "label": "Az Ön lakóhelye? (településtípus)",
+        "label": "Kérjük add meg a lakóhelyed!",
         "budapest": "Budapest",
         "county-seat": "Megyeszékhely / megyei jogú város",
         "other-city": "Egyéb város",
         "village": "Község / falu"
       },
       "education": {
-        "label": "Legmagasabb iskolai végzettsége?",
+        "label": "Mi a legmagasabb befejezett iskolai végzettséged?",
         "primary": "Alapfokú (általános iskola)",
         "secondary-no-matura": "Középfokú (érettségi nélkül)",
         "secondary-matura": "Középfokú (érettségivel)",
@@ -186,7 +186,7 @@
         "master-or-higher": "Felsőfokú (MA/MSc vagy magasabb)"
       },
       "would-vote": {
-        "label": "Ha most vasárnap lenne a választás, Ön melyik pártra szavazna?",
+        "label": "Ha most vasárnap lenne a választás, te melyik pártra szavaznál?",
         "fidesz-kdnp": "Fidesz–KDNP",
         "tisza": "TISZA Párt",
         "dk": "DK (Demokratikus Koalíció)",
@@ -238,7 +238,7 @@
     },
     "donate": {
       "title": "Voksmonitor támogatása",
-      "description": "Támogasd a Voksmonitort készítő K-Monitor egyesületet!",
+      "description": "Támogasd a Voksmonitort készítő K-Monitor Közhasznú Egyesületet!",
       "button": "Támogatom a Voksmonitort",
       "close-aria-label": "Bezárás"
     },
@@ -252,12 +252,12 @@
     },
     "feedback-survey": {
       "heading": "Visszajelzés",
-      "description": "Kérjük, értékelje, mennyire volt hasznos az Ön számára a Voksmonitor!",
+      "description": "Kérjük, értékeld, mennyire volt számodra hasznos a Voksmonitor!",
       "close-aria-label": "Bezárás",
-      "helpfulness-label": "Hozzájárult a Voksmonitor ahhoz, hogy könnyebben dönts a választáson?",
+      "helpfulness-label": "Mennyire érezted úgy, hogy a kérdések számodra valóban fontos témákat érintenek?",
       "star-aria-label": "{value} csillag",
-      "scale-low": "Nem volt hasznos",
-      "scale-high": "Nagyon hasznos",
+      "scale-low": "Egyáltalán nem",
+      "scale-high": "Teljes mértékben",
       "skip-button": "Kihagyás",
       "submit-button": "Küldés",
       "submitting-button": "Küldés..."
