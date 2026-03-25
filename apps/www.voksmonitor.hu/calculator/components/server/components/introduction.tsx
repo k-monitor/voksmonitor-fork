@@ -21,6 +21,11 @@ export function Introduction({ calculator }: Introduction) {
               {chunks}
             </a>
           ),
+          website: (chunks) => (
+            <a href="https://k-monitor.hu/" className="font-bold">
+              {chunks}
+            </a>
+          ),
           kohopolit: (chunks) => (
             <a href="https://kohovolit.eu/" className="font-bold">
               {chunks}

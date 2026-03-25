@@ -19,15 +19,24 @@ export default async function Page() {
           {t.rich("p1", {
             kmonitor: (chunks) => <strong className="font-semibold text-gray-900">{chunks}</strong>,
             kohopolit: (chunks) => <strong className="font-semibold text-gray-900">{chunks}</strong>,
+            website: (chunks) => (
+              <a href="https://k-monitor.hu" target="_blank" rel="noopener noreferrer">{chunks}</a>
+            ),
           })}
         </p>
-        {t("body")
-          .split("\n")
-          .map((para, i) => (
-            <p key={i} className="text-lg text-gray-700 leading-relaxed mb-6">
-              {para}
-            </p>
-          ))}
+        {(() => {
+          const richBody = t.rich("body", {
+            website: (chunks) => (
+              <a href="https://k-monitor.hu" target="_blank" rel="noopener noreferrer">{chunks}</a>
+            ),
+          });
+          if (typeof richBody === "string") {
+            return richBody.split("\n").map((para, i) => (
+              <p key={i} className="text-lg text-gray-700 leading-relaxed mb-6">{para}</p>
+            ));
+          }
+          return richBody;
+        })()}
       </div>
 
       <h2 className="font-display ko:font-display font-bold tracking-tight text-gray-800 text-2xl md:text-xl mb-2 mt-8">{t("support-heading")}</h2>
