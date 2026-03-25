@@ -115,11 +115,13 @@
   },
   "calculator": {
     "introduction": {
+      "close-aria-label": "Close",
       "para1": "The goal of Voksmonitor is to help voters engage with politics not only through party communications, but to learn about the positions of various political actors (in this case, factions and representatives) on a wide range of urban policy and professional issues. The app matches respondents with the faction or representative whose position is closest to their values based on their answers.",
       "para2": "Voksmonitor selects 28 issues from the period between the inaugural session of the Budapest General Assembly on October 4, 2024 and May 28, 2025, in which representatives debated, deliberated, and made decisions. The questions were compiled by K-Monitor staff to cover a wide range of decision-making areas before the General Assembly. Our goal was for the questions to reflect meaningful and understandable dilemmas affecting the city's functioning — from transport and housing to green space management, transparency, and urban development.",
       "para3": "Voksmonitor is a joint project of <kmonitor>K-Monitor</kmonitor> and <kohopolit>KohoVolit.eu</kohopolit>."
     },
     "guide": {
+      "close-aria-label": "Close",
       "agree-label": "Agree",
       "agree-description": "If a response matches the position of a faction or representative, it is worth one point.",
       "disagree-label": "Disagree",
