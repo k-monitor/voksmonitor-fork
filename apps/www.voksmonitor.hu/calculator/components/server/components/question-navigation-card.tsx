@@ -7,7 +7,7 @@ import { mdiArrowLeft, mdiArrowRight, mdiStar, mdiStarOutline } from "@mdi/js";
 import { useTranslations } from "next-intl";
 
 import type { AnswerViewModel } from "../../../view-models";
-import { NavigationCard } from "../../server/components/navigation-card";
+import { CenterNavigationCard } from "../../server/components/navigation-card";
 
 const HEIGHT = "h-[320px] sm:h-[170px]";
 
@@ -28,7 +28,7 @@ export function QuestionNavigationCard({ current, total, onPreviousClick, onNext
   const nextButtonLabel = answer.answer?.answer !== undefined ? t("next-button") : t("skip-button");
 
   return (
-    <NavigationCard>
+    <CenterNavigationCard>
       <div className="grid grid-flow-row gap-2 sm:gap-3">
         <div className="grid grid-cols-[1fr_1fr] @[350px]:grid-cols-[minmax(8rem,1fr)_auto_minmax(8rem,1fr)] gap-1 @sm:gap-2 items-center">
           <div className="justify-self-start">
@@ -79,7 +79,7 @@ export function QuestionNavigationCard({ current, total, onPreviousClick, onNext
           </div>
         </div>
       </div>
-    </NavigationCard>
+    </CenterNavigationCard>
   );
 }
 
