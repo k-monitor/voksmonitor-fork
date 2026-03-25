@@ -194,7 +194,7 @@ export function DemographySurvey({ calculatorId, calculatorKey, onComplete }: De
           {/* Footer */}
           <div className="flex items-center justify-between pt-2 border-t border-gray-100">
             <span className="text-xs text-gray-400">{t("answered-count", { count: answeredCount, total: totalCount })}</span>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap content-end justify-end gap-2">
               <Button variant="link" color="neutral" size="small" onClick={handleSkip}>
                 {t("skip-button")}
               </Button>
