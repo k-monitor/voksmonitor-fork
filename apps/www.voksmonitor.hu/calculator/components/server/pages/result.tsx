@@ -69,9 +69,6 @@ export function ResultPage({
                 </AppHeader.BottomMain>
                 <div className="ml-auto flex items-center gap-2">
                   {shareUrl && <ShareDropdown shareUrl={shareUrl} align={condensed ? "left" : "right"} />}
-                  <Button variant="fill" color="neutral" size="small" onClick={onNextClick}>
-                    {t("comparison-button")}
-                  </Button>
                 </div>
               </AppHeader.Bottom>
             </AppHeader>
@@ -102,16 +99,22 @@ export function ResultPage({
             </React.Fragment>
           ))}
           {onShowAllPartiesChange && !showAllParties && (
-            <div className="flex justify-center">
+            <div className="flex justify-between gap-4">
               <Button variant="outline" color="neutral" onClick={() => onShowAllPartiesChange(true)}>
                 {t("show-all-parties")}
+              </Button>
+              <Button variant="fill" color="neutral" onClick={onNextClick}>
+                {t("comparison-button")}
               </Button>
             </div>
           )}
           {onShowAllPartiesChange && showAllParties && (
-            <div className="flex justify-center">
+            <div className="flex justify-between gap-4">
               <Button variant="outline" color="neutral" onClick={() => onShowAllPartiesChange(false)}>
                 {t("show-fewer-parties")}
+              </Button>
+              <Button variant="fill" color="neutral" onClick={onNextClick}>
+                {t("comparison-button")}
               </Button>
             </div>
           )}
