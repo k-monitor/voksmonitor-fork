@@ -1,29 +1,4 @@
-/**
- * Scans localStorage for all answer keys and removes those whose expiry has passed.
- * Call this on app load or periodically to keep storage clean.
- */
-export function clearExpiredAnswersFromLocalStorage(): void {
-  if (typeof window === "undefined") return;
-  try {
-    for (let i = 0; i < localStorage.length; i++) {
-      const key = localStorage.key(i);
-      if (!key) continue;
-      if (key.startsWith(EXPIRY_KEY_PREFIX)) {
-        const calculatorId = key.substring(EXPIRY_KEY_PREFIX.length);
-        const expiry = localStorage.getItem(key);
-        if (expiry && Date.now() >= Number(expiry)) {
-          localStorage.removeItem(key);
-          localStorage.removeItem(answersKey(calculatorId));
-          localStorage.removeItem(completedKey(calculatorId));
-          localStorage.removeItem(demoCompletedKey(calculatorId));
-          localStorage.removeItem(feedbackCompletedKey(calculatorId));
-        }
-      }
-    }
-  } catch {
-    // silently ignore
-  }
-}
+
 import type { Answer } from "../../../../packages/schema/schemas/answer.schema";
 
 const ANSWERS_KEY_PREFIX = "voksmonitor-answers-";
@@ -31,6 +6,26 @@ const EXPIRY_KEY_PREFIX = "voksmonitor-answers-expiry-";
 const COMPLETED_KEY_PREFIX = "voksmonitor-completed-";
 const DEMO_COMPLETED_KEY_PREFIX = "voksmonitor-demography-completed-";
 const FEEDBACK_COMPLETED_KEY_PREFIX = "voksmonitor-feedback-completed-";
+
+/**
+ * Scans localStorage for all answer keys and removes those whose expiry has passed.
+ * Call this on app load or periodically to keep storage clean.
+ */
+export function clearExpiredAnswersFromLocalStorage(): void {
+  if (typeof window === "undefined") return;
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (!key) continue;
+    if (key.startsWith(EXPIRY_KEY_PREFIX)) {
+      const calculatorId = key.substring(EXPIRY_KEY_PREFIX.length);
+      const expiry = localStorage.getItem(key);
+      if (expiry && Date.now() >= Number(expiry)) {
+        localStorage.clear();
+      }
+    }
+  }
+}
+
 
 /** 1 hour in milliseconds */
 const ANSWERS_TTL_MS = 1 * 60 * 60 * 1000;
@@ -76,8 +71,7 @@ export function loadAnswersFromLocalStorage(calculatorId: string): Answer[] {
       const expiresAt = Number(expiry);
       if (Date.now() >= expiresAt) {
         // Expired — clean up
-        localStorage.removeItem(answersKey(calculatorId));
-        localStorage.removeItem(expiryKey(calculatorId));
+        localStorage.clear();
         return [];
       }
     }
