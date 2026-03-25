@@ -41,6 +41,7 @@ export function SharePageClient({ matches, calculatorKey }: SharePageClient) {
       </header>
       <main className="max-w-xl w-full mx-auto p-2 sm:p-4">
         <h2 className="font-display font-semibold text-2xl tracking-tight text-gray-700 mb-6">{t("heading")}</h2>
+        <p className="text-gray-500 mb-6">{t("description")}</p>
         {matches.length === 0 ? (
           <p className="text-gray-500">{t("no-results")}</p>
         ) : (

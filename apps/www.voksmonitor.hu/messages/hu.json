@@ -265,6 +265,7 @@
   },
   "share-page": {
     "heading": "Megosztott eredmény",
+    "description": "Itt láthatod, hogy az egyes pártok álláspontjai hány százalékban egyeznek az én véleményemmel.",
     "no-results": "Nem található eredmény.",
     "cta-button": "Töltsd ki te is!"
   }

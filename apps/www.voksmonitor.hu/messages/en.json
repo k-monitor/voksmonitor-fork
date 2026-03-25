@@ -264,6 +264,7 @@
   "share-page": {
     "heading": "Shared result",
     "no-results": "No results found.",
+    "description": "Here you can see how closely each party's positions match my opinions.",
     "cta-button": "Try it yourself!"
   }
 }
