@@ -105,8 +105,8 @@ function AppHeaderMain({ children, title, calculator, logoMonochrome }: AppHeade
         <h1 className="font-bold uppercase">{title}</h1>
         <div>
           <h2 className="font-semibold inline">{calculator?.title}</h2>
-          {calculator?.title && calculator?.secondaryTitle && <span className="font-light hidden @[24rem]:inline"> • </span>}
-          <span className="font-light hidden @[24rem]:inline">{calculator?.secondaryTitle}</span>
+          {/* {calculator?.title && calculator?.secondaryTitle && <span className="font-light hidden @[24rem]:inline"> • </span>} */}
+          {/* <span className="font-light hidden @[24rem]:inline">{calculator?.secondaryTitle}</span> */}
         </div>
         {children}
       </div>
