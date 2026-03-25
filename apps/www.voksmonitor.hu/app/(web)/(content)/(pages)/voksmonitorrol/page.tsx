@@ -20,7 +20,7 @@ export default async function Page() {
       {(() => {
         const richWhat = t.rich("what", {
           website: (chunks) => (
-            <a href="https://k-monitor.hu" target="_blank" rel="noopener noreferrer">{chunks}</a>
+            <a href="https://k-monitor.hu" className="font-semibold text-gray-900" target="_blank" rel="noopener noreferrer">{chunks}</a>
           ),
         });
         if (typeof richWhat === "string") {
@@ -36,10 +36,10 @@ export default async function Page() {
       {(() => {
         const richWho = t.rich("who", {
           website: (chunks) => (
-            <a href="https://k-monitor.hu" target="_blank" rel="noopener noreferrer">{chunks}</a>
+            <a href="https://k-monitor.hu" className="font-semibold text-gray-900" target="_blank" rel="noopener noreferrer">{chunks}</a>
           ),
-          koho: (chunks) => ( <a href="https://kohovolit.eu/" target="_blank" rel="noopener noreferrer">{chunks}</a> ),
-          vox: (chunks) => ( <a href="https://kozvelemeny.org/" target="_blank" rel="noopener noreferrer">{chunks}</a> ),
+          koho: (chunks) => ( <a href="https://kohovolit.eu/" className="font-semibold text-gray-900" target="_blank" rel="noopener noreferrer">{chunks}</a> ),
+          vox: (chunks) => ( <a href="https://kozvelemeny.org/" className="font-semibold text-gray-900" target="_blank" rel="noopener noreferrer">{chunks}</a> ),
         });
         if (typeof richWho === "string") {
           return richWho.split("\n").map((para, i) => (
@@ -54,7 +54,7 @@ export default async function Page() {
       {(() => {
         const richHow = t.rich("how", {
           website: (chunks) => (
-            <a href="https://k-monitor.hu" target="_blank" rel="noopener noreferrer">{chunks}</a>
+            <a href="https://k-monitor.hu" className="font-semibold text-gray-900" target="_blank" rel="noopener noreferrer">{chunks}</a>
           ),
         });
         if (typeof richHow === "string") {

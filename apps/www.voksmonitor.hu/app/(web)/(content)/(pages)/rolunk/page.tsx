@@ -25,8 +25,8 @@ export default async function Page() {
 
       <p className="text-lg text-gray-700 leading-relaxed mb-0">
         {t.rich("about-kmonitor-links", {
-          website: (chunks) => <a href="https://k-monitor.hu">{chunks}</a>,
-          blog: (chunks) => <a href="https://k.blog.hu">{chunks}</a>,
+          website: (chunks) => <a href="https://k-monitor.hu" className="font-semibold text-gray-900">{chunks}</a>,
+          blog: (chunks) => <a href="https://k.blog.hu" className="font-semibold text-gray-900">{chunks}</a>,
         })}
       </p>
 
