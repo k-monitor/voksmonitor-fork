@@ -161,7 +161,7 @@
         "no-answer": "Nem kívánok válaszolni"
       },
       "age": {
-        "label": "Kérjük, add meg az életkorod",
+        "label": "Kérjük, add meg az életkorod!",
         "0-18": "0–18",
         "18-24": "18–24",
         "25-34": "25–34",
