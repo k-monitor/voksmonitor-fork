@@ -22,6 +22,8 @@ export default async function Page() {
             website: (chunks) => (
               <a href="https://k-monitor.hu" target="_blank" rel="noopener noreferrer">{chunks}</a>
             ),
+            koho: (chunks) => ( <a href="https://kohovolit.eu/" target="_blank" rel="noopener noreferrer">{chunks}</a> ),
+            vox: (chunks) => ( <a href="https://kozvelemeny.org/" target="_blank" rel="noopener noreferrer">{chunks}</a> ),
           })}
         </p>
         {(() => {

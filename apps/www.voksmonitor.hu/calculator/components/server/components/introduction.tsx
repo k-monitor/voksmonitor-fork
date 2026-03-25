@@ -31,6 +31,8 @@ export function Introduction({ calculator }: Introduction) {
               {chunks}
             </a>
           ),
+          koho: (chunks) => ( <a href="https://kohovolit.eu/" target="_blank" rel="noopener noreferrer">{chunks}</a> ),
+          vox: (chunks) => ( <a href="https://kozvelemeny.org/" target="_blank" rel="noopener noreferrer">{chunks}</a> ),
         })}
       </p>
     </div>
