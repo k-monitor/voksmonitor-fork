@@ -22,7 +22,7 @@ export function Introduction({ calculator }: Introduction) {
             </a>
           ),
           website: (chunks) => (
-            <a href="https://k-monitor.hu/"  className="font-semibold text-gray-900">
+            <a href="https://k-monitor.hu/" className="font-semibold text-gray-900">
               {chunks}
             </a>
           ),
@@ -31,8 +31,16 @@ export function Introduction({ calculator }: Introduction) {
               {chunks}
             </a>
           ),
-          koho: (chunks) => ( <a href="https://kohovolit.eu/" className="font-semibold text-gray-900" target="_blank" rel="noopener noreferrer">{chunks}</a> ),
-          vox: (chunks) => ( <a href="https://kozvelemeny.org/" className="font-semibold text-gray-900" target="_blank" rel="noopener noreferrer">{chunks}</a> ),
+          koho: (chunks) => (
+            <a href="https://kohovolit.eu/" className="font-semibold text-gray-900" target="_blank" rel="noopener noreferrer">
+              {chunks}
+            </a>
+          ),
+          vox: (chunks) => (
+            <a href="https://www.facebook.com/valasztasi.kalauz/" className="font-semibold text-gray-900" target="_blank" rel="noopener noreferrer">
+              {chunks}
+            </a>
+          ),
         })}
       </p>
     </div>

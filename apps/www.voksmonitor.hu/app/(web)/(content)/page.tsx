@@ -36,9 +36,15 @@ export default function Page() {
                     <span className="rounded-full bg-gray-100 px-2.5 py-1">{t("2026-card.tags.duration")}</span>
                   </div>
                   <h2 className="mt-4 font-display ko:font-display font-bold tracking-tight text-gray-700 text-2xl md:text-3xl">{t("2026-card.title")}</h2>
-                  <p className="mt-2 text-gray-500">{t.rich("2026-card.description", {website: (chunks) => (
-                    <a href="https://k-monitor.hu" className="font-semibold text-gray-900" target="_blank" rel="noopener noreferrer">{chunks}</a>
-                  ),})}</p>
+                  <p className="mt-2 text-gray-500">
+                    {t.rich("2026-card.description", {
+                      website: (chunks) => (
+                        <a href="https://k-monitor.hu" className="font-semibold text-gray-900" target="_blank" rel="noopener noreferrer">
+                          {chunks}
+                        </a>
+                      ),
+                    })}
+                  </p>
                   <div className="grid mt-auto pt-4 md:pt-6">
                     <Link href="/vm/2026-ogy/inventory" className="grid">
                       <Button variant="fill" color="primary">
@@ -103,10 +109,20 @@ export default function Page() {
             <div className="w-full max-w-6xl mx-auto">
               <div className="bg-gray-50 rounded-lg p-8 md:p-12">
                 <h2 className="font-display ko:font-display font-bold tracking-tight text-gray-700 text-3xl md:text-4xl text-center mb-4">{t("methodology-section.title")}</h2>
-                <p className="text-center text-gray-600 max-w-4xl mx-auto mb-12">{t.rich("methodology-section.description", {
-                  website: (chunks) => (<a href="https://k-monitor.hu" className="font-semibold text-gray-900" target="_blank" rel="noopener noreferrer">{chunks}</a>),
-                  koho: (chunks) => ( <a href="https://kohovolit.eu/" className="font-semibold text-gray-900" target="_blank" rel="noopener noreferrer">{chunks}</a> ),
-                })}</p>
+                <p className="text-center text-gray-600 max-w-4xl mx-auto mb-12">
+                  {t.rich("methodology-section.description", {
+                    website: (chunks) => (
+                      <a href="https://k-monitor.hu" className="font-semibold text-gray-900" target="_blank" rel="noopener noreferrer">
+                        {chunks}
+                      </a>
+                    ),
+                    koho: (chunks) => (
+                      <a href="https://kohovolit.eu/" className="font-semibold text-gray-900" target="_blank" rel="noopener noreferrer">
+                        {chunks}
+                      </a>
+                    ),
+                  })}
+                </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                   {/* Step 1 */}
                   <div className="flex flex-col items-center text-center">
