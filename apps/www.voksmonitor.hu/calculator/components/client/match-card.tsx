@@ -22,15 +22,19 @@ export function MatchCard({ candidate, order, match, respondent }: MatchCard) {
           <ExpandableCard.Content className="grid gap-3 p-4 sm:gap-4 sm:p-6">
             <div className="grid grid-cols-[auto_1fr_auto] gap-4 items-center">
               {candidate.avatar ? (
-                <Avatar
-                  image={candidate.avatar.urls}
-                  backgroundColor="#e2e8f0"
-                  shape={candidate.type === "person" ? "circle" : "square"}
-                  alignment={candidate.avatar.type === "portrait" ? "top" : "center"}
-                  fit={candidate.avatar.type === "logo" ? "contain" : "cover"}
-                  padding={candidate.avatar.type === "logo" || candidate.avatar.type === "avatar"}
-                  size="large"
-                />
+                <div className="relative h-20 w-20">
+                  <Avatar
+                    image={candidate.avatar.urls}
+                    backgroundColor="#e2e8f0"
+                    shape={candidate.type === "person" ? "circle" : "square"}
+                    alignment={candidate.avatar.type === "portrait" ? "top" : "center"}
+                    fit={candidate.avatar.type === "logo" ? "contain" : "cover"}
+                    padding={candidate.avatar.type === "logo" || candidate.avatar.type === "avatar"}
+                    size="large"
+                  />
+                  {/* Badge in bottom right corner */}
+                  <span className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 bg-black text-white text-[13px] font-semibold px-2 py-0.5 rounded-full select-none">{order}</span>
+                </div>
               ) : (
                 <div
                   className={`flex h-20 w-20 items-center justify-center rounded-2xl ${order === 1 ? "bg-[var(--ko-color-primary)] text-[var(--ko-color-on-bg-primary)]" : "bg-white text-gray-700"}`}
