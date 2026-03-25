@@ -67,15 +67,14 @@ export function ResultPage({
                 <AppHeader.BottomMain condensed={condensed}>
                   <h3 className="font-display font-semibold text-2xl tracking-tight text-gray-700">{t("heading")}</h3>
                 </AppHeader.BottomMain>
-                <div className="ml-auto flex items-center gap-2">
-                  {shareUrl && <ShareDropdown shareUrl={shareUrl} align={condensed ? "left" : "right"} />}
-                </div>
+                <div className="ml-auto flex items-center gap-2">{shareUrl && <ShareDropdown shareUrl={shareUrl} align={condensed ? "left" : "right"} />}</div>
               </AppHeader.Bottom>
             </AppHeader>
           )}
         </WithCondenseOnScroll>
       </Layout.Header>
       <Layout.Content>
+        {!showAllParties && <h4 className="font-display font-semibold text-xl tracking-tight text-gray-700 mb-2">{t("description")}</h4>}
         {shouldShowToggleComputed && (
           <div className="mb-6">
             <div className="flex items-center gap-3 text-sm">

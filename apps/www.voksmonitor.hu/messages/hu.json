@@ -234,7 +234,8 @@
       "close-aria-label": "Bezárás",
       "back-aria-label": "Vissza",
       "show-all-parties": "Összes párt mutatása",
-      "show-fewer-parties": "Kevesebb párt mutatása"
+      "show-fewer-parties": "Kevesebb párt mutatása",
+      "description": "Két legnagyobb párt eredménye"
     },
     "donate": {
       "title": "Voksmonitor támogatása",

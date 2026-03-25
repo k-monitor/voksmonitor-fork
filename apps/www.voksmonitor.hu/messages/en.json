@@ -232,7 +232,8 @@
       "close-aria-label": "Close",
       "back-aria-label": "Back",
       "show-all-parties": "Show all parties",
-      "show-fewer-parties": "Show fewer parties"
+      "show-fewer-parties": "Show fewer parties",
+      "description": "Results of the two largest parties"
     },
     "donate": {
       "title": "Support Voksmonitor",
