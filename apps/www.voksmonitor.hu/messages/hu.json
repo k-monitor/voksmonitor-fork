@@ -69,7 +69,7 @@
     }
   },
   "subscribe-form": {
-    "heading": "Iratkozz fel a K-Monitor hírlevelére!",
+    "heading": "Iratkozz fel a K-Monitor hírlevelére! A feliratkozók első kézből értesülnek a Voksmonitorhoz kapcoslódó tartalamkról és elemzésekről.",
     "email-label": "Add meg az e-mail címed",
     "email-placeholder": "E-mail",
     "submit-button": "Küldés",
