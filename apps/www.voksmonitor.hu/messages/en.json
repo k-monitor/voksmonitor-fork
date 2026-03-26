@@ -176,7 +176,8 @@
         "budapest": "Budapest",
         "county-seat": "County seat / city with county rights",
         "other-city": "Other city",
-        "village": "Village / town"
+        "village": "Village / town",
+        "abroad": "Abroad"
       },
       "education": {
         "label": "What is your highest level of education?",

@@ -178,7 +178,8 @@
         "budapest": "Budapest",
         "county-seat": "Megyeszékhely / megyei jogú város",
         "other-city": "Egyéb város",
-        "village": "Község / falu"
+        "village": "Község / falu",
+        "abroad": "Külföld"
       },
       "education": {
         "label": "Mi a legmagasabb befejezett iskolai végzettséged?",

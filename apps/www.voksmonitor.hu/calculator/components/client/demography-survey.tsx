@@ -34,7 +34,7 @@ const DEMOGRAPHY_QUESTIONS: DemographyQuestion[] = [
   {
     id: "residence",
     translationKey: "residence",
-    optionKeys: ["budapest", "county-seat", "other-city", "village"],
+    optionKeys: ["budapest", "county-seat", "other-city", "village", "abroad"],
   },
   {
     id: "education",
