@@ -2,6 +2,8 @@ import { useRouter } from "next/navigation";
 
 import { GuidePage as AppGuidePage } from "../../../../calculator/components/server";
 import { useAnswersStore } from "../../../../calculator/stores/answers";
+import { useCalculatorStore } from "../../../../calculator/stores";
+
 import { useCalculator } from "../../../../calculator/view-models";
 import { useAutoSave } from "../../../../hooks/auto-save";
 import { saveAnswersToLocalStorage, clearExpiredAnswersFromLocalStorage } from "../../../../lib/local-storage";
@@ -15,6 +17,7 @@ export function GuidePageWithRouting({ segments }: { segments: RouteSegments }) 
   const calculator = useCalculator();
   const embed = useEmbed();
   const answersStore = useAnswersStore((state) => state.answers);
+  const questions = useCalculatorStore((state) => state.data.questions);
 
   useAutoSave();
   useEffect(() => {
@@ -22,6 +25,18 @@ export function GuidePageWithRouting({ segments }: { segments: RouteSegments }) 
   }, []);
 
   const handleNavigationNextClick = () => {
+    // get last unanswered question and navigate there instead of always going to the first question
+    for (const answers of answersStore) {
+      if (answers.answer === null || answers.answer === undefined) {
+        const questionIndex = questions.findIndex((q) => q.id === answers.questionId);
+        if (questionIndex !== -1) {
+          router.push(routes.question(segments, questionIndex + 1));
+          return;
+        }
+      }
+    }
+
+    // If all questions are answered, navigate to the first question page
     router.push(routes.question(segments, 1));
   };
 
