@@ -170,7 +170,7 @@ function ExpandableComment({ comment, sources, cellKey, expandedComments, toggle
   if (!isLong) {
     return (
       <div>
-        <p className="text-[10px] leading-4 text-center text-gray-600 break-words">{textToRender}</p>
+        <p className="text-[10px] leading-4 text-center text-gray-700 break-words">{textToRender}</p>
         {sourceLinks}
       </div>
     );
@@ -184,7 +184,7 @@ function ExpandableComment({ comment, sources, cellKey, expandedComments, toggle
         onClick={() => toggleComment(cellKey)}
         aria-expanded={isExpanded}
       >
-        {textToRender} {!isExpanded && <span className="text-black-600 font-bold ml-1">Olvass tovább!</span>}
+        {textToRender} {!isExpanded && <span className="text-gray-700 font-bold ml-1">Olvass tovább!</span>}
       </button>
       {sourceLinks}
     </div>
