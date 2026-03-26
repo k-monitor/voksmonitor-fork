@@ -15,22 +15,22 @@ function getShuffleSeed(calculatorId: string, sessionId?: string): string {
     return sessionId;
   }
 
-  // Create a session-persistent seed using sessionStorage
+  // Create a persistent seed using localStorage
   const storageKey = `calculator-shuffle-seed-${calculatorId}`;
 
-  if (typeof window !== "undefined" && window.sessionStorage) {
-    const existingSeed = sessionStorage.getItem(storageKey);
+  if (typeof window !== "undefined" && window.localStorage) {
+    const existingSeed = localStorage.getItem(storageKey);
     if (existingSeed) {
       return existingSeed;
     }
 
-    // Generate a new seed for this browser session
+    // Generate a new seed for this browser (persistent)
     const newSeed = `${calculatorId}-${Math.random().toString(36).substring(2, 15)}`;
-    sessionStorage.setItem(storageKey, newSeed);
+    localStorage.setItem(storageKey, newSeed);
     return newSeed;
   }
 
-  // Fallback for SSR or when sessionStorage is not available
+  // Fallback for SSR or when localStorage is not available
   return calculatorId;
 }
 
@@ -42,10 +42,10 @@ export const createCalculatorStore = (calculatorData: CalculatorData, sessionId?
   // Shuffle questions using seed for consistent randomization per session
   const shuffledData = {
     ...calculatorData,
-    data: {
+    data: { 
       ...calculatorData.data,
-      questions: calculatorData.data.questions,
-      // questions: shuffle(calculatorData.data.questions, seed),
+      // questions: calculatorData.data.questions,
+      questions: shuffle(calculatorData.data.questions, seed),
     },
   };
 
