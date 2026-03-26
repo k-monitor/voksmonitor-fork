@@ -40,6 +40,9 @@ export async function Footer() {
               <Link href="https://tamogatas.k-monitor.hu/" target="_blank" className="text-sm text-gray-400 hover:text-white">
                 {t("nav.support")}
               </Link>
+              <Link href="https://adatbazis.k-monitor.hu/egyeb/adatkezelesi-tajekoztato" target="_blank" className="text-sm text-gray-400 hover:text-white">
+                {t("nav.privacy-policy")}
+              </Link>
             </div>
             <div>
               <h3 className="mb-4">{t("contact.heading")}</h3>
