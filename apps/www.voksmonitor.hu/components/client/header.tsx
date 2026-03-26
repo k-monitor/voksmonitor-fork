@@ -8,9 +8,9 @@ export function Header() {
       <WithCondenseOnScroll>
         {(condensed) => (
           <AppHeader condensed={condensed}>
-            <AppHeaderRight>
-              <LanguageSwitcher />
-            </AppHeaderRight>
+            {/* <AppHeaderRight> */}
+              {/* <LanguageSwitcher /> */}
+            {/* </AppHeaderRight> */}
           </AppHeader>
         )}
       </WithCondenseOnScroll>
