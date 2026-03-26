@@ -157,7 +157,7 @@
       "incomplete-warning": "Kérjük, válaszolj minden kérdésre, vagy válaszd a Kihagyás gombot a továbblépéshez.",
       "answered-count": "{count}/{total} megválaszolva",
       "gender": {
-        "label": "Az Ön neme?",
+        "label": "Kérjük, add meg a nemed!",
         "male": "Férfi",
         "female": "Nő",
         "other": "Egyéb",
