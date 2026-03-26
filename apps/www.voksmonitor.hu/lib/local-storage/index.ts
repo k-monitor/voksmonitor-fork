@@ -56,7 +56,7 @@ export function saveAnswersToLocalStorage(calculatorId: string, answers: Answer[
   try {
     localStorage.setItem(answersKey(calculatorId), JSON.stringify(answers));
     // Reset the expiry every time we save (sliding window)
-    localStorage.removeItem(expiryKey(calculatorId));
+    setAnswersExpiry(calculatorId);
   } catch {
     // localStorage may be full or disabled — silently ignore
   }
