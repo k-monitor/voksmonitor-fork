@@ -147,7 +147,7 @@
     },
     "demography-survey": {
       "heading": "Kérdőív",
-      "description": "Kérjük, járulj hozzá munkánkhoz néhány rövid kérdés megválaszolásával! A válaszadás teljes mértékben önkéntes, az adatokat pedig kizárólag kutatási célokra használjuk fel. Kitöltéseddel hozzájárulsz ahhoz, hogy pontosabb és árnyaltabb képet kapjunk a közvéleményről.",
+      "description": "Nem csak a pártok, hanem a választók véleménye is számít! Kérjük, járulj hozzá munkánkhoz néhány rövid kérdés megválaszolásával! A válaszadás teljes mértékben anonim és önkéntes, az adatokat pedig kizárólag kutatási célokra használjuk fel. Kitöltéseddel hozzájárulsz ahhoz, hogy jobban megismerjük, mit gondolnak egyes társadalmi csoportok a fontos közéleti kérdésekről. ",
       "close-aria-label": "Bezárás",
       "skip-button": "Kihagyás",
       "submit-button": "Küldés és tovább",
@@ -255,7 +255,7 @@
     },
     "feedback-survey": {
       "heading": "Visszajelzés",
-      "description": "Kérjük, értékeld, mennyire volt számodra hasznos a Voksmonitor!",
+      "description": "Kérjük, válaszoddal segítsd a Voksmonitor fejlesztését!",
       "close-aria-label": "Bezárás",
       "helpfulness-label": "Mennyire érezted úgy, hogy a kérdések számodra valóban fontos témákat érintenek?",
       "star-aria-label": "{value} csillag",
