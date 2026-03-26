@@ -128,7 +128,7 @@
       "disagree-label": "Nem ért egyet",
       "disagree-description": "Amennyiben a válaszod ellentétes egy párt válaszával, egy pontot levonunk.",
       "skip-label": "Kihagyás",
-      "skip-description": "Amennyiben nincs álláspontod a témáról, vagy nem szeretnél válaszolni, a jobb oldalon található 'Következő' feliratra kattintással továbbléphetsz. A kérdést nem vesszük figyelembe az eredmények kiszámításánál.",
+      "skip-description": "Amennyiben nincs álláspontod a témáról, vagy nem szeretnél válaszolni, a jobb oldalon található 'Kihagyás' feliratra kattintással továbbléphetsz. A kérdést nem vesszük figyelembe az eredmények kiszámításánál.",
       "important-label": "Fontos számomra",
       "important-description": "Csillaggal jelölheted a számodra fontos témákat. Ezeket a program dupla súllyal számítja."
     },
