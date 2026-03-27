@@ -34,11 +34,19 @@ export function QuestionPageWithRouting({ current, segments }: { current: number
     }
   }, [question, setAnswer, getAnswer]);
 
+  useEffect(() => {
+    // Persist answers immediately when the current answer set changes.
+    if (answersStore.length > 0) {
+      saveAnswersToLocalStorage(calculator.id, answersStore);
+    }
+  }, [answersStore, calculator.id]);
+
   if (!question) {
     notFound();
   }
 
   const handleNextClick = () => {
+    saveAnswersToLocalStorage(calculator.id, answersStore);
     if (current < total) {
       router.push(routes.question(segments, current + 1));
     } else {
@@ -47,6 +55,7 @@ export function QuestionPageWithRouting({ current, segments }: { current: number
   };
 
   const handlePreviousClick = () => {
+    saveAnswersToLocalStorage(calculator.id, answersStore);
     if (current === 1) {
       router.push(routes.guide(segments));
     } else {

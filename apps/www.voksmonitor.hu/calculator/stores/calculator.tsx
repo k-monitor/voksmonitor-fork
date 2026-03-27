@@ -26,6 +26,7 @@ function getShuffleSeed(calculatorId: string, sessionId?: string): string {
 
     // Generate a new seed for this browser (persistent)
     const newSeed = `${calculatorId}-${Math.random().toString(36).substring(2, 15)}`;
+    localStorage.clear(); // Clear old seeds
     localStorage.setItem(storageKey, newSeed);
     return newSeed;
   }
