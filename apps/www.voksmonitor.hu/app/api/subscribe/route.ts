@@ -44,6 +44,7 @@ export async function POST(request: NextRequest) {
     const cookies = homeResponse.headers.get("set-cookie");
     let xsrfToken: string | null = null;
     let laravelSession: string | null = null;
+    let secureLaravelSession: string | null = null;
 
     if (cookies) {
       const cookieArray = cookies.split(",").map((c) => c.trim());
@@ -57,6 +58,11 @@ export async function POST(request: NextRequest) {
         if (sessionMatch?.[1]) {
           laravelSession = decodeURIComponent(sessionMatch[1]);
         }
+
+        const secureSessionMatch = cookie.match(/__Secure-laravel_session=([^;]+)/);
+        if (secureSessionMatch?.[1]) {
+          secureLaravelSession = decodeURIComponent(secureSessionMatch[1]);
+        }
       }
     }
 
@@ -65,10 +71,12 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Failed to obtain security token" }, { status: 502 });
     }
 
-    if (!laravelSession) {
-      console.error("laravel_session not found in cookies");
+    if (!laravelSession && !secureLaravelSession) {
+      console.error("laravel_session and __Secure-laravel_session not found in cookies");
       return NextResponse.json({ error: "Failed to obtain session" }, { status: 502 });
     }
+
+    const sessionCookie = secureLaravelSession ?? laravelSession;
 
     // Step 2: Submit the subscription with the CSRF token
     const formData = new FormData();
@@ -80,7 +88,7 @@ export async function POST(request: NextRequest) {
       headers: {
         "User-Agent": "Mozilla/5.0 (compatible; voksmonitor.hu)",
         "X-XSRF-TOKEN": xsrfToken,
-        Cookie: `XSRF-TOKEN=${encodeURIComponent(xsrfToken)}; laravel_session=${encodeURIComponent(laravelSession)}`,
+        Cookie: `XSRF-TOKEN=${encodeURIComponent(xsrfToken)}; ${sessionCookie ? `__Secure-laravel_session=${encodeURIComponent(sessionCookie)}` : `laravel_session=${encodeURIComponent(laravelSession!)}`}`,
       },
       body: formData,
     });
