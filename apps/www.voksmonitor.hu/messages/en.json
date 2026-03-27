@@ -146,7 +146,7 @@
     },
     "demography-survey": {
       "heading": "Questionnaire",
-      "description": "Please contribute to our work by answering a few short questions! Answering is entirely voluntary, and we use the data exclusively for research purposes. By completing it, you contribute to us getting a more accurate and nuanced picture of public opinion",
+      "description": "Not only the parties’ opinions matter, but voters’ views do too! Please support our work by answering a few short questions. Participation is completely anonymous and voluntary, and the data will be used exclusively for research purposes. By completing the survey, you help us better understand what different social groups think about important public issues.",
       "close-aria-label": "Close",
       "skip-button": "Skip",
       "submit-button": "Submit and continue",
@@ -255,7 +255,7 @@
     },
     "feedback-survey": {
       "heading": "Feedback",
-      "description": "Please rate how helpful Voksmonitor was for you!",
+      "description": "Please help us improve the Voksmonitor by sharing your response!",
       "close-aria-label": "Close",
       "helpfulness-label": "How much did you feel that the questions addressed topics that are truly important to you?",
       "star-aria-label": "{value} star",
