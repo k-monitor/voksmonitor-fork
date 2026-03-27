@@ -27,6 +27,11 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
+        source: "/vm/2026-ogy",
+        destination: "/vm/2026-ogy/inventory",
+        permanent: false,
+      },
+      {
         source: "/metodika-tvorby-otazek",
         destination: "/metodika",
         permanent: true,
