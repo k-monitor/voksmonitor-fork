@@ -77,10 +77,15 @@ export function DonateCard() {
               🤩 10 000 Ft
             </button>
           </div>
-          <div className="col-span-3 @sm:col-start-2 @sm:col-span-3">
-            <a href={getPayPalUrl(selectedAmount || undefined)} target="_blank" className="grid">
+          <div className="col-span-3 @sm:col-start-2 @sm:col-span-3 grid grid-cols-1 gap-2">
+            <a href={getPayPalUrl(selectedAmount || undefined)} target="_blank" rel="noreferrer noopener" className="grid">
               <Button variant="outline" color="primary" size="medium">
-                {t("button")}
+                Támogatom (PayPal)
+              </Button>
+            </a>
+            <a href="https://tamogatas.k-monitor.hu/?utm_source=voksmonitor" target="_blank" rel="noreferrer noopener" className="grid">
+              <Button variant="outline" color="primary" size="medium">
+                Támogatom (további lehetőségek)
               </Button>
             </a>
           </div>
