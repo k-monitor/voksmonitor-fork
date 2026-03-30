@@ -1,47 +1,47 @@
 {
   "homepage": {
-    "title": "Voksmonitor",
+    "title": "Parliamentary Elections 2026 Voksmonitor",
     "date": "April 12, 2026",
     "other-calculators": "Previous Voksmonitors",
     "2026-card": {
       "tags": {
-        "questionnaire": "Topic inventory",
-        "questions": "40 questions",
-        "duration": "20 minutes"
+        "questionnaire": "Question Inventory",
+        "questions": "44 questions",
+        "duration": "15 minutes"
       },
-      "title": "Parliamentary Election Voksmonitor",
-      "description": "The goal of Voksmonitor is to help voters engage with politics not only through party communications, but to learn about the positions of various political actors (in this case, factions and representatives) on a wide range of urban policy and professional issues. The app matches respondents with the faction or representative whose position is closest to their values based on their answers.",
-      "start-button": "Start questions"
+      "title": "Parliamentary Elections 2026 Voksmonitor",
+      "description": "The goal of the Voksmonitor created for the 2026 parliamentary elections is for voters to encounter politics not only through party campaign messages, but to also learn about the positions of the parties running in the election on important policy issues. The application matches the respondent with the party whose position is closest to the respondent's opinion based on their answers. The questions were compiled by K-Monitor staff to cover a wide range of policy areas that determine the operation of the country. Our goal was to present dilemmas that meaningfully influence public policy and are understandable to voters, for example, in the areas of the economy, social policy, education, healthcare, environmental protection, or the transparency of state operations.",
+      "start-button": "Start Questions"
     },
     "bp-card": {
       "tags": {
-        "questionnaire": "Topic inventory",
+        "questionnaire": "Question Inventory",
         "questions": "28 questions",
         "duration": "10 minutes"
       },
-      "title": "Budapest General Assembly Voksmonitor",
-      "description": "The goal of Voksmonitor is to help voters engage with politics not only through party communications, but to learn about the positions of various political actors (in this case, factions and representatives) on a wide range of urban policy and professional issues. The app matches respondents with the faction or representative whose position is closest to their values based on their answers.",
-      "start-button": "Start questions"
+      "title": "Metropolitan Assembly Voksmonitor",
+      "description": "The goal of Voksmonitor is for voters to encounter politics not only through party communications, but to also learn about the positions of various political actors (in our case, factions and representatives) on a wide range of urban policy and professional issues. The application matches the respondent with the faction or representative whose position is closest to the respondent's values based on their answers.",
+      "start-button": "Start Questions"
     },
     "archive-section": {
-      "description": "K-Monitor has been running Voksmonitor since 2014, producing its Hungarian and English-language election calculator for parliamentary, European Parliament, and municipal (as well as mayoral) elections. You can find previous Voksmonitors in the archive.",
-      "archive-button": "Go to archive"
+      "description": "K-Monitor has been operating Voksmonitor since 2014, and prepares its Hungarian and English-language election calculator for parliamentary, European Parliament, and municipal (as well as mayoral) elections. You can find previous Voksmonitors in the archive.",
+      "archive-button": "Go to Archive"
     },
     "methodology-section": {
       "title": "How is Voksmonitor made?",
-      "description": "Voksmonitor is a joint project of the K-Monitor and KohoVolit.eu nonprofit organizations, helping people learn how the factions and representatives of the Budapest General Assembly relate to the city's affairs.",
+      "description": "Voksmonitor is a joint project of <website>K-Monitor</website> and the KohoVolit.eu nonprofit organizations, which helps weigh who to vote for based on party platforms.",
       "step1-alt": "Questionnaire",
-      "step1-text": "The questionnaire contains 28 General Assembly issues that were debated and decided upon between October 4, 2024 and May 28, 2025.",
+      "step1-text": "The questionnaire assesses the respondent's position on current political topics in 44 questions.",
       "step2-alt": "Parties",
-      "step2-text": "The factions' answers were determined based on General Assembly votes and debates.",
+      "step2-text": "We submitted the questions to every party running a list with meaningful support.",
       "step3-alt": "Comparison",
-      "step3-text": "These results are compared with your answers.",
+      "step3-text": "We compare these results with your answers.",
       "step4-alt": "Calculation",
-      "step4-text": "Voksmonitor then shows which faction's or representative's opinion is closest to your values.",
-      "footer-text": "The goal of Voksmonitor is to inform and support voter deliberation. The final decision is yours to make in the voting booth.",
+      "step4-text": "Voksmonitor thus shows which party's opinion is closest to your values.",
+      "footer-text": "The goal of Voksmonitor is to inform and assist voter deliberation. You make the final decision in the voting booth.",
       "learn-more": "Learn more!"
     },
-    "footer": "© 2025 Volební kalkulačka / Voksmonitor"
+    "footer": "© 2026 Volební kalkulačka / Voksmonitor"
   },
   "routing": {
     "prefixes": {
@@ -70,7 +70,7 @@
     }
   },
   "subscribe-form": {
-    "heading": "Subscribe to the K-Monitor newsletter!",
+    "heading": "Subscribe to the K-Monitor newsletter! Subscribers will be the first to receive content and analyses related to Voksmonitor.",
     "email-label": "Enter your email address",
     "email-placeholder": "Email",
     "submit-button": "Submit",
@@ -88,7 +88,7 @@
       "about-kmonitor-heading": "About K-Monitor",
       "support-heading": "Support the creation of Voksmonitor!",
       "support-text": "Do you like Voksmonitor? Please support its creation!",
-      "about-kmonitor": "At K-Monitor, we believe that corruption is a problem that affects every part of society and harms everyone – regardless of worldview, origin, gender, or political conviction. Corruption not only causes enormous economic damage, but also undermines trust in institutions and the rule of law. It threatens democracies and particularly severely affects regions where good governance is essential to eliminating hunger, poverty, and violence.\nThe best antidote to corruption is a society where citizens feel responsible for institutions and actively shape their own environment.\nAs a nonprofit organization, K-Monitor supports institutions, journalists, and individuals in the fight against corruption through community building, technological development, advocacy, and research.\nThe principles of our operation are transparency, independence, and critical thinking.",
+      "about-kmonitor": "At K-Monitor, we believe that corruption is a problem that affects every part of society and harms everyone – regardless of worldview, origin, gender, or political conviction. Corruption not only causes enormous economic damage, but also undermines trust in institutions and the rule of law. It endangers democracies and is particularly severe in regions where good governance would be essential for eliminating hunger, poverty, and violence. The best antidote to corruption is a society where citizens feel responsible for institutions and actively shape their own environment. As a nonprofit organization, K-Monitor supports institutions, journalists, and individuals in the fight against corruption through community building, technological development, advocacy, and research. The principles of our operation are transparency, independence, and critical thinking. If you are interested in learning more about our activities, visit our <website>website</website> or <blog>blog</blog>!",
       "about-kmonitor-links": "If you are interested in learning more about our activities, visit our <website>website</website> or <blog>blog</blog>!"
     },
     "voksmonitorrol": {
@@ -97,17 +97,17 @@
       "what-heading": "What is Voksmonitor?",
       "who-heading": "Who makes Voksmonitor and how?",
       "how-heading": "How does it work?",
-      "what": "Voksmonitor is an online application that compares your opinion with the positions of the factions and representatives working in the Budapest General Assembly. You can read more about the history of Hungarian (e.g. Vokskabin) and international (e.g. Stemwijzer, Wahl-O-Mat, Wahlrechner) election calculators similar to Voksmonitor and successful examples from around the world on Wikipedia.\nIts goal is to help voters engage with politics not only through communications and campaigns, but to learn how decision-makers relate to urban policy issues.\nThe app matches respondents with the faction or representative whose position is closest to their values based on their answers.",
-      "who": "Voksmonitor is jointly developed and operated by the K-Monitor and KohoVolit.eu nonprofit organizations.\nThe current edition selects 28 issues from the period between the inaugural session of the Budapest General Assembly on October 4, 2024 and May 28, 2025, in which representatives debated, deliberated, and made decisions.\nThe questions were compiled by K-Monitor staff to represent various areas of the General Assembly's decision-making – covering transport, housing, green space management, transparency, and urban development.\nThe representatives' answers were determined based on General Assembly votes.",
-      "how": "The Voksmonitor questionnaire presents 28 General Assembly issues, each through supporting and opposing statements, to help respondents form their own position.\nRespondents can indicate for each statement whether they agree with it, and how important they consider the given topic.\nThe app then compares the answers with the positions of factions and representatives, and calculates who shows the greatest alignment. The result is displayed as a percentage, indicating which political actor (faction or representative) is closest to the respondent's values."
+      "what": "Voksmonitor is an online election calculator that compares your political opinion with the positions of the parties running in the 2026 parliamentary elections. Hungarian applications similar to Voksmonitor (e.g. Vokskabin) and international applications (e.g. Stemwijzer, Wahl-O-Mat, Wahlrechner) aim to help voters navigate and make the political landscape more transparent. The goal of Voksmonitor is for voters to encounter politics not only through campaign messages and communications, but also to learn about the parties' specific platforms and the positions they hold on important policy issues. The application helps reveal which political actors' views are closest to or furthest from your values.",
+      "who": "Voksmonitor has been jointly developed and operated for years by <website>K-Monitor</website> and KohoVolit.eu. This year, Vox Populi Election Guide also joined our initiative. The questions are compiled by K-Monitor staff and experts in order to cover the most important policy topics relevant to the 2026 parliamentary elections. The topics include, for example, the economy, healthcare, education, environmental protection, energy, and the rule of law. We send the questionnaire to parties running in the election in advance, who are given the opportunity to provide their answers and comments. If a party does not respond, we reconstruct their position based on their public platform, statements, and past decisions. We provide every party involved with the opportunity to review and correct their answers.",
+      "how": "The Voksmonitor questionnaire contains 44 political questions relevant to the 2026 parliamentary elections. Each question comes with a short, neutral explanation that presents the different positions, helping the respondent form their own opinion. Users can indicate for each question whether they agree with the given statement (yes / no / don't know), and can also indicate how important they consider the given topic. The application then compares the answers with the parties' positions and calculates the degree of agreement. The result is displayed as a percentage, showing which parties are closest to your views. The results are informational in nature: their purpose is to help voters make decisions and provide an opportunity to compare their own position with the political landscape."
     },
     "modszertan": {
-      "meta-title": "Voksmonitor methodology",
-      "heading": "Voksmonitor methodology",
-      "p1": "Voksmonitor is a joint project of <kmonitor>K-Monitor</kmonitor> and <kohopolit>KohoVolit.eu</kohopolit>, aimed at helping voters engage with politics not only through the communications of factions and representatives, but to learn their positions on urban policy and professional issues of the Budapest General Assembly.",
+      "meta-title": "Voksmonitor Methodology",
+      "heading": "Voksmonitor Methodology",
+      "p1": "The Voksmonitor is a joint project of <website>K-Monitor</website> and KohoVolit.eu, with the goal of allowing voters to encounter politics not only through party communications, but also to learn about the various parties' platforms and positions on the most important political issues relevant to the 2026 parliamentary elections. This year, the Vox Populi Election Guide also joined our initiative.",
       "support-heading": "Support the creation of Voksmonitor!",
       "support-text": "Do you like Voksmonitor? Please support its creation!",
-      "body": "The application compares the user's answers with the positions of the factions and representatives working in the General Assembly, then shows who thinks most similarly to the respondent.\nVoksmonitor previously worked by sending statements to party candidates, who had the opportunity to answer and justify them. If a party did not respond, their answers were determined based on their public positions. The current Voksmonitor breaks with this tradition: the positions of individual factions and representatives were classified solely based on the minutes and resolutions of the Budapest General Assembly. In return, we did not examine the agendas and debates of specialist committees, nor press conferences and political statements related to the General Assembly.\nVoksmonitor helps respondents navigate 28 urban policy topics. The questions cover issues discussed by the General Assembly between October 4, 2024 and May 28, 2025. Of these, 3 topics cover Transparency, 3 Environmental Protection and Sustainability, 6 Transport and Mobility, 1 Community and Culture, 5 Social and Housing Affairs, 1 Social Issues and Equal Opportunities, 4 Urban Development, and 5 City Operations.\nThe creation of Voksmonitor was preceded by thorough research. We first browsed press materials and General Assembly minutes to find topics that generated lively debate, or that well illustrate the functioning and decision-making logic of the General Assembly, or which we considered important for the city.\nOf course, the General Assembly dealt with many more than these 28 issues, and many topics were left out that were too technical, difficult to interpret, or not clearly articulable as questions. Our goal was to select issues that are understandable, relevant, and truly affect the life of Budapest.\nOn average, 35–50% of proposals come from the city leadership, either as official preparations or as proposals by the chief notary or the mayor. In contrast, the proportion of such proposals in Voksmonitor is below 20%, and the vast majority of the topics covered are representative initiatives. The main reason for this disproportion is that city leadership proposals are typically decisions related to daily operations or the implementation of ongoing projects, personnel decisions, or particularly complex regulations – for example, the adoption of urban planning legislation – which would have been difficult to summarize within the framework of a public policy statement.\nIn this sense, the methodological decision that Voksmonitor should primarily cover new initiatives favored politically \"amplified\" but substantively often simpler, single-focus representative motions, as opposed to the current agenda items of long-term processes.\nAfter selecting the topics, we matched them with the related votes. The results of roll-call votes were extracted from the Budapest General Assembly minutes using our own software code and arranged into tables, then assigned to the selected urban policy issues. Given that we ultimately present the result of a specific vote, we often had to narrow the originally broadly formulated public policy topic to a sub-area so that the voting result remained representative of the statement. Moreover, there may be topics in Voksmonitor that came up multiple times during the past year in the Budapest General Assembly, sometimes with different voting results – in these cases, we ultimately had to choose a specific vote, which does not necessarily reflect the political positions evolving over the year, but in such cases we tried to select the most comprehensive vote.\nEach question is accompanied by a brief explanation summarizing the main positions in the debate. Respondents can anonymously indicate their opinion with \"agree\", \"disagree\" or \"skip\" responses, and can also mark individual questions as important. The result is intended to guide orientation: it shows which factions and representatives are closest to the respondent's values.\nRegarding the interpretation of voting results, it is also important to note that General Assembly votes are often preceded by debates in specialist committees, and certain amendments may already fail there or be integrated into the committee's consolidated amendment. In the General Assembly debate, it may therefore happen that we see an already compromised proposal, which the majority of factions more easily support. Furthermore, the most contentious issues may be voted down in the form of separate amendments or by requesting separate votes on individual resolution points, and in some cases they may not even make it onto the agenda. This is why, while there may be significant debate about details, the voting result often shows near-complete agreement among factions, or only 1-2 factions abstaining if an element particularly important to them was ultimately not included in the package. It is therefore worth keeping in mind when evaluating voting results that the proposal potentially already functions as the greatest common denominator among the supporting factions."
+      "body": "The application ranks parties for users based on how closely their policy positions match the user's answers. Before creating the application, we send the questions to parties running in the election, who are given the opportunity to answer the questions and provide comments. If a party does not respond to our inquiry, we reconstruct their position based on their electoral platform, public statements, and past decisions. This naturally raises the possibility that the answers may differ from the parties' official positions; however, K-Monitor provides every political force featured in the application the opportunity to correct these. Voksmonitor helps respondents navigate 44 politically themed questions. These cover current nationally relevant political issues and policy topics. All questions can be answered anonymously with yes, no, or don't know. A short, neutral explanation is also available for users for each question, summarizing the main positions related to the question. The result is in all cases orientational in nature: it allows users to compare their own position with the parties' positions. After completing the questionnaire, users see a short, anonymous, optionally completable mini questionnaire, in which they can answer a few basic demographic questions as well as a question about party preference. We use this data exclusively for research purposes: it helps us better understand how different social groups relate to various political issues, and to what extent users' self-reported party preference differs from what the Voksmonitor result shows. This contributes to the development of the application's methodology and to more accurate mapping of voter attitudes."
     },
     "kontakt": {
       "meta-title": "Contact",
@@ -117,20 +117,20 @@
   "calculator": {
     "introduction": {
       "close-aria-label": "Close",
-      "para1": "The goal of Voksmonitor is to help voters engage with politics not only through party communications, but to learn about the positions of various political actors (in this case, factions and representatives) on a wide range of urban policy and professional issues. The app matches respondents with the faction or representative whose position is closest to their values based on their answers.",
-      "para2": "Voksmonitor selects 28 issues from the period between the inaugural session of the Budapest General Assembly on October 4, 2024 and May 28, 2025, in which representatives debated, deliberated, and made decisions. The questions were compiled by K-Monitor staff to cover a wide range of decision-making areas before the General Assembly. Our goal was for the questions to reflect meaningful and understandable dilemmas affecting the city's functioning — from transport and housing to green space management, transparency, and urban development.",
-      "para3": "Voksmonitor is a joint project of <kmonitor>K-Monitor</kmonitor> and <kohopolit>KohoVolit.eu</kohopolit>."
+      "para1": "TThe goal of the Parliamentary Elections 2026 Voksmonitor is for voters to encounter politics not only through party campaign messages, but also to learn about the parties' positions on important policy issues. The application matches the respondent with the party whose position is closest to the respondent's opinion based on their answers.",
+      "para2": "The Parliamentary Elections 2026 Voksmonitor was created for the 2026 parliamentary elections. The questions were compiled by K-Monitor staff to cover a wide range of policy areas that determine the functioning of the country. Our goal was for the questions to present dilemmas that meaningfully influence public policy and are understandable to voters, for example, in the areas of the economy, social policy, education, healthcare, environmental protection, or the transparency of state operations.",
+      "para3": "The Parliamentary Elections 2026 Voksmonitor is a joint project of <website>K-Monitor</website>, KohoVolit.eu, and Vox Populi."
     },
     "guide": {
       "close-aria-label": "Close",
       "agree-label": "Agree",
-      "agree-description": "If a response matches the position of a faction or representative, it is worth one point.",
+      "agree-description": "If your answer matches a party's answer, it is worth one point.",
       "disagree-label": "Disagree",
-      "disagree-description": "If the response is the opposite, one point is deducted.",
+      "disagree-description": "If your answer is contrary to a party's answer, one point is deducted.",
       "skip-label": "Skip",
-      "skip-description": "If you have no position on the topic or do not wish to answer, you can proceed with the arrow on the right. The question will not be counted in the results.",
+      "skip-description": "If you have no position on the topic or do not wish to answer, you can proceed using the arrow on the right. The question will not be taken into account in the calculation of results.",
       "important-label": "Important to me",
-      "important-description": "Topics important to the respondent can be marked with a star. These are counted with double weight by the program."
+      "important-description": "You can mark topics that are important to you with a star. The program counts these with double weight."
     },
     "question": {
       "guide-button": "Guide",
@@ -145,24 +145,24 @@
       "show-results-button": "Show results"
     },
     "demography-survey": {
-      "heading": "Survey",
-      "description": "Please help us by answering a few anonymous questions! Participation is voluntary, and the results will be used for research purposes only.",
+      "heading": "Questionnaire",
+      "description": "Not only the parties’ opinions matter, but voters’ views do too! Please support our work by answering a few short questions. Participation is completely anonymous and voluntary, and the data will be used exclusively for research purposes. By completing the survey, you help us better understand what different social groups think about important public issues.",
       "close-aria-label": "Close",
       "skip-button": "Skip",
       "submit-button": "Submit and continue",
-      "confirm-empty-submit": "You have not completed all questions. Are you sure you want to submit the survey empty?",
+      "confirm-empty-submit": "You have not answered every question. Are you sure you want to submit the questionnaire with empty answers?",
       "submitting-button": "Submitting...",
-      "incomplete-warning": "Please answer all questions or use Skip to continue without the survey.",
+      "incomplete-warning": "Please answer every question, or choose the Skip button to proceed.",
       "answered-count": "{count}/{total} answered",
       "gender": {
         "label": "What is your gender?",
         "male": "Male",
         "female": "Female",
         "other": "Other",
-        "no-answer": "Prefer not to say"
+        "no-answer": "I do not wish to answer"
       },
       "age": {
-        "label": "What is your age?",
+        "label": "Please provide your age",
         "0-18": "0–18",
         "18-24": "18–24",
         "25-34": "25–34",
@@ -172,7 +172,7 @@
         "65+": "65+"
       },
       "residence": {
-        "label": "Where do you live? (settlement type)",
+        "label": "Please provide your place of residence!",
         "budapest": "Budapest",
         "county-seat": "County seat / city with county rights",
         "other-city": "Other city",
@@ -180,23 +180,23 @@
         "abroad": "Abroad"
       },
       "education": {
-        "label": "What is your highest level of education?",
-        "primary": "Primary school",
+        "label": "What is your highest completed level of education?",
+        "primary": "Primary (elementary school)",
         "secondary-no-matura": "Secondary (without Matura)",
         "secondary-matura": "Secondary (with Matura)",
         "bachelor": "Bachelor's degree (BA/BSc)",
         "master-or-higher": "Master's degree or higher (MA/MSc+)"
       },
       "would-vote": {
-        "label": "If elections were held next Sunday, which party would you vote for?",
+        "label": "If there were an election this Sunday, which party would you vote for?",
         "fidesz-kdnp": "Fidesz–KDNP",
         "tisza": "TISZA Party",
         "dk": "DK (Democratic Coalition)",
         "mi-hazank": "Mi Hazánk Movement",
         "mkkp": "Hungarian Two-Tailed Dog Party",
         "other-party": "Other party",
-        "would-not-vote": "Would not vote",
-        "dont-know": "Don't know / prefer not to say"
+        "would-not-vote": "I would not go to vote",
+        "dont-know": "I don't know / I do not wish to answer"
       }
     },
     "share": {
@@ -209,7 +209,7 @@
       "copied-button": "Copied",
       "share-instagram": "Share on Instagram",
       "share-x": "Share on X",
-      "share-text": "Check out my Voksmonitor result!",
+      "share-text": "I found out which parties are closest to me!",
       "share-text-with-handle": "Check out my {handle} Voksmonitor result!",
       "privacy-notice": "By sharing your results, you agree to our <privacyLink>privacy policy</privacyLink>.",
       "filename": "My Voksmonitor result.png"
@@ -218,7 +218,7 @@
       "heading": "Comparison",
       "back-aria-label": "Back to results",
       "close-aria-label": "Close",
-      "choose-party": "Choose party",
+      "choose-party": "Select a party",
       "all-organizations": "All organizations",
       "you": "You",
       "read-more": "Read more!"
@@ -241,7 +241,7 @@
     },
     "donate": {
       "title": "Support Voksmonitor",
-      "description": "Support the K-Monitor association that creates Voksmonitor!",
+      "description": "Support the K-Monitor Public Benefit Association that creates the Voksmonitor!",
       "button": "Support Voksmonitor",
       "paypal-button": "Support (PayPal)",
       "more-options-button": "Support (more options)",
@@ -249,7 +249,7 @@
     },
     "match": {
       "you-candidate-header": "You • Candidate",
-      "expert-respondent-note": "Position determined from public sources; the party did not respond to the questions sent.",
+      "expert-respondent-note": "The position was determined from public sources; the party did not respond to the submitted questions.",
       "unknown-position": "Position could not be determined",
       "source": "Source",
       "no-description": "No description available",
@@ -257,12 +257,12 @@
     },
     "feedback-survey": {
       "heading": "Feedback",
-      "description": "Please rate how helpful Voksmonitor was for you!",
+      "description": "Please help us improve the Voksmonitor by sharing your response!",
       "close-aria-label": "Close",
-      "helpfulness-label": "How helpful was Voksmonitor?",
+      "helpfulness-label": "How much did you feel that the questions addressed topics that are truly important to you?",
       "star-aria-label": "{value} star",
-      "scale-low": "Not helpful",
-      "scale-high": "Very helpful",
+      "scale-low": "Not at all",
+      "scale-high": "Completely",
       "skip-button": "Skip",
       "submit-button": "Submit",
       "submitting-button": "Submitting..."
