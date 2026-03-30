@@ -243,6 +243,8 @@
       "title": "Support Voksmonitor",
       "description": "Support the K-Monitor association that creates Voksmonitor!",
       "button": "Support Voksmonitor",
+      "paypal-button": "Support (PayPal)",
+      "more-options-button": "Support (more options)",
       "close-aria-label": "Close"
     },
     "match": {

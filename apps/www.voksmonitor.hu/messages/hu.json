@@ -245,6 +245,8 @@
       "title": "Voksmonitor támogatása",
       "description": "Támogasd a Voksmonitort készítő K-Monitor Közhasznú Egyesületet!",
       "button": "Támogatom a Voksmonitort",
+      "paypal-button": "Támogatom (PayPal)",
+      "more-options-button": "Támogatom (további lehetőségek)",
       "close-aria-label": "Bezárás"
     },
     "match": {

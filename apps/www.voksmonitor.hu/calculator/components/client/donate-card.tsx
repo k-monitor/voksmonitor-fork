@@ -80,12 +80,12 @@ export function DonateCard() {
           <div className="col-span-3 @sm:col-start-2 @sm:col-span-3 grid grid-cols-1 gap-2">
             <a href={getPayPalUrl(selectedAmount || undefined)} target="_blank" rel="noreferrer noopener" className="grid">
               <Button variant="outline" color="primary" size="medium">
-                Támogatom (PayPal)
+                {t("paypal-button")}
               </Button>
             </a>
             <a href="https://tamogatas.k-monitor.hu/?utm_source=voksmonitor" target="_blank" rel="noreferrer noopener" className="grid">
               <Button variant="outline" color="primary" size="medium">
-                Támogatom (további lehetőségek)
+                {t("more-options-button")}
               </Button>
             </a>
           </div>
