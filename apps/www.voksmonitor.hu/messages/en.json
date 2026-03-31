@@ -137,6 +137,7 @@
       "back-to-intro": "Back to introduction"
     },
     "question": {
+      "close-aria-label": "Close questionnaire",
       "guide-button": "Guide",
       "previous-button": "Previous",
       "skip-button": "Skip",
