@@ -5,7 +5,7 @@ import { QuestionPage as AppQuestionPage } from "../../../../calculator/componen
 import { useAnswersStore } from "../../../../calculator/stores/answers";
 import { useAnswer, useCalculator, useQuestions } from "../../../../calculator/view-models";
 import { useAutoSave } from "../../../../hooks/auto-save";
-import { saveAnswersToLocalStorage, clearExpiredAnswersFromLocalStorage } from "../../../../lib/local-storage";
+import { clearExpiredAnswersFromLocalStorage, saveAnswersToLocalStorage } from "../../../../lib/local-storage";
 import { type RouteSegments, routes } from "../../../../lib/routing/route-builders";
 import { useEmbed } from "../../../client/embed-context-provider";
 

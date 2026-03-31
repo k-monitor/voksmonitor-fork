@@ -25,7 +25,7 @@ export type QuestionNavigationCard = {
 export function QuestionNavigationCard({ current, total, onPreviousClick, onNextClick, answer, onAgreeChange, onDisagreeChange, onImportantChange }: QuestionNavigationCard) {
   const t = useTranslations("calculator.question");
   const previousButtonLabel = current === 1 ? t("guide-button") : t("previous-button");
-  const nextButtonLabel = (answer.answer?.answer !== undefined && answer.answer?.answer !== null) ? t("next-button") : t("skip-button");
+  const nextButtonLabel = answer.answer?.answer !== undefined && answer.answer?.answer !== null ? t("next-button") : t("skip-button");
 
   return (
     <CenterNavigationCard>

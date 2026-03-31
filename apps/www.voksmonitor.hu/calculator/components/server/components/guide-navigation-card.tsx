@@ -1,6 +1,7 @@
 import { Button } from "@kalkulacka-one/design-system/client";
 
 import { NavigationCard } from "./navigation-card";
+import { useTranslations } from "next-intl";
 
 const HEIGHT = "h-22";
 
@@ -9,10 +10,12 @@ export type GuideNavigationCard = {
 };
 
 export function GuideNavigationCard({ onNextClick }: GuideNavigationCard) {
+  const t = useTranslations("calculator.guide");
+
   return (
     <NavigationCard>
       <Button color="primary" onClick={onNextClick}>
-        Válaszadás megkezdése
+        {t("start-answering-button")}
       </Button>
     </NavigationCard>
   );

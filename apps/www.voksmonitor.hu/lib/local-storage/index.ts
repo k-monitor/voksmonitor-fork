@@ -1,4 +1,3 @@
-
 import type { Answer } from "../../../../packages/schema/schemas/answer.schema";
 
 const ANSWERS_KEY_PREFIX = "voksmonitor-answers-";
@@ -26,7 +25,6 @@ export function clearExpiredAnswersFromLocalStorage(): void {
   }
 }
 
-
 /** 1 hour in milliseconds */
 const ANSWERS_TTL_MS = 1 * 60 * 60 * 1000;
 
@@ -49,7 +47,6 @@ function demoCompletedKey(calculatorId: string): string {
 function feedbackCompletedKey(calculatorId: string): string {
   return `${FEEDBACK_COMPLETED_KEY_PREFIX}${calculatorId}`;
 }
-
 
 export function saveAnswersToLocalStorage(calculatorId: string, answers: Answer[]): void {
   if (typeof window === "undefined") return;

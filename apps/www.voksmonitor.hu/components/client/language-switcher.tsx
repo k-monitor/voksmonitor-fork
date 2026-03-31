@@ -1,8 +1,8 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useLocale } from "next-intl";
-import { useTransition } from "react";
+import { useTransition, useEffect } from "react";
 
 import { setLocale } from "../../app/actions";
 
@@ -14,11 +14,26 @@ const LOCALES = [
 export function LanguageSwitcher() {
   const locale = useLocale();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [isPending, startTransition] = useTransition();
+
+  // Sync locale with ?lang=xx in URL
+  useEffect(() => {
+    const urlLang = searchParams.get("lang");
+    if (urlLang && urlLang !== locale) {
+      setLocale(urlLang).then(() => {
+        router.refresh();
+      });
+    }
+  }, [searchParams, locale, router]);
 
   const handleSwitch = (newLocale: string) => {
     startTransition(async () => {
       await setLocale(newLocale);
+      // Update the URL with the new lang param
+      const params = new URLSearchParams(searchParams.toString());
+      params.set("lang", newLocale);
+      router.push("?" + params.toString());
       router.refresh();
     });
   };

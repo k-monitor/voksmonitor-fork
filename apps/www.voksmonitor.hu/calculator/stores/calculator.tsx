@@ -43,7 +43,7 @@ export const createCalculatorStore = (calculatorData: CalculatorData, sessionId?
   // Shuffle questions using seed for consistent randomization per session
   const shuffledData = {
     ...calculatorData,
-    data: { 
+    data: {
       ...calculatorData.data,
       // questions: calculatorData.data.questions,
       questions: shuffle(calculatorData.data.questions, seed),

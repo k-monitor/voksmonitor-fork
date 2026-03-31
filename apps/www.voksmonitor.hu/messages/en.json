@@ -10,7 +10,7 @@
         "duration": "15 minutes"
       },
       "title": "Parliamentary Elections 2026 Voksmonitor",
-      "description": "The goal of the Voksmonitor created for the 2026 parliamentary elections is for voters to encounter politics not only through party campaign messages, but to also learn about the positions of the parties running in the election on important policy issues. The application matches the respondent with the party whose position is closest to the respondent's opinion based on their answers. The questions were compiled by K-Monitor staff to cover a wide range of policy areas that determine the operation of the country. Our goal was to present dilemmas that meaningfully influence public policy and are understandable to voters, for example, in the areas of the economy, social policy, education, healthcare, environmental protection, or the transparency of state operations.",
+      "description": "The goal of the Voksmonitor created for the 2026 parliamentary elections is for voters to encounter politics not only through party campaign messages, but to also learn about the positions of the parties running in the election on important policy issues. The application matches the respondent with the party whose position is closest to the respondent's opinion based on their answers. The questions were compiled by <website>K-Monitor</website> staff to cover a wide range of policy areas that determine the operation of the country. Our goal was to present dilemmas that meaningfully influence public policy and are understandable to voters, for example, in the areas of the economy, social policy, education, healthcare, environmental protection, or the transparency of state operations.",
       "start-button": "Start Questions"
     },
     "bp-card": {
@@ -29,7 +29,7 @@
     },
     "methodology-section": {
       "title": "How is Voksmonitor made?",
-      "description": "Voksmonitor is a joint project of <website>K-Monitor</website> and the KohoVolit.eu nonprofit organizations, which helps weigh who to vote for based on party platforms.",
+      "description": "Voksmonitor is a joint project of <website>K-Monitor</website> and the <koho>KohoVolit.eu</koho> nonprofit organizations, which helps weigh who to vote for based on party platforms.",
       "step1-alt": "Questionnaire",
       "step1-text": "The questionnaire assesses the respondent's position on current political topics in 44 questions.",
       "step2-alt": "Parties",
@@ -98,13 +98,13 @@
       "who-heading": "Who makes Voksmonitor and how?",
       "how-heading": "How does it work?",
       "what": "Voksmonitor is an online election calculator that compares your political opinion with the positions of the parties running in the 2026 parliamentary elections. Hungarian applications similar to Voksmonitor (e.g. Vokskabin) and international applications (e.g. Stemwijzer, Wahl-O-Mat, Wahlrechner) aim to help voters navigate and make the political landscape more transparent. The goal of Voksmonitor is for voters to encounter politics not only through campaign messages and communications, but also to learn about the parties' specific platforms and the positions they hold on important policy issues. The application helps reveal which political actors' views are closest to or furthest from your values.",
-      "who": "Voksmonitor has been jointly developed and operated for years by <website>K-Monitor</website> and KohoVolit.eu. This year, Vox Populi Election Guide also joined our initiative. The questions are compiled by K-Monitor staff and experts in order to cover the most important policy topics relevant to the 2026 parliamentary elections. The topics include, for example, the economy, healthcare, education, environmental protection, energy, and the rule of law. We send the questionnaire to parties running in the election in advance, who are given the opportunity to provide their answers and comments. If a party does not respond, we reconstruct their position based on their public platform, statements, and past decisions. We provide every party involved with the opportunity to review and correct their answers.",
+      "who": "Voksmonitor has been jointly developed and operated for years by <website>K-Monitor</website> and <koho>KohoVolit.eu</koho>. This year, <vox>Vox Populi</vox> Election Guide also joined our initiative. The questions are compiled by K-Monitor staff and experts in order to cover the most important policy topics relevant to the 2026 parliamentary elections. The topics include, for example, the economy, healthcare, education, environmental protection, energy, and the rule of law. We send the questionnaire to parties running in the election in advance, who are given the opportunity to provide their answers and comments. If a party does not respond, we reconstruct their position based on their public platform, statements, and past decisions. We provide every party involved with the opportunity to review and correct their answers.",
       "how": "The Voksmonitor questionnaire contains 44 political questions relevant to the 2026 parliamentary elections. Each question comes with a short, neutral explanation that presents the different positions, helping the respondent form their own opinion. Users can indicate for each question whether they agree with the given statement (yes / no / don't know), and can also indicate how important they consider the given topic. The application then compares the answers with the parties' positions and calculates the degree of agreement. The result is displayed as a percentage, showing which parties are closest to your views. The results are informational in nature: their purpose is to help voters make decisions and provide an opportunity to compare their own position with the political landscape."
     },
     "modszertan": {
       "meta-title": "Voksmonitor Methodology",
       "heading": "Voksmonitor Methodology",
-      "p1": "The Voksmonitor is a joint project of <website>K-Monitor</website> and KohoVolit.eu, with the goal of allowing voters to encounter politics not only through party communications, but also to learn about the various parties' platforms and positions on the most important political issues relevant to the 2026 parliamentary elections. This year, the Vox Populi Election Guide also joined our initiative.",
+      "p1": "The Voksmonitor is a joint project of <website>K-Monitor</website> and <koho>KohoVolit.eu</koho>, with the goal of allowing voters to encounter politics not only through party communications, but also to learn about the various parties' platforms and positions on the most important political issues relevant to the 2026 parliamentary elections. This year, the <vox>Vox Populi</vox> Election Guide also joined our initiative.",
       "support-heading": "Support the creation of Voksmonitor!",
       "support-text": "Do you like Voksmonitor? Please support its creation!",
       "body": "The application ranks parties for users based on how closely their policy positions match the user's answers. Before creating the application, we send the questions to parties running in the election, who are given the opportunity to answer the questions and provide comments. If a party does not respond to our inquiry, we reconstruct their position based on their electoral platform, public statements, and past decisions. This naturally raises the possibility that the answers may differ from the parties' official positions; however, K-Monitor provides every political force featured in the application the opportunity to correct these. Voksmonitor helps respondents navigate 44 politically themed questions. These cover current nationally relevant political issues and policy topics. All questions can be answered anonymously with yes, no, or don't know. A short, neutral explanation is also available for users for each question, summarizing the main positions related to the question. The result is in all cases orientational in nature: it allows users to compare their own position with the parties' positions. After completing the questionnaire, users see a short, anonymous, optionally completable mini questionnaire, in which they can answer a few basic demographic questions as well as a question about party preference. We use this data exclusively for research purposes: it helps us better understand how different social groups relate to various political issues, and to what extent users' self-reported party preference differs from what the Voksmonitor result shows. This contributes to the development of the application's methodology and to more accurate mapping of voter attitudes."
@@ -119,7 +119,8 @@
       "close-aria-label": "Close",
       "para1": "TThe goal of the Parliamentary Elections 2026 Voksmonitor is for voters to encounter politics not only through party campaign messages, but also to learn about the parties' positions on important policy issues. The application matches the respondent with the party whose position is closest to the respondent's opinion based on their answers.",
       "para2": "The Parliamentary Elections 2026 Voksmonitor was created for the 2026 parliamentary elections. The questions were compiled by K-Monitor staff to cover a wide range of policy areas that determine the functioning of the country. Our goal was for the questions to present dilemmas that meaningfully influence public policy and are understandable to voters, for example, in the areas of the economy, social policy, education, healthcare, environmental protection, or the transparency of state operations.",
-      "para3": "The Parliamentary Elections 2026 Voksmonitor is a joint project of <website>K-Monitor</website>, KohoVolit.eu, and Vox Populi."
+      "para3": "The Parliamentary Elections 2026 Voksmonitor is a joint project of <website>K-Monitor</website>, <koho>KohoVolit.eu</koho>, and <vox>Vox Populi</vox>.",
+      "next-button": "Next"
     },
     "guide": {
       "close-aria-label": "Close",
@@ -130,7 +131,10 @@
       "skip-label": "Skip",
       "skip-description": "If you have no position on the topic or do not wish to answer, you can proceed using the arrow on the right. The question will not be taken into account in the calculation of results.",
       "important-label": "Important to me",
-      "important-description": "You can mark topics that are important to you with a star. The program counts these with double weight."
+      "important-description": "You can mark topics that are important to you with a star. The program counts these with double weight.",
+      "guide-heading": "Guide",
+      "start-answering-button": "Start answering",
+      "back-to-intro": "Back to introduction"
     },
     "question": {
       "guide-button": "Guide",

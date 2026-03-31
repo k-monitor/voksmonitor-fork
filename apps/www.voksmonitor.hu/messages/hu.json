@@ -119,7 +119,8 @@
       "close-aria-label": "Bezárás",
       "para1": "Az Országgyűlési választások 2026 Voksmonitor célja, hogy a választók a politikával ne csak a pártok kampányüzenetein keresztül találkozzanak, hanem megismerjék a pártok álláspontját fontos szakpolitikai kérdésekben. Az alkalmazás a válaszadóhoz azt a pártot rendeli, amelynek álláspontja a válaszok alapján a legközelebb áll a kitöltő véleményéhez.",
       "para2": "Az Országgyűlési választások 2026 Voksmonitor a 2026-os országgyűlési választásokra készült. A kérdéseket a K-Monitor munkatársai úgy állították össze, hogy lefedjék az ország működését meghatározó szakpolitikai területek széles körét. Célunk az volt, hogy a kérdések olyan dilemmákat jelenítsenek meg, amelyek érdemben befolyásolják a közpolitikát, és a választók számára is érthetők, például a gazdaság, a szociálpolitika, az oktatás, az egészségügy, a környezetvédelem vagy az állami működés átláthatósága terén.",
-      "para3": "Az Országgyűlési választások 2026 Voksmonitor  a <website>K-Monitor</website>, a <koho>KohoVolit.eu</koho> és a <vox>Vox Populi</vox> közös projektje."
+      "para3": "Az Országgyűlési választások 2026 Voksmonitor  a <website>K-Monitor</website>, a <koho>KohoVolit.eu</koho> és a <vox>Vox Populi</vox> közös projektje.",
+      "next-button": "Tovább"
     },
     "guide": {
       "close-aria-label": "Bezárás",
@@ -130,7 +131,10 @@
       "skip-label": "Kihagyás",
       "skip-description": "Amennyiben nincs álláspontod a témáról, vagy nem szeretnél válaszolni, a jobb oldalon található 'Kihagyás' feliratra kattintással továbbléphetsz. A kérdést nem vesszük figyelembe az eredmények kiszámításánál.",
       "important-label": "Fontos számomra",
-      "important-description": "Csillaggal jelölheted a számodra fontos témákat. Ezeket a program dupla súllyal számítja."
+      "important-description": "Csillaggal jelölheted a számodra fontos témákat. Ezeket a program dupla súllyal számítja.",
+      "guide-heading": "Útmutató",
+      "start-answering-button": "Válaszadás megkezdése",
+      "back-to-intro": "Vissza a bevezetőhöz"
     },
     "question": {
       "guide-button": "Útmutató",

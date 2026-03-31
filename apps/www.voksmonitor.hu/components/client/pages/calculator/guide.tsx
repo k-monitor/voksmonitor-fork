@@ -1,16 +1,14 @@
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 import { GuidePage as AppGuidePage } from "../../../../calculator/components/server";
-import { useAnswersStore } from "../../../../calculator/stores/answers";
 import { useCalculatorStore } from "../../../../calculator/stores";
-
+import { useAnswersStore } from "../../../../calculator/stores/answers";
 import { useCalculator } from "../../../../calculator/view-models";
 import { useAutoSave } from "../../../../hooks/auto-save";
-import { saveAnswersToLocalStorage, clearExpiredAnswersFromLocalStorage } from "../../../../lib/local-storage";
+import { clearExpiredAnswersFromLocalStorage, saveAnswersToLocalStorage } from "../../../../lib/local-storage";
 import { type RouteSegments, routes } from "../../../../lib/routing/route-builders";
 import { useEmbed } from "../../../client/embed-context-provider";
-
-import { useEffect } from "react";
 
 export function GuidePageWithRouting({ segments }: { segments: RouteSegments }) {
   const router = useRouter();

@@ -176,6 +176,8 @@ function ExpandableComment({ comment, sources, cellKey, expandedComments, toggle
     );
   }
 
+  const t = useTranslations("calculator.comparison");
+
   return (
     <div>
       <button
@@ -184,7 +186,7 @@ function ExpandableComment({ comment, sources, cellKey, expandedComments, toggle
         onClick={() => toggleComment(cellKey)}
         aria-expanded={isExpanded}
       >
-        {textToRender} {!isExpanded && <span className="text-gray-700 font-bold ml-1">Olvass tovább!</span>}
+        {textToRender} {!isExpanded && <span className="text-gray-700 font-bold ml-1">{t("read-more")}</span>}
       </button>
       {sourceLinks}
     </div>

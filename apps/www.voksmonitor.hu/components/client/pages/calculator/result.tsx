@@ -6,7 +6,7 @@ import { ResultPage as AppResultPage } from "../../../../calculator/components/s
 import { useAnswersStore } from "../../../../calculator/stores/answers";
 import { useCalculatedMatches, useCalculator, useResult } from "../../../../calculator/view-models";
 import { submitAnonymously } from "../../../../lib/api/submit";
-import { markCalculatorCompleted, setAnswersExpiry, isCalculatorCompleted } from "../../../../lib/local-storage";
+import { isCalculatorCompleted, markCalculatorCompleted, setAnswersExpiry } from "../../../../lib/local-storage";
 import { reportError } from "../../../../lib/monitoring";
 import { type RouteSegments, routes } from "../../../../lib/routing/route-builders";
 import { useEmbed } from "../../embed-context-provider";

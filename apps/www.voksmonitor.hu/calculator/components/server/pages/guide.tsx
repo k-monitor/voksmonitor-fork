@@ -33,12 +33,12 @@ export function GuidePage({ embedContext, calculator, onNextClick, onBackClick, 
           </AppHeader.Right>
           <AppHeader.Bottom>
             <AppHeader.BottomLeft condensed={false}>
-              <Button variant="link" color="neutral" size="small" onClick={onBackClick} aria-label="Zpět na úvod">
+              <Button variant="link" color="neutral" size="small" onClick={onBackClick} aria-label={t("back-to-intro")}> 
                 <Icon icon={mdiArrowLeft} size="medium" decorative />
               </Button>
             </AppHeader.BottomLeft>
             <AppHeader.BottomMain condensed={false}>
-              <h3 className="font-display font-semibold text-2xl tracking-tight text-slate-700">Útmutató</h3>
+              <h3 className="font-display font-semibold text-2xl tracking-tight text-slate-700">{t("guide-heading")}</h3>
             </AppHeader.BottomMain>
           </AppHeader.Bottom>
         </AppHeader>
