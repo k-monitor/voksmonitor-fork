@@ -46,7 +46,7 @@ export default function Page() {
                     })}
                   </p>
                   <div className="grid mt-auto pt-4 md:pt-6">
-                    <Link href="/vm/2026-ogy/inventory" className="grid">
+                    <Link href={`/vm/${t("2026-card.calculator-name")}/inventory`} className="grid">
                       <Button variant="fill" color="primary">
                         {t("2026-card.start-button")}
                       </Button>

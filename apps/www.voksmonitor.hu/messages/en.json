@@ -11,7 +11,8 @@
       },
       "title": "Parliamentary Elections 2026 Voksmonitor",
       "description": "The goal of the Voksmonitor created for the 2026 parliamentary elections is for voters to encounter politics not only through party campaign messages, but to also learn about the positions of the parties running in the election on important policy issues. The application matches the respondent with the party whose position is closest to the respondent's opinion based on their answers. The questions were compiled by <website>K-Monitor</website> staff to cover a wide range of policy areas that determine the operation of the country. Our goal was to present dilemmas that meaningfully influence public policy and are understandable to voters, for example, in the areas of the economy, social policy, education, healthcare, environmental protection, or the transparency of state operations.",
-      "start-button": "Start Questions"
+      "start-button": "Start Questions",
+      "calculator-name": "2026-ogy-en"
     },
     "bp-card": {
       "tags": {

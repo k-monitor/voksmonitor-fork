@@ -11,7 +11,8 @@
       },
       "title": "Országgyűlési választások 2026 Voksmonitor",
       "description": "A 2026-os országgyűlési választásokra készült Voksmonitor célja, hogy a választók a politikával ne csak a pártok kampányüzenetein keresztül találkozzanak, hanem megismerjék a választáson induló pártok álláspontját fontos szakpolitikai kérdésekben. Az alkalmazás a válaszadóhoz azt a pártot rendeli, amelynek álláspontja a válaszok alapján a legközelebb áll a kitöltő véleményéhez. A kérdéseket a <website>K-Monitor</website> munkatársai úgy állították össze, hogy lefedjék az ország működését meghatározó szakpolitikai területek széles körét. Célunk az volt, hogy a kérdések olyan dilemmákat jelenítsenek meg, amelyek érdemben befolyásolják a közpolitikát, és a választók számára is érthetők, például a gazdaság, a szociálpolitika, az oktatás, az egészségügy, a környezetvédelem vagy az állami működés átláthatósága terén.",
-      "start-button": "Kérdések indítása"
+      "start-button": "Kérdések indítása",
+      "calculator-name": "2026-ogy"
     },
     "bp-card": {
       "tags": {
