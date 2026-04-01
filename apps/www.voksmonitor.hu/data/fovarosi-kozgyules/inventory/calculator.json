@@ -1,0 +1,22 @@
+{
+  "id": "d16c04e9-b0b5-4c76-ad3e-f03689303a29",
+  "version": "1.0.0",
+  "calculatorGroup": {
+    "id": "2736ac9e-5d06-4f8b-93fa-bb701b657f2e",
+    "key": "budapest-kozgyules"
+  },
+  "variant": {
+    "key": "inventory"
+  },
+  "createdAt": "2025-12-19T15:57:54.419546+01:00",
+  "title": "Fővárosi Közgyűlés Voksmonitor",
+  "shortTitle": "Fővárosi Közgyűlés",
+  "description": "Hasonlítsa össze véleményét a fővárosi képviselők szavazataival.",
+  "intro": "A Voksmonitor a Fővárosi Közgyűlés 2024. október 4-i alakuló ülésétől 2025. május 28-ig tartó időszakból válogat 28 olyan ügyet, amelyekben a képviselők vitáztak, közösen gondolkodtak és döntést hoztak. A kérdéseket a K-Monitor munkatársai állították össze úgy, hogy lefedjék a  Fővárosi Közgyűlés előtt tárgyalt legfontosabb döntési területeket. Célunk az volt, hogy a kérdések tükrözzék a város működését érdemben befolyásoló és érthető dilemmákat – a közlekedéstől és lakhatástól kezdve a zöldfelületek kezelésén és átláthatóságon át a városi fejlesztésekig.",
+  "tags": [
+    "Budapest",
+    "Fővárosi Közgyűlés",
+    "Voksmonitor"
+  ],
+  "updatedAt": "2025-12-19T15:57:54.419546+01:00"
+}
