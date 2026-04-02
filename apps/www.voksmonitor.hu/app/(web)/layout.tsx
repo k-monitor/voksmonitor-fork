@@ -108,7 +108,7 @@ export async function generateMetadata({ params }: { params: LayoutParams }): Pr
       default: isEn ? "Voksmonitor" : "Voksmonitor",
       template: isEn ? "%s — Voksmonitor" : "%s — Voksmonitor",
     },
-    description: isEn ? "Voksmonitor 2026 - Compare your views with the parties." : "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.",
+    description: isEn ? "Voksmonitor 2026 - Compare your answers with party positions." : "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.",
     icons: {
       icon: [
         { url: "/favicon.ico" },

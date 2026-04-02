@@ -32,7 +32,7 @@ export async function generateCalculatorMetadata({
   const baseUrl = process.env.NEXT_PUBLIC_CANONICAL_URL || "http://localhost:3000";
   const isEn = isEnglishCalculator({ key, canonicalUrl });
   const metadataTitle = isEn ? "Hungarian Parliamentary Elections 2026 Voksmonitor" : "Országgyűlési választások 2026 Voksmonitor";
-  const metadataDescription = isEn ? "Voksmonitor 2026 - Compare your views with the parties." : "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.";
+  const metadataDescription = isEn ? "Voksmonitor 2026 - Compare your answers with party positions." : "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.";
 
   const calculatorData = await loadCalculatorData({ key, group });
   const calculator = calculatorViewModel(calculatorData.data.calculator);
