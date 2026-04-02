@@ -46,7 +46,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       description,
       images: [
         {
-          url: "/share-og.png",
+          url: isEn ? "/share-og-en.png" : "/share-og.png",
           width: 1200,
           height: 630,
           alt: ogAlt,
