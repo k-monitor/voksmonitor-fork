@@ -124,7 +124,7 @@ export async function generateMetadata({ params, searchParams }: { params: Layou
     metadataBase: new URL(baseUrl),
     openGraph: {
       title: isEn ? "Hungarian Parliamentary Elections 2026 Voksmonitor" : "Országgyűlési választások 2026 Voksmonitor",
-      description: isEn ? "Voksmonitor 2026 - Compare your views with the parties." : "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.",
+      description: isEn ? "Voksmonitor 2026 - Compare your answers with party positions." : "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.",
       url: baseUrl,
       siteName: "Voksmonitor",
       images: [
@@ -132,7 +132,7 @@ export async function generateMetadata({ params, searchParams }: { params: Layou
           url: isEn ? "/og-image-en.png" : "/og-image.png",
           width: 1200,
           height: 630,
-          alt: isEn ? "Voksmonitor 2026 - Compare your views with the parties." : "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.",
+          alt: isEn ? "Compare your answers with party positions." : "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.",
         },
       ],
       locale: isEn ? "en_GB" : "hu_HU",
@@ -141,7 +141,7 @@ export async function generateMetadata({ params, searchParams }: { params: Layou
     twitter: {
       card: "summary_large_image",
       title: isEn ? "Hungarian Parliamentary Elections 2026 Voksmonitor" : "Országgyűlési választások 2026 Voksmonitor",
-      description: isEn ? "Voksmonitor 2026 - Compare your views with the parties." : "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.",
+      description: isEn ? "Voksmonitor 2026 - Compare your answers with party positions." : "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.",
       images: ["/og-image.png"],
     },
     robots: {

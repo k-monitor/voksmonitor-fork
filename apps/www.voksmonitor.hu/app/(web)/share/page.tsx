@@ -34,9 +34,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   const locale = inferShareMetadataLocale(params);
   const isEn = locale === "en";
 
-  const title = isEn ? "I found which parties are closest to me 👀" : "Kiderült, mely pártok állnak hozzám a legközelebb 👀";
-  const description = isEn ? "Take the Voksmonitor too!" : "Töltsd ki te is a Voksmonitort!";
-  const ogAlt = isEn ? "I have already completed Voksmonitor! Check my results!" : "Én már kitöltöttem a Voksmonitort! Nézd meg az eredményeim!";
+  const title = isEn ? "I've already completed the Voksmonitor. Check out my results! 👀" : "Kiderült, mely pártok állnak hozzám a legközelebb 👀";
+  const description = isEn ? "Try the Voksmonitor!" : "Töltsd ki te is a Voksmonitort!";
+  const ogAlt = isEn ? "I've already completed the Voksmonitor! Check out my results!" : "Én már kitöltöttem a Voksmonitort! Nézd meg az eredményeim!";
 
   return {
     title,
