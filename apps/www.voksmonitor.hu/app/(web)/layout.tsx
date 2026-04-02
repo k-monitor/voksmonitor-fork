@@ -73,10 +73,12 @@ async function resolveLocale({
   params,
   cookieLocale,
   pathname,
+  forcedLocale,
 }: {
   params: LayoutParams;
   cookieLocale?: string;
   pathname?: string | null;
+  forcedLocale?: string | null;
 }): Promise<SupportedLocale> {
   const [resolvedParams, requestLocale] = await Promise.all([
     params,
@@ -85,10 +87,11 @@ async function resolveLocale({
 
   const routeLocale = inferLocaleFromRouteValues(extractRouteValues(resolvedParams));
   const pathnameLocale = inferLocaleFromPathname(pathname ?? null);
+  const forcedLocaleNormalized = normalizeLocale(forcedLocale);
   const localeFromCookie = normalizeLocale(cookieLocale);
   const localeFromRequest = normalizeLocale(requestLocale);
 
-  return routeLocale ?? pathnameLocale ?? localeFromCookie ?? localeFromRequest ?? "hu";
+  return forcedLocaleNormalized ?? routeLocale ?? pathnameLocale ?? localeFromCookie ?? localeFromRequest ?? "hu";
 }
 
 export async function generateMetadata({ params }: { params: LayoutParams }): Promise<Metadata> {
@@ -97,6 +100,7 @@ export async function generateMetadata({ params }: { params: LayoutParams }): Pr
     params,
     cookieLocale: cookieStore.get("NEXT_LOCALE")?.value,
     pathname: headerStore.get("x-pathname") ?? headerStore.get("next-url"),
+    forcedLocale: headerStore.get("x-forced-locale"),
   });
   const isEn = lang === "en";
   return {
@@ -157,6 +161,7 @@ export default async function RootLayout({ children, params }: { children: React
     params,
     cookieLocale: cookieStore.get("NEXT_LOCALE")?.value,
     pathname: headerStore.get("x-pathname") ?? headerStore.get("next-url"),
+    forcedLocale: headerStore.get("x-forced-locale"),
   });
 
   let messages;
