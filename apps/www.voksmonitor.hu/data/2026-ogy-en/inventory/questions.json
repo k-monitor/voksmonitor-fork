@@ -3,7 +3,7 @@
     "id": "303c8a1c-1d3c-4299-9be6-aed9a104d1cb",
     "title": "Taxation",
     "statement": "Wealth exceeding one billion forints should be taxed.",
-    "detail": "According to research, half of household wealth is held by the richest 10% of the country, which can slow economic growth, worsen social mobility, and, in the long term, increase social tensions. Some argue that a wealth tax could reduce inequalities, increase government revenue, and enable the expansion of social and educational investments. Others, however, fear that a wealth tax would discourage investment, reduce innovation and increase tax evasion.",
+    "detail": "According to research, half of all Hungarian household wealth is held by the richest 10% of the country, which can slow economic growth, worsen social mobility, and, in the long term, increase social tensions. Some argue that a wealth tax could reduce inequalities, increase government revenue, and enable the expansion of social and educational investments. Others, however, fear that a wealth tax would discourage investment, reduce innovation and increase tax evasion.",
     "tags": [
       "Taxation"
     ]
@@ -12,7 +12,7 @@
     "id": "6c13edb1-60a5-4a98-ac4f-a8b01cf989ef",
     "title": "Constitutional Law",
     "statement": "The office of prime minister should be limited to a maximum of two terms.",
-    "detail": "There is currently no limit in Hungary on how many times someone can serve as prime minister, while the president of the republic may serve a maximum of two terms. Supporters of this argue that holding power for too long can distort a leader’s personality, and that limiting the number of terms would strengthen democratic competition and reduce the risk of corruption. Opponents, however, believe that without genuine constitutional safeguards, this would be merely a symbolic measure; moreover, it could undermine stable governance and would not encourage long-term planning.",
+    "detail": "There is currently no limit in Hungary on how many times someone can serve as prime minister, while the president of the republic may serve a maximum of two terms. Supporters of introducing a limit argue that holding power for too long can distort a leader’s personality, and that limiting the number of terms would strengthen democratic competition and reduce the risk of corruption. Opponents, however, believe that without genuine constitutional safeguards, this would be merely a symbolic measure; moreover, it could undermine stable governance and would not encourage long-term planning.",
     "tags": [
       "Constitutional Law"
     ]
@@ -66,7 +66,7 @@
     "id": "99bf8ad5-707e-4749-89c9-62e46fa6a5bd",
     "title": "Values",
     "statement": "It is right that women considering abortion are required to listen to the foetal heartbeat before making their decision.",
-    "detail": "The government introduced the rule known as the \"heartbeat law\" in 2022, which makes it mandatory to listen to the foetal heartbeat before an abortion. Critics say this is humiliating and further burdens women in difficult situations, especially victims of violence or minors, and does not reduce the number of abortions. Supporters, however, believe it is important that the weight of the decision to terminate a pregnancy be duly considered and not treated as just a medical procedure.",
+    "detail": "The government introduced the rule known as the \"heartbeat law\" in 2022, which makes it mandatory to listen to the foetal heartbeat before an abortion. Critics say this is humiliating and further burdens women in difficult situations, especially victims of sexual assault or minors, and does not reduce the number of abortions. Supporters, however, believe it is important that the weight of the decision to terminate a pregnancy be duly considered and not treated as just a medical procedure.",
     "tags": [
       "Values"
     ]
@@ -102,7 +102,7 @@
     "id": "cc1472b9-22a1-4612-bffd-a0966d4fc701",
     "title": "EU",
     "statement": "Hungary should strive to introduce the euro as soon as possible.",
-    "detail": "The euro is currently the common currency of 21 EU member states and is also used outside the EU. Slovakia and, since 2026, Bulgaria also use the euro. Hungary committed to introducing the common currency when signing the EU accession treaty, but no specific date was set. Supporters argue that joining the eurozone would increase Hungary's economic stability and competitiveness and reduce costs for businesses and individuals. Others argue that an independent currency provides greater room for manoeuvre and competitiveness.",
+    "detail": "The euro is currently the common currency of 21 EU member states and is also used outside the EU. Even peers of Hungary, such as Slovakia and, since 2026, Bulgaria also use the euro. Hungary committed to introducing the common currency when signing the EU accession treaty, but no specific date was set. Supporters argue that joining the eurozone would increase Hungary's economic stability and competitiveness and reduce costs for businesses and individuals. Others argue that an independent currency provides greater room for manoeuvre and competitiveness.",
     "tags": [
       "EU"
     ]
@@ -128,8 +128,8 @@
   {
     "id": "3a28e929-ec12-4114-a59a-36977062461b",
     "title": "Economy",
-    "statement": "The government does well to encourage foreign company investments through tax incentives and individual subsidies.",
-    "detail": "The government encourages foreign multinational companies, mostly car or battery manufacturers, to invest in Hungary through direct subsidies and tax incentives granted via particular government decisions. Supporters argue that these investments create jobs and strengthen the economy. Critics, however, say the overall economic benefits are not well-founded; such projects are often environmentally harmful, operate with low added value, and increase the country’s economic exposure. In their view, support policies should instead focus on improving the competitiveness of domestic small and medium-sized enterprises.",
+    "statement": "The government does well to encourage foreign direct investments through tax incentives and individual subsidies.",
+    "detail": "The government encourages foreign multinational companies, mostly car or battery manufacturers, to invest in Hungary through direct subsidies and tax incentives granted via particular government decisions. Supporters argue that these investments create jobs and strengthen the economy. Critics, however, say the overall economic benefits are not well-founded; such projects are often environmentally harmful, operate with low added value, and increase the country’s economic exposure. In their view, development policies should instead focus on improving the competitiveness of domestic small and medium-sized enterprises.",
     "tags": [
       "Economy"
     ]
@@ -138,7 +138,7 @@
     "id": "d42fa2ad-dd7a-4ccb-9c65-eb7f28572c5f",
     "title": "Economy",
     "statement": "The modernisation of railway lines and the rolling stock of the Hungarian State Railways (MÁV) should take priority over new road developments.",
-    "detail": "State transport development over the past 20-30 years has prioritised highway construction over railway development. The underfunding of railways is visible in MÁV's ageing tracks and rolling stock. Some argue that instead of building new highways, railway modernisation should be the focus of resources in the near future, as it is more energy-efficient and more suitable for mass transport. Others argue that railway developments only pay back over such a long time horizon that the construction of new highways must remain a priority in the interests of the Hungarian economy and rural regions.",
+    "detail": "State transport development over the past 20-30 years has prioritised highway construction over railway development. The underfunding of railways is visible in MÁV's ageing tracks and rolling stock. Some argue that instead of building new highways, railway modernisation should be the focus of resources in the near future, as it is more energy-efficient and more suitable for mass transport. Others argue that railway developments only pay off over such a long time horizon that the construction of new highways must remain a priority in the interests of the Hungarian economy and rural regions.",
     "tags": [
       "Economy"
     ]
@@ -164,8 +164,8 @@
   {
     "id": "1f522f68-da8f-407c-b137-2a3566b2ea5c",
     "title": "National Defence",
-    "statement": "In the long term, it is appropriate for Hungary to spend approximately 5 per cent of its GDP on defence.",
-    "detail": "Hungary joined NATO in 1999, committing to spend a given proportion of GDP on defence. Instead of the previous 2% target, the alliance set a 5% target at the 2025 Hague summit, which would require more than doubling of Hungary's current spending of around HUF 1,939 billion. Supporters argue that a gradual increase spread over 10 years would be realistic and would strengthen the country's security and defence industry. Opponents worry that it would impose such a significant budgetary burden that it would come at the expense of other developments, and they do not consider participation in an arms race to be morally justified.",
+    "statement": "In the long term, it is appropriate for Hungary to spend approximately 5 percent of its GDP on defence.",
+    "detail": "Hungary joined NATO in 1999, committing to spend a given proportion of GDP on defence. Instead of the previous 2% target, the alliance set a 5% target at the 2025 Hague summit, which would require more than doubling Hungary's current spending of around HUF 1,939 billion. Supporters argue that a gradual increase spread over 10 years could be realistic and would strengthen the country's security and defence industry. Opponents worry that it would impose such a significant budgetary burden that it would come at the expense of other developments, and they do not consider participation in an arms race to be morally justified.",
     "tags": [
       "National Defence"
     ]
@@ -174,7 +174,7 @@
     "id": "3bdba9a3-f475-4e7d-b5f5-2977258ac0f3",
     "title": "Taxation",
     "statement": "The current system of family tax allowances is an appropriate instrument for supporting child-rearing.",
-    "detail": "In Hungary, the family tax and contribution allowance is the foundation of the family support system, which increases parents’ net income based on the number of their children. Supporters argue that it is effective because it encourages work and childbearing. Critics, however, believe that the allowance primarily benefits higher-income earners, while for the poorest families, the tax benefit does not cover the costs of raising children, and they may even miss out on it altogether (for example, in cases of unemployment). Therefore, they propose increasing family benefits and introducing need-based support.",
+    "detail": "In Hungary, the family tax and social contribution allowance is the foundation of the family support system, which increases parents’ net income based on the number of their children. Supporters argue that it is effective because it encourages work and childbearing. Critics, however, believe that the allowance primarily benefits higher-income earners, while for the poorest families, the tax benefit does not cover the costs of raising children, and they may even miss out on it altogether (for example, in cases of unemployment). Therefore, they propose increasing family benefits and introducing need-based support.",
     "tags": [
       "Taxation"
     ]
@@ -182,7 +182,7 @@
   {
     "id": "e01a77a2-7acd-4608-85a8-2a783b1469fb",
     "title": "Pension",
-    "statement": "Pensions should be adjusted to both inflation and wage growth.",
+    "statement": "Pensions should be adjusted to both inflation and wage increases.",
     "detail": "In Hungary, pension increase is mainly linked to inflation. Supporters of the change argue that this does not ensure that pensioners benefit from economic growth, and therefore propose the \"Swiss indexation\" which also takes wage increases into account. Opponents, however, argue that wage-linked increases would place a great burden on the budget in an ageing society and could jeopardise the long-term sustainability of the pension system.",
     "tags": [
       "Pension"
@@ -192,7 +192,7 @@
     "id": "bfa9e91e-4933-4233-a331-9fddb64c408a",
     "title": "Climate and Environmental Protection",
     "statement": "Combating the desertification of the Great Hungarian Plain is an urgent task of the state.",
-    "detail": "In the Great Hungarian Plain, particularly in the sand ridge between Duna and Tisza (\"Homohátság\"), drought is becoming increasingly severe and groundwater levels are rapidly falling. Supporters of intervention argue that desertification threatens agriculture and the stability of food prices, and that comprehensive water retention and landscape rehabilitation programmes are needed. Opponents, however, citing the high costs and the global nature of climate change, consider strengthening adaptation and local innovation more important, and see the role of the state more in stimulating economic recovery.",
+    "detail": "In the Great Hungarian Plain, particularly in the sand ridge between Duna and Tisza (\"Homokhátság\"), drought is becoming increasingly severe and groundwater levels are rapidly falling. Supporters of intervention argue that desertification threatens agriculture and the stability of food prices, and that comprehensive water retention and landscape rehabilitation programmes are needed. Opponents, however, citing the high costs and the global nature of climate change, consider strengthening adaptation and local innovation more important, and see the role of the state more in stimulating economic recovery.",
     "tags": [
       "Climate and Environmental Protection"
     ]
@@ -201,7 +201,7 @@
     "id": "dcd28e4b-1481-48d0-ad08-0c523cab1394",
     "title": "Transparency and Anti-corruption",
     "statement": "Extensive wealth investigations should be conducted among members of the political and economic elite.",
-    "detail": "Supporters of wealth investigations argue that in recent decades, representatives of Hungary's political and economic elite have used their influence to amass far greater wealth than would have been legally possible. The investigations would create an opportunity to uncover assets acquired through corruption and recover them for the public good. This could also strengthen citizens' faith in state accountability and serve as a deterrent against future corruption. Critics, however, argue that the authorities have already been doing their job well, while also warning of the risk of political abuse and threats to legal certainty.",
+    "detail": "Supporters of wealth investigations argue that in recent decades, representatives of Hungary's political and economic elite have used their influence to amass far greater wealth than would have been legally possible. The investigations would create an opportunity to uncover assets acquired through corruption and recover them for the public good. This could also strengthen citizens' faith in state accountability and serve as a deterrent against future corruption. Critics, however, argue that the authorities have already been doing their job well, and that such investigations entail risks of political abuse and the potential to undermine the rule of law.",
     "tags": [
       "Transparency and Anti-corruption"
     ]
@@ -210,7 +210,7 @@
     "id": "02bed490-44d3-46f2-befb-4c7749442535",
     "title": "Transparency and Anti-corruption",
     "statement": "Hungary should join the European Public Prosecutor's Office.",
-    "detail": "The European Public Prosecutor's Office was established in 2021 to strengthen the fight against fraud and corruption affecting the EU budget. 24 of the EU's 27 member states have joined; Hungary has not. Supporters argue that participation would increase the effectiveness of the fight against corruption in cases where national authorities have no interest in doing so. Opponents, however, fear a reduction in national sovereignty and believe that Hungary's own prosecution system is also capable of investigating such cases.",
+    "detail": "The European Public Prosecutor's Office was established in 2021 to strengthen the fight against fraud and corruption affecting the EU budget. Of the EU's 27 member states 24 have already joined, but Hungary has not. Supporters argue that participation would increase the effectiveness of the fight against corruption in cases where national authorities have no interest in doing so. Opponents, however, fear a reduction in national sovereignty and believe that Hungary's own prosecution system is also capable of investigating such cases.",
     "tags": [
       "Transparency and Anti-corruption"
     ]
@@ -228,7 +228,7 @@
     "id": "a57fb9f6-3176-4ddd-8065-9234d86fd01a",
     "title": "Transparency and Anti-corruption",
     "statement": "Companies using public funds should proactively disclose their publicly funded contracts without request.",
-    "detail": "In Hungary, contracts concluded through public procurement are in principle required to be published, but companies can also receive public funds in other ways (support schemes, subcontracts, below-threshold procurement, etc.). Supporters argue that if companies also had such an automatic disclosure obligation, they would manage public funds more responsibly, reducing the risk of corruption and overpricing. Critics, however, argue that this would impose burdens on companies that could put them at a competitive disadvantage, and that the contracts could expose sensitive business information that might deter market players from accepting public orders.",
+    "detail": "The aim of the proposal is to make it easy to determine what government contracts, subsidies, and real estate a business has obtained, without having to inquire at every possible public institution. Supporters argue that if companies also had such an automatic disclosure obligation, they would manage public funds more responsibly, reducing the risk of corruption and overpricing. Critics, however, argue that this would impose burdens on companies that could put them at a competitive disadvantage, and that the contracts could expose sensitive business information that might deter market players from accepting public orders.",
     "tags": [
       "Transparency and Anti-corruption"
     ]
@@ -236,7 +236,7 @@
   {
     "id": "e1faf9fa-cc52-4b26-aebd-d0fbadd29b2b",
     "title": "Constitutional Law",
-    "statement": "A new constitution is necessary.",
+    "statement": "Hungary needs a new constitution.",
     "detail": "Hungary's Fundamental Law was adopted in 2011 and entered into force in 2012. Some argue that the current text was not created through broad political consensus, so its long-term legitimacy is questionable; in contrast, a constitution adopted through broad social consultation would strengthen trust in democratic institutions. They argue that a new constitution could restore the system of checks and balances and guarantee fundamental rights for all. Opponents, however, argue that the Fundamental Law was lawfully adopted by a two-thirds majority of Parliament and thus has democratic legitimacy, and that in the interests of stability, amending the disputed points might be sufficient instead of a completely new constitution.",
     "tags": [
       "Constitutional Law"
@@ -255,7 +255,7 @@
     "id": "11931d9a-e3fe-4437-b1dc-4b1ed6938b54",
     "title": "Constitutional Law",
     "statement": "Judicial enforcement should be nationalised.",
-    "detail": "The Völner-Schadl affair triggered a debate about the future of the profit-based bailiff system. Supporters argue that public management organised under the courts could provide greater transparency, more uniform operation and fewer opportunities for abuse. Opponents, however, fear that nationalisation would increase bureaucracy and slow down proceedings, and therefore consider maintaining a strictly regulated but non-state system to be more effective.",
+    "detail": "The Völner-Schadl affair triggered a debate about the future of the profit-based bailiff system. Supporters argue that public management organised under the courts could provide greater transparency, more uniform operation and fewer opportunities for abuse. Opponents, however, fear that nationalisation would increase bureaucracy and slow down proceedings, and therefore consider maintaining a strictly regulated but private system to be more effective.",
     "tags": [
       "Constitutional Law"
     ]
@@ -263,7 +263,7 @@
   {
     "id": "6be60a1b-8fb1-4b96-bfad-ba8ef8e20a58",
     "title": "Foreign Policy",
-    "statement": "Hungary should pursue an independent foreign policy even if this conflicts with the common position of the European Union.",
+    "statement": "Hungary should pursue an independent foreign policy even if this conflicts with the common position in the European Union.",
     "detail": "The Hungarian government often pursues an independent foreign policy within the EU: at times blocking common decisions with vetoes, while at other times, under the framework of the “Eastern Opening,” building partnerships that may strengthen competitors to the EU. Supporters of this independent approach argue that national interest is paramount, and that an autonomous direction can provide greater room for maneuver in international relations and economic cooperation. Opponents, however, believe that weakening EU unity may reduce Hungary’s ability to assert its interests and its security, and may also entail political and economic risks.",
     "tags": [
       "Foreign Policy"
@@ -273,7 +273,7 @@
     "id": "a2b9f23e-d66a-4986-ac6a-693c6935ff83",
     "title": "Foreign Policy",
     "statement": "It is in Hungary's long-term interest to reduce its dependence on Russian energy sources, even if this entails short-term costs.",
-    "detail": "Despite the Russian-Ukrainian war, 80-90% of Hungary's oil imports and 50-70% of its gas imports still come from Russian sources. Supporters of the statement argue that reducing dependency would increase the country's sovereignty, and that the development of alternative sources and renewable energies could provide a more stable, environmentally friendly supply in the longer term. Opponents, however, fear that breaking away could cause significant price increases and a competitive disadvantage.",
+    "detail": "Despite the Russian-Ukrainian war, 80-90% of Hungary's oil imports and 50-70% of its gas imports still come from Russian sources. Supporters of the statement argue that reducing dependency would increase the country's sovereignty, and that increasing the share of alternative sources and renewable energies could provide a more stable, environmentally friendly supply in the longer term. Opponents, however, fear that breaking away could cause significant price increases and a competitive disadvantage.",
     "tags": [
       "Foreign Policy"
     ]
@@ -282,7 +282,7 @@
     "id": "fc1d7860-82eb-4028-90b2-837fe90a7c56",
     "title": "Housing",
     "statement": "Access to home ownership should continue to be supported primarily through subsidised loans, regardless of financial situation.",
-    "detail": "According to analysts, the Otthon Start (Home Start) programme would cost around HUF 250 billion per year after five years, which, together with the CSOK and the Babaváró loan, places a significant burden on the state budget. Critics of the schemes fear that they push up prices, indebt society and do not reach the most needy, so they propose state housing programmes and targeted social support instead. Supporters argue that subsidised loans help families to obtain housing, increase stability and stimulate the construction industry.",
+    "detail": "According to analysts, the Otthon Start (Home Start) programme would cost around HUF 250 billion per year after five years, which, together with the CSOK (Familiy Housing Support Programme) and the Babaváró (childbirth incentive) loan, places a significant burden on the state budget. Critics of the schemes fear that they push up prices, indebt society and do not reach those most in need, so they propose state housing programmes and targeted social support instead. Supporters argue that subsidised loans help families purchase their own homes, increase stability and boost the construction industry.",
     "tags": [
       "Housing"
     ]
@@ -291,7 +291,7 @@
     "id": "20bb94c4-dbd1-48d0-a0a6-27024954b3c1",
     "title": "Media",
     "statement": "State media should be supervised by a body that is organisationally independent from the government and parliamentary parties.",
-    "detail": "Some argue that state media airs programmes politically biased towards the government, and that the average daily cost of its operation can reach HUF 450 million. In their view,  state media should provide balanced, impartial information, which could be achieved with a new media law and an independent supervisory body. Others argue that democratic control of publicly funded media can be provided by the parliament, so it is understandable that parliamentary representation is reflected in organisational and personnel decisions.",
+    "detail": "Some argue that public media produces programming that is politically biased toward the government, and that its average daily operating costs can reach 450 million forints. In their view, the role of public media is to provide balanced, impartial information, which could be achieved through a new media law and an independent oversight body. Others argue that parliamentary oversight is the appropriate form of democratic control for publicly funded public media, so it is understandable that parliamentary representation should be reflected in organizational and personnel decisions.",
     "tags": [
       "Media"
     ]
@@ -300,7 +300,7 @@
     "id": "d7aac1d2-8e64-4b9f-8cf9-37484027884a",
     "title": "Economy",
     "statement": "It is appropriate for agricultural land to be treated as an investment product.",
-    "detail": "In 2025, the land trading law was amended to allow the purchase of agricultural land for the purpose of leasing it out, meaning that the owner does not have to cultivate the land themselves and can essentially treat it as an investment product. Supporters argue that land is a value-preserving investment and opening up the land market can increase efficiency, stimulate development and revitalise the rural economy. Opponents, however, fear that the investment purpose will drive up prices and squeeze out smaller farmers, while the primary role of agricultural land is to ensure food production and rural livelihoods.",
+    "detail": "In 2025, the land trading law was amended to allow the purchase of agricultural land for the purpose of leasing it out, meaning that the owner does not have to cultivate the land themselves and can essentially treat it as an investment product. Supporters argue that land is a value-preserving investment and opening up the land market can increase efficiency, stimulate development and revitalise the rural economy. Opponents, however, fear that the investment purpose will drive up prices and push smaller farmers out of the market, while the primary role of agricultural land is to ensure food production and rural livelihoods.",
     "tags": [
       "Economy"
     ]
@@ -327,7 +327,7 @@
     "id": "07273388-8b85-4e0b-aba2-3c02a755b414",
     "title": "Labour Affairs",
     "statement": "Employers who pay women lower wages for the same work should be penalised.",
-    "detail": "Research suggests that women in the same or similar positions are paid on average lower salaries than men. Supporters of stricter enforcement argue that the principle of \"equal pay for equal work\" must be enforced through effective supervision and sanctions. Opponents, however, argue that pay agreements are influenced by many factors, such as experience, performance or negotiating ability, and that excessive state interference in this area can increase administrative burdens and unduly restrict the room for manoeuvre of businesses.",
+    "detail": "Research suggests that women in the same or similar positions are paid on average lower salaries than men. Supporters of stricter measures argue that the principle of \"equal pay for equal work\" must be enforced through effective supervision and sanctions. Opponents, however, argue that wage agreements are influenced by many factors, such as experience, performance or negotiating ability, and that excessive state interference in this area can increase administrative burdens and unduly restrict the room for manoeuvre of businesses.",
     "tags": [
       "Labour Affairs"
     ]
@@ -345,7 +345,7 @@
     "id": "c8d636dc-4f26-4d5b-9a35-7d2ad8f1628f",
     "title": "Labour Affairs",
     "statement": "Home care should be recognised as a formal employment status.",
-    "detail": "In Hungary, more than 50,000 people care for a chronically ill or severely disabled relative at home, often 24 hours a day. Supporters argue that recognising home care as an employment relationship would provide fairer income and social insurance and pension entitlements. Opponents, however, warn that this would entail significant additional budgetary expenditure and raise legal questions about regulating the employment relationship.",
+    "detail": "In Hungary, more than 50,000 people care for a chronically ill or severely disabled relative at home, often 24 hours a day. Supporters argue that recognising home care as an employment status would provide fairer income and social insurance and pension entitlements. Opponents, however, warn that this would entail significant additional budgetary expenditure and raise legal questions about regulating employment.",
     "tags": [
       "Labour Affairs"
     ]
@@ -372,7 +372,7 @@
     "id": "115651d5-4e2a-4e82-bee4-73fcbdc28ac5",
     "title": "Education",
     "statement": "Universities that have undergone a model change should remain under private management.",
-    "detail": "In recent years, more than 20 Hungarian higher education institutions have been transferred to foundations managing assets of public interest (KEKVAs). Supporters of the ownership change argue that this gives institutions greater economic independence and competitiveness, enabling them to launch more market-oriented programmes. Opponents, however, argue that the change did not make universities more effective, while they have lost their autonomy as political appointees sit on the foundation boards and can enforce political considerations in university governance.",
+    "detail": "In recent years, more than 20 Hungarian higher education institutions have been transferred to public trust funds performing a public function (KEKVAs). Supporters of the model change argue that this gives institutions greater economic independence and competitiveness, enabling them to launch more market-oriented programmes. Opponents, however, argue that the change did not make universities more efficient, while they have lost their autonomy as political appointees sit on the foundation boards and can enforce political considerations in university governance.",
     "tags": [
       "Education"
     ]

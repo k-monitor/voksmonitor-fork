@@ -2,7 +2,7 @@
   "id": "12c0b7cc-2206-5f5e-a407-6e3687b18a82",
   "key": "voksmonitor-2026",
   "version": "1.0.0",
-  "createdAt": "2026-03-31T12:55:54+00:00",
+  "createdAt": "2026-04-02T23:33:24+00:00",
   "title": "Parliamentary Elections 2026 Voksmonitor",
   "shortTitle": "Voksmonitor 2026",
   "description": "Voksmonitor 2026 - Compare your views with the parties.",
@@ -10,7 +10,7 @@
   "checksums": {
     "questions": {
       "algorithm": "sha256",
-      "value": "5da8ef9f3922c9357cbab1d84bbe42ee98c2619578774fdcafab196ae32297aa"
+      "value": "4811e830f52b7eb2fd4403616531569f93312e08fb5a8c2a8f3285cf3df58b41"
     }
   }
 }
