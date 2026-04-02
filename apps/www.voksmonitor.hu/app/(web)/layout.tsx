@@ -17,7 +17,6 @@ const baseUrl = process.env.NEXT_PUBLIC_CANONICAL_URL || "http://localhost:3000"
 
 type SupportedLocale = "en" | "hu";
 type LayoutParams = Promise<Record<string, string | string[] | undefined>>;
-type LayoutSearchParams = Promise<Record<string, string | string[] | undefined>>;
 
 function normalizeLocale(value: string | undefined | null): SupportedLocale | undefined {
   if (!value) {
@@ -72,35 +71,30 @@ function inferLocaleFromPathname(pathname: string | null): SupportedLocale | und
 
 async function resolveLocale({
   params,
-  searchParams,
   cookieLocale,
   pathname,
 }: {
   params: LayoutParams;
-  searchParams?: LayoutSearchParams;
   cookieLocale?: string;
   pathname?: string | null;
 }): Promise<SupportedLocale> {
-  const [resolvedParams, resolvedSearchParams, requestLocale] = await Promise.all([
+  const [resolvedParams, requestLocale] = await Promise.all([
     params,
-    searchParams ? searchParams : Promise.resolve<Record<string, string | string[] | undefined>>({}),
     getLocale(),
   ]);
 
-  const searchLocale = normalizeLocale(typeof resolvedSearchParams.lang === "string" ? resolvedSearchParams.lang : undefined);
   const routeLocale = inferLocaleFromRouteValues(extractRouteValues(resolvedParams));
   const pathnameLocale = inferLocaleFromPathname(pathname ?? null);
   const localeFromCookie = normalizeLocale(cookieLocale);
   const localeFromRequest = normalizeLocale(requestLocale);
 
-  return searchLocale ?? routeLocale ?? pathnameLocale ?? localeFromCookie ?? localeFromRequest ?? "hu";
+  return routeLocale ?? pathnameLocale ?? localeFromCookie ?? localeFromRequest ?? "hu";
 }
 
-export async function generateMetadata({ params, searchParams }: { params: LayoutParams; searchParams?: LayoutSearchParams }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: LayoutParams }): Promise<Metadata> {
   const [cookieStore, headerStore] = await Promise.all([cookies(), headers()]);
   const lang = await resolveLocale({
     params,
-    searchParams,
     cookieLocale: cookieStore.get("NEXT_LOCALE")?.value,
     pathname: headerStore.get("x-pathname") ?? headerStore.get("next-url"),
   });
