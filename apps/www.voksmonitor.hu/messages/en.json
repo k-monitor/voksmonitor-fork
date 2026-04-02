@@ -143,8 +143,8 @@
       "previous-button": "Previous",
       "skip-button": "Skip",
       "next-button": "Next",
-      "agree-button": "I agree",
-      "disagree-button": "I disagree",
+      "agree-button": "Agree",
+      "disagree-button": "Disagree",
       "important-aria-label": "Important to me"
     },
     "review": {
