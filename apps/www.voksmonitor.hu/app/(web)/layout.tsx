@@ -1,4 +1,8 @@
 import type { Metadata, Viewport } from "next";
+import type { ReactNode } from "react";
+
+import { cookies, headers } from "next/headers";
+import { notFound } from "next/navigation";
 
 import "../globals.css";
 
@@ -11,8 +15,95 @@ import { allowCrawling } from "../../lib/seo";
 
 const baseUrl = process.env.NEXT_PUBLIC_CANONICAL_URL || "http://localhost:3000";
 
-export async function generateMetadata({ searchParams }: { searchParams: { lang?: string } }): Promise<Metadata> {
-  const lang = searchParams?.lang || "hu";
+type SupportedLocale = "en" | "hu";
+type LayoutParams = Promise<Record<string, string | string[] | undefined>>;
+type LayoutSearchParams = Promise<Record<string, string | string[] | undefined>>;
+
+function normalizeLocale(value: string | undefined | null): SupportedLocale | undefined {
+  if (!value) {
+    return undefined;
+  }
+
+  const normalized = value.toLowerCase();
+  if (normalized === "en" || normalized === "hu") {
+    return normalized;
+  }
+
+  return undefined;
+}
+
+function inferLocaleFromRouteValues(routeValues: Array<string | undefined>): SupportedLocale | undefined {
+  for (const value of routeValues) {
+    const normalized = value?.toLowerCase();
+    if (!normalized) {
+      continue;
+    }
+
+    if (normalized === "en" || normalized.endsWith("-en")) {
+      return "en";
+    }
+
+    if (normalized === "hu" || normalized.endsWith("-hu")) {
+      return "hu";
+    }
+  }
+
+  return undefined;
+}
+
+function extractRouteValues(params: Record<string, string | string[] | undefined>): string[] {
+  return Object.values(params).flatMap((value) => (Array.isArray(value) ? value : [value])).filter((value): value is string => typeof value === "string");
+}
+
+function inferLocaleFromPathname(pathname: string | null): SupportedLocale | undefined {
+  if (!pathname) {
+    return undefined;
+  }
+
+  const [pathOnly = ""] = pathname.split("?");
+
+  const routeValues = pathOnly
+    .split("/")
+    .map((segment) => segment.trim())
+    .filter(Boolean);
+
+  return inferLocaleFromRouteValues(routeValues);
+}
+
+async function resolveLocale({
+  params,
+  searchParams,
+  cookieLocale,
+  pathname,
+}: {
+  params: LayoutParams;
+  searchParams?: LayoutSearchParams;
+  cookieLocale?: string;
+  pathname?: string | null;
+}): Promise<SupportedLocale> {
+  const [resolvedParams, resolvedSearchParams, requestLocale] = await Promise.all([
+    params,
+    searchParams ? searchParams : Promise.resolve<Record<string, string | string[] | undefined>>({}),
+    getLocale(),
+  ]);
+
+  const searchLocale = normalizeLocale(typeof resolvedSearchParams.lang === "string" ? resolvedSearchParams.lang : undefined);
+  const routeLocale = inferLocaleFromRouteValues(extractRouteValues(resolvedParams));
+  const pathnameLocale = inferLocaleFromPathname(pathname ?? null);
+  const localeFromCookie = normalizeLocale(cookieLocale);
+  const localeFromRequest = normalizeLocale(requestLocale);
+
+  return searchLocale ?? routeLocale ?? pathnameLocale ?? localeFromCookie ?? localeFromRequest ?? "hu";
+}
+
+export async function generateMetadata({ params, searchParams }: { params: LayoutParams; searchParams?: LayoutSearchParams }): Promise<Metadata> {
+  const [cookieStore, headerStore] = await Promise.all([cookies(), headers()]);
+  const lang = await resolveLocale({
+    params,
+    searchParams,
+    cookieLocale: cookieStore.get("NEXT_LOCALE")?.value,
+    pathname: headerStore.get("x-pathname") ?? headerStore.get("next-url"),
+  });
   const isEn = lang === "en";
   return {
     title: {
@@ -65,14 +156,16 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-import { cookies } from "next/headers";
-import { notFound } from "next/navigation";
-
-export default async function RootLayout({ children, searchParams }: { children: React.ReactNode; searchParams?: { lang?: string } }) {
-  // Prefer lang from query param, fallback to cookie, then default
+export default async function RootLayout({ children, params, searchParams }: { children: ReactNode; params: LayoutParams; searchParams?: LayoutSearchParams }) {
   const cookieStore = await cookies();
-  const lang = searchParams?.lang || cookieStore.get("NEXT_LOCALE")?.value || "hu";
-  const locale = lang;
+  const headerStore = await headers();
+  const locale = await resolveLocale({
+    params,
+    searchParams,
+    cookieLocale: cookieStore.get("NEXT_LOCALE")?.value,
+    pathname: headerStore.get("x-pathname") ?? headerStore.get("next-url"),
+  });
+
   let messages;
   try {
     messages = await getMessages({ locale });

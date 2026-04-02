@@ -4,6 +4,10 @@ import { loadCalculatorData } from "../../calculator/lib";
 import { buildDataUrl } from "../../calculator/lib/data-fetching/url-builders";
 import { calculatorViewModel } from "../../calculator/view-models/server";
 
+function isEnglishCalculator({ key, canonicalUrl }: { key: string; canonicalUrl: string }): boolean {
+  return key.toLowerCase().endsWith("-en") || canonicalUrl.toLowerCase().includes("-en");
+}
+
 export async function generateCalculatorMetadata({
   key,
   group,
@@ -26,6 +30,10 @@ export async function generateCalculatorMetadata({
   };
 }): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_CANONICAL_URL || "http://localhost:3000";
+  const isEn = isEnglishCalculator({ key, canonicalUrl });
+  const metadataTitle = isEn ? "Hungarian Parliamentary Elections 2026 Voksmonitor" : "Országgyűlési választások 2026 Voksmonitor";
+  const metadataDescription = isEn ? "Voksmonitor 2026 - Compare your views with the parties." : "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.";
+
   const calculatorData = await loadCalculatorData({ key, group });
   const calculator = calculatorViewModel(calculatorData.data.calculator);
 
@@ -64,22 +72,22 @@ export async function generateCalculatorMetadata({
   }
 
   const metadata: Metadata = {
-    title: "Országgyűlési választások 2026 Voksmonitor",
-    description: "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.",
+    title: metadataTitle,
+    description: metadataDescription,
     alternates: {
       canonical: canonicalUrl,
     },
     metadataBase: new URL(baseUrl),
     openGraph: {
-      title: "Országgyűlési választások 2026 Voksmonitor",
-      description: "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.",
+      title: metadataTitle,
+      description: metadataDescription,
       url: canonicalUrl,
       images: [
         {
-          url: ogImageUrl || "/og-image.png",
+          url: isEn ? "/og-image-en.png" : "/og-image.png",
           width: ogImageWidth || 1200,
           height: ogImageHeight || 630,
-          alt: ogImageAlt || "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.",
+          alt: ogImageAlt || metadataDescription,
         },
       ],
     },

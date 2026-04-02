@@ -1,0 +1,16 @@
+{
+  "id": "12c0b7cc-2206-5f5e-a407-6e3687b18a82",
+  "key": "voksmonitor-2026",
+  "version": "1.0.0",
+  "createdAt": "2026-03-31T12:55:54+00:00",
+  "title": "Parliamentary Elections 2026 Voksmonitor",
+  "shortTitle": "Voksmonitor 2026",
+  "description": "Voksmonitor 2026 - Compare your views with the parties.",
+  "intro": "Answer the questions to see which party is closest to you.",
+  "checksums": {
+    "questions": {
+      "algorithm": "sha256",
+      "value": "5da8ef9f3922c9357cbab1d84bbe42ee98c2619578774fdcafab196ae32297aa"
+    }
+  }
+}
