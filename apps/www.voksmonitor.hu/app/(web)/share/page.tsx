@@ -14,22 +14,47 @@ function normalizeSlug(text: string): string {
     .replace(/\s+/g, "-");
 }
 
-export const metadata: Metadata = {
-  title: "Kiderült, mely pártok állnak hozzám a legközelebb 👀",
-  description: "Töltsd ki te is a Voksmonitort!",
-  openGraph: {
-    title: "Kiderült, mely pártok állnak hozzám a legközelebb 👀",
-    description: "Töltsd ki te is a Voksmonitort!",
-    images: [
-      {
-        url: "/share-og.png",
-        width: 1200,
-        height: 630,
-        alt: "Én már kitöltöttem a Voksmonitort! Nézd meg az eredményeim!",
-      },
-    ],
-  },
-};
+function inferShareMetadataLocale(params: Record<string, string | string[] | undefined>): "en" | "hu" {
+  const langParam = typeof params.lang === "string" ? params.lang.toLowerCase() : undefined;
+  if (langParam === "en") {
+    return "en";
+  }
+
+  const calcParam = typeof params.calc === "string" ? params.calc.toLowerCase() : "";
+  const key = calcParam.split("/")[0] || "";
+  if (key.endsWith("-en")) {
+    return "en";
+  }
+
+  return "hu";
+}
+
+export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
+  const params = await searchParams;
+  const locale = inferShareMetadataLocale(params);
+  const isEn = locale === "en";
+
+  const title = isEn ? "I found which parties are closest to me 👀" : "Kiderült, mely pártok állnak hozzám a legközelebb 👀";
+  const description = isEn ? "Take the Voksmonitor too!" : "Töltsd ki te is a Voksmonitort!";
+  const ogAlt = isEn ? "I have already completed Voksmonitor! Check my results!" : "Én már kitöltöttem a Voksmonitort! Nézd meg az eredményeim!";
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [
+        {
+          url: "/share-og.png",
+          width: 1200,
+          height: 630,
+          alt: ogAlt,
+        },
+      ],
+    },
+  };
+}
 
 export default async function SharePage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const params = await searchParams;

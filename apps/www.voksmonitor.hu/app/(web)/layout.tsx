@@ -129,7 +129,7 @@ export async function generateMetadata({ params, searchParams }: { params: Layou
       siteName: "Voksmonitor",
       images: [
         {
-          url: "/og-image.png",
+          url: isEn ? "/og-image-en.png" : "/og-image.png",
           width: 1200,
           height: 630,
           alt: isEn ? "Voksmonitor 2026 - Compare your views with the parties." : "Voksmonitor 2026 - pártok álláspontjainak összehasonlítása.",
