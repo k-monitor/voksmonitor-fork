@@ -156,12 +156,11 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-export default async function RootLayout({ children, params, searchParams }: { children: ReactNode; params: LayoutParams; searchParams?: LayoutSearchParams }) {
+export default async function RootLayout({ children, params }: { children: ReactNode; params: LayoutParams }) {
   const cookieStore = await cookies();
   const headerStore = await headers();
   const locale = await resolveLocale({
     params,
-    searchParams,
     cookieLocale: cookieStore.get("NEXT_LOCALE")?.value,
     pathname: headerStore.get("x-pathname") ?? headerStore.get("next-url"),
   });
