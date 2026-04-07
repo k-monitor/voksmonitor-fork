@@ -10,12 +10,14 @@ export type Introduction = {
 
 export function Introduction({ calculator }: Introduction) {
   const t = useTranslations("calculator.introduction");
+  const calculatorKey = calculator.key ?? "voksmonitor-2026";
+  const tc = useTranslations(`calculator.introduction.${calculatorKey}`);
   return (
     <div className="grid gap-2 max-w-prose text-slate-600">
-      <p className="font-bold">{t("para1")}</p>
-      <p>{t("para2")}</p>
+      <p className="font-bold">{tc("para1")}</p>
+      <p>{tc("para2")}</p>
       <p>
-        {t.rich("para3", {
+        {tc.rich("para3", {
           kmonitor: (chunks) => (
             <a href="https://k-monitor.hu/" className="font-bold">
               {chunks}

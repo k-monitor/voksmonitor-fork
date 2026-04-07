@@ -1,13 +1,7 @@
 {
   "id": "d16c04e9-b0b5-4c76-ad3e-f03689303a29",
+  "key": "fovarosi-kozgyules",
   "version": "1.0.0",
-  "calculatorGroup": {
-    "id": "2736ac9e-5d06-4f8b-93fa-bb701b657f2e",
-    "key": "budapest-kozgyules"
-  },
-  "variant": {
-    "key": "inventory"
-  },
   "createdAt": "2025-12-19T15:57:54.419546+01:00",
   "title": "Fővárosi Közgyűlés Voksmonitor",
   "shortTitle": "Fővárosi Közgyűlés",
