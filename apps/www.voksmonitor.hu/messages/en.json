@@ -236,6 +236,11 @@
       "you": "You",
       "read-more": "Read more!"
     },
+    "answers": {
+      "heading": "Answers",
+      "back-aria-label": "Back to results",
+      "close-aria-label": "Close"
+    },
     "result": {
       "comparison-button": "Comparison",
       "share-button": "Share",

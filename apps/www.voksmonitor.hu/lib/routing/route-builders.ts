@@ -26,4 +26,5 @@ export const routes = {
   review: (segments: RouteSegments) => `/${createBaseSegment(segments)}/osszegzes`,
   result: (segments: RouteSegments) => `/${createBaseSegment(segments)}/egyezeseim`,
   comparison: (segments: RouteSegments) => `/${createBaseSegment(segments)}/osszehasonlitas`,
+  answers: (segments: RouteSegments) => `/${createBaseSegment(segments)}/valaszok`,
 } as const;

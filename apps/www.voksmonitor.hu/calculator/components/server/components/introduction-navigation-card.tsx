@@ -1,7 +1,8 @@
 import { Button } from "@kalkulacka-one/design-system/client";
 
-import { NavigationCard } from "./navigation-card";
 import { useTranslations } from "next-intl";
+
+import { NavigationCard } from "./navigation-card";
 
 const HEIGHT = "h-22";
 
@@ -9,7 +10,7 @@ export type IntroductionNavigationCard = {
   onNextClick: () => void;
 };
 
-export function IntroductionNavigationCard({ onNextClick, }: IntroductionNavigationCard) {
+export function IntroductionNavigationCard({ onNextClick }: IntroductionNavigationCard) {
   const t = useTranslations("calculator.introduction");
   return (
     <NavigationCard>

@@ -33,7 +33,7 @@ export function GuidePage({ embedContext, calculator, onNextClick, onBackClick, 
           </AppHeader.Right>
           <AppHeader.Bottom>
             <AppHeader.BottomLeft condensed={false}>
-              <Button variant="link" color="neutral" size="small" onClick={onBackClick} aria-label={t("back-to-intro")}> 
+              <Button variant="link" color="neutral" size="small" onClick={onBackClick} aria-label={t("back-to-intro")}>
                 <Icon icon={mdiArrowLeft} size="medium" decorative />
               </Button>
             </AppHeader.BottomLeft>

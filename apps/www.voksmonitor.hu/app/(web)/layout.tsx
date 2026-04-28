@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import type { ReactNode } from "react";
-
 import { cookies, headers } from "next/headers";
 import { notFound } from "next/navigation";
+import type { ReactNode } from "react";
 
 import "../globals.css";
 
@@ -51,7 +50,9 @@ function inferLocaleFromRouteValues(routeValues: Array<string | undefined>): Sup
 }
 
 function extractRouteValues(params: Record<string, string | string[] | undefined>): string[] {
-  return Object.values(params).flatMap((value) => (Array.isArray(value) ? value : [value])).filter((value): value is string => typeof value === "string");
+  return Object.values(params)
+    .flatMap((value) => (Array.isArray(value) ? value : [value]))
+    .filter((value): value is string => typeof value === "string");
 }
 
 function inferLocaleFromPathname(pathname: string | null): SupportedLocale | undefined {
@@ -80,10 +81,7 @@ async function resolveLocale({
   pathname?: string | null;
   forcedLocale?: string | null;
 }): Promise<SupportedLocale> {
-  const [resolvedParams, requestLocale] = await Promise.all([
-    params,
-    getLocale(),
-  ]);
+  const [resolvedParams, requestLocale] = await Promise.all([params, getLocale()]);
 
   const routeLocale = inferLocaleFromRouteValues(extractRouteValues(resolvedParams));
   const pathnameLocale = inferLocaleFromPathname(pathname ?? null);

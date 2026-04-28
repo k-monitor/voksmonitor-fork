@@ -2,7 +2,7 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { useLocale } from "next-intl";
-import { useTransition, useEffect } from "react";
+import { useEffect, useTransition } from "react";
 
 import { setLocale } from "../../app/actions";
 

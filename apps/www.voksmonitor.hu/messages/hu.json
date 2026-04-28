@@ -237,6 +237,11 @@
       "you": "Te",
       "read-more": "Olvass tovább!"
     },
+    "answers": {
+      "heading": "Válaszok",
+      "back-aria-label": "Vissza az eredményekhez",
+      "close-aria-label": "Bezárás"
+    },
     "result": {
       "comparison-button": "Összehasonlítás",
       "share-button": "Megosztás",
