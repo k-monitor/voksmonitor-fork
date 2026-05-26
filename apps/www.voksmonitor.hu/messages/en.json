@@ -14,6 +14,12 @@
       "start-button": "Start Questions",
       "calculator-name": "2026-ogy-en"
     },
+    "post-election-panel": {
+      "description": "There is no election currently in progress, but you can still fill out the most recent Voksmonitor here. If you'd like to see what parties promised voters in 2026 and how they expressed their positions on various topics, click the button and browse their stances!",
+      "signature": "See you at the next election!",
+      "answers-button": "Browse party answers",
+      "analysis-button": "Read our analysis of the 2026 Voksmonitor data"
+    },
     "bp-card": {
       "tags": {
         "questionnaire": "Question Inventory",
