@@ -24,6 +24,28 @@ export default function Page() {
           <h1 className="font-display ko:font-display font-bold tracking-tighter text-gray-700 text-4xl md:text-5xl lg:text-6xl text-center">{t("title")}</h1>
           <p className="mt-3 text-center text-lg font-semibold text-gray-600">{t("date")}</p>
 
+          {/* Post-election panel */}
+          <div className="mt-10 md:mt-12 flex justify-center">
+            <div className="w-full max-w-2xl">
+              <Card border className="h-full !border-gray-200 bg-gray-50/50">
+                <div className="p-6 h-full flex flex-col">
+                  <p className="text-gray-600">{t("post-election-panel.description")}</p>
+                  <p className="mt-3 font-semibold text-gray-700">{t("post-election-panel.signature")}</p>
+                  <div className="grid mt-4 gap-3">
+                    <Link href={`/vm/${t("2026-card.calculator-name")}/inventory/valaszok`} className="grid">
+                      <Button variant="fill" color="primary">
+                        {t("post-election-panel.answers-button")}
+                      </Button>
+                    </Link>
+                    <Button variant="outline" color="primary" disabled>
+                      {t("post-election-panel.analysis-button")}
+                    </Button>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+
           {/* Featured cards */}
           <div className="mt-10 md:mt-12 flex justify-center">
             <div className="w-full max-w-2xl">
