@@ -37,9 +37,16 @@ export default function Page() {
                         {t("post-election-panel.answers-button")}
                       </Button>
                     </Link>
-                    <Button variant="outline" color="primary" disabled>
-                      {t("post-election-panel.analysis-button")}
-                    </Button>
+                    <a
+                      href="https://voxpopuli.444.hu/2026/05/26/tamogattak-e-a-miniszterelnokke-valaszthatosag-8-evre-csokkenteset-a-tisza-szavazoi-a-valasztasok-elott-es-kellokeppen-nepszeru-e-az-alapitvanyi-fenntartasu-egyetemek-statuszanak-megvaltoztatasa"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="grid"
+                    >
+                      <Button variant="outline" color="primary">
+                        {t("post-election-panel.analysis-button")}
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </Card>
